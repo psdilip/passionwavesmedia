@@ -1,254 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
   <title>PassionWavesMedia</title>
-  <link>https://example.com/</link>
+  <link>https://passionwavesmedia.com/</link>
   <description>One place for the things I can&#x27;t stop thinking about — the cloud, the road, the kitchen, and everything I&#x27;m still figuring out. If a piece here teaches you something or nudges you to start, it did its job.</description>
   <language>en-us</language>
-  <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://example.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://passionwavesmedia.com/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>Your First Website on S3</title>
-    <link>https://example.com/s3-website.html</link>
-    <guid isPermaLink="true">https://example.com/s3-website.html</guid>
+    <link>https://passionwavesmedia.com/s3-website.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/s3-website.html</guid>
     <pubDate>Wed, 08 Jul 2026 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A calm, copy-paste-able walkthrough to get a real site live on AWS in an afternoon — no prior cloud experience needed.</description>
   </item>
   <item>
     <title>Road Trip: Idaho, Oregon &amp; Utah</title>
-    <link>https://example.com/western-wonders-road-trip-idaho-oregon-utah.html</link>
-    <guid isPermaLink="true">https://example.com/western-wonders-road-trip-idaho-oregon-utah.html</guid>
+    <link>https://passionwavesmedia.com/western-wonders-road-trip-idaho-oregon-utah.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/western-wonders-road-trip-idaho-oregon-utah.html</guid>
     <pubDate>Sun, 01 Oct 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.</description>
   </item>
   <item>
     <title>&quot;The Story Of…&quot;</title>
-    <link>https://example.com/toastmasters-the-story-of.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-the-story-of.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-the-story-of.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-the-story-of.html</guid>
     <pubDate>Fri, 22 Sep 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>A speech about a friend who lost both parents to cancer before he&#x27;d even finished school — and what he taught me about staying calm inside chaos.</description>
   </item>
   <item>
     <title>&quot;A Work Week in New York&quot;</title>
-    <link>https://example.com/navigating-new-york-work-week.html</link>
-    <guid isPermaLink="true">https://example.com/navigating-new-york-work-week.html</guid>
+    <link>https://passionwavesmedia.com/navigating-new-york-work-week.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/navigating-new-york-work-week.html</guid>
     <pubDate>Tue, 08 Aug 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>A work trip to New York that still found room for hot yoga, ice skating at Rockefeller Center, and a lot of very good food.</description>
   </item>
   <item>
     <title>&quot;Vegan Guide to Eastvale&quot;</title>
-    <link>https://example.com/vegan-eastvale-guide.html</link>
-    <guid isPermaLink="true">https://example.com/vegan-eastvale-guide.html</guid>
+    <link>https://passionwavesmedia.com/vegan-eastvale-guide.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/vegan-eastvale-guide.html</guid>
     <pubDate>Tue, 08 Aug 2023 12:00:00 +0000</pubDate>
     <category>Food</category>
     <description>Eight Eastvale spots with real vegan orders worth making the trip for, from ramen to a beyond-sausage sandwich.</description>
   </item>
   <item>
     <title>3 Common Toastmasters Mistakes</title>
-    <link>https://example.com/toastmasters-common-feedback-mistakes.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-common-feedback-mistakes.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-common-feedback-mistakes.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-common-feedback-mistakes.html</guid>
     <pubDate>Thu, 27 Jul 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>The two pieces of feedback that come up again and again — from 15 of my own speeches and watching 50 more.</description>
   </item>
   <item>
     <title>&quot;A Wedding Trip: Atlanta to Tennessee&quot;</title>
-    <link>https://example.com/atlanta-to-tennessee-wedding-trip.html</link>
-    <guid isPermaLink="true">https://example.com/atlanta-to-tennessee-wedding-trip.html</guid>
+    <link>https://passionwavesmedia.com/atlanta-to-tennessee-wedding-trip.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/atlanta-to-tennessee-wedding-trip.html</guid>
     <pubDate>Thu, 06 Jul 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>A friend&#x27;s wedding in the Smokies, bookended by an overnight drive in each direction and more Taco Bell than planned.</description>
   </item>
   <item>
     <title>&quot;Vegan Guide to the Inland Empire&quot;</title>
-    <link>https://example.com/vegan-inland-empire-guide.html</link>
-    <guid isPermaLink="true">https://example.com/vegan-inland-empire-guide.html</guid>
+    <link>https://passionwavesmedia.com/vegan-inland-empire-guide.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/vegan-inland-empire-guide.html</guid>
     <pubDate>Tue, 23 May 2023 12:00:00 +0000</pubDate>
     <category>Food</category>
     <description>A cuisine-by-cuisine tour of the Inland Empire&#x27;s best vegan orders — ramen, falafel, dumplings, and plant-based burgers.</description>
   </item>
   <item>
     <title>&quot;Colorado&#x27;s Playground: Rockies to Red Rocks&quot;</title>
-    <link>https://example.com/colorado-trip-aug-2022.html</link>
-    <guid isPermaLink="true">https://example.com/colorado-trip-aug-2022.html</guid>
+    <link>https://passionwavesmedia.com/colorado-trip-aug-2022.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/colorado-trip-aug-2022.html</guid>
     <pubDate>Fri, 24 Mar 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>Four days in Colorado — Rocky Mountain National Park, the summit of Mount Evans, and Red Rocks on the way out.</description>
   </item>
   <item>
     <title>&quot;My Icebreaker Speech&quot;</title>
-    <link>https://example.com/toastmasters-icebreaker-speech.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-icebreaker-speech.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-icebreaker-speech.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-icebreaker-speech.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>The first speech every Toastmaster gives — an introduction, a name that&#x27;s been mispronounced in every possible way, and where I am right now.</description>
   </item>
   <item>
     <title>&quot;A Letter to My Friend, Rain&quot;</title>
-    <link>https://example.com/toastmasters-letter-to-my-friend.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-letter-to-my-friend.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-letter-to-my-friend.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-letter-to-my-friend.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>A speech written as a letter to an old friend — one who falls constantly and never gets hurt.</description>
   </item>
   <item>
     <title>&quot;Rocky (Rap Song)&quot;</title>
-    <link>https://example.com/toastmasters-rocky-rap.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-rocky-rap.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-rocky-rap.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-rocky-rap.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>What my dog Rocky has taught me about awareness, presence, and taking a break — delivered as a rap, because a blog post dared me to.</description>
   </item>
   <item>
     <title>&quot;Self-Driving Cars&quot;</title>
-    <link>https://example.com/toastmasters-self-driving-cars.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-self-driving-cars.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-self-driving-cars.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-self-driving-cars.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>A prepared speech on why autonomous vehicles still make the same kinds of mistakes they were built to eliminate.</description>
   </item>
   <item>
     <title>&quot;On Time&quot;</title>
-    <link>https://example.com/toastmasters-time.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-time.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-time.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-time.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>A prepared speech on the one resource everyone has an opinion about and almost no one actually understands.</description>
   </item>
   <item>
     <title>&quot;Valentine&quot;</title>
-    <link>https://example.com/toastmasters-valentine.html</link>
-    <guid isPermaLink="true">https://example.com/toastmasters-valentine.html</guid>
+    <link>https://passionwavesmedia.com/toastmasters-valentine.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-valentine.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
     <description>What a relationship that didn&#x27;t last still managed to teach me about self-care, solitude, and not losing track of everything else.</description>
   </item>
   <item>
     <title>Presigned URLs for S3 with the CLI</title>
-    <link>https://example.com/s3-presigned-urls-cli.html</link>
-    <guid isPermaLink="true">https://example.com/s3-presigned-urls-cli.html</guid>
+    <link>https://passionwavesmedia.com/s3-presigned-urls-cli.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/s3-presigned-urls-cli.html</guid>
     <pubDate>Wed, 18 May 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A walkthrough for sharing a single private S3 object temporarily — no public bucket required.</description>
   </item>
   <item>
     <title>Fixing an S3 Networking Error</title>
-    <link>https://example.com/s3-networking-error-fix.html</link>
-    <guid isPermaLink="true">https://example.com/s3-networking-error-fix.html</guid>
+    <link>https://passionwavesmedia.com/s3-networking-error-fix.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/s3-networking-error-fix.html</guid>
     <pubDate>Sat, 23 Apr 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A quick fix for the confusing &quot;networking error&quot; or &quot;access denied&quot; message in the S3 console when your permissions are actually fine.</description>
   </item>
   <item>
     <title>Getting Chrome onto Windows Server 2019</title>
-    <link>https://example.com/download-chrome-ie-windows-server-2019.html</link>
-    <guid isPermaLink="true">https://example.com/download-chrome-ie-windows-server-2019.html</guid>
+    <link>https://passionwavesmedia.com/download-chrome-ie-windows-server-2019.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/download-chrome-ie-windows-server-2019.html</guid>
     <pubDate>Thu, 17 Feb 2022 12:00:00 +0000</pubDate>
     <category>How-To</category>
     <description>A fresh Windows Server 2019 box only comes with Internet Explorer — here&#x27;s how to get Chrome onto it without a fight.</description>
   </item>
   <item>
     <title>Upgrading EC2 to IMDSv2</title>
-    <link>https://example.com/imdsv1-to-imdsv2-upgrade.html</link>
-    <guid isPermaLink="true">https://example.com/imdsv1-to-imdsv2-upgrade.html</guid>
+    <link>https://passionwavesmedia.com/imdsv1-to-imdsv2-upgrade.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/imdsv1-to-imdsv2-upgrade.html</guid>
     <pubDate>Wed, 16 Feb 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Why the original instance metadata service was a security gap, and the exact commands to move every instance to the authenticated version.</description>
   </item>
   <item>
     <title>Jenkins Agents on EC2 Spot Instances</title>
-    <link>https://example.com/jenkins-agents-ec2-spot-instances.html</link>
-    <guid isPermaLink="true">https://example.com/jenkins-agents-ec2-spot-instances.html</guid>
+    <link>https://passionwavesmedia.com/jenkins-agents-ec2-spot-instances.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/jenkins-agents-ec2-spot-instances.html</guid>
     <pubDate>Thu, 06 Jan 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A proof of concept for scaling Jenkins agents on spot pricing with the EC2-Fleet plugin — cheaper builds, no idle capacity.</description>
   </item>
   <item>
     <title>Installing Nginx via EC2 User Data</title>
-    <link>https://example.com/installing-nginx-ec2-user-data.html</link>
-    <guid isPermaLink="true">https://example.com/installing-nginx-ec2-user-data.html</guid>
+    <link>https://passionwavesmedia.com/installing-nginx-ec2-user-data.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/installing-nginx-ec2-user-data.html</guid>
     <pubDate>Sun, 02 Jan 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Stand up an Nginx web server on a fresh EC2 instance with nothing but a user-data script — no manual SSH setup required.</description>
   </item>
   <item>
     <title>Windows Access via Session Manager, No RDP Port</title>
-    <link>https://example.com/session-manager-windows-no-rdp-port.html</link>
-    <guid isPermaLink="true">https://example.com/session-manager-windows-no-rdp-port.html</guid>
+    <link>https://passionwavesmedia.com/session-manager-windows-no-rdp-port.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/session-manager-windows-no-rdp-port.html</guid>
     <pubDate>Sat, 01 Jan 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Get shell and RDP access to a Windows EC2 instance through Systems Manager, then close port 3389 in the security group for good.</description>
   </item>
   <item>
     <title>Starting Your AWS Journey</title>
-    <link>https://example.com/starting-out-on-your-aws-journey.html</link>
-    <guid isPermaLink="true">https://example.com/starting-out-on-your-aws-journey.html</guid>
+    <link>https://passionwavesmedia.com/starting-out-on-your-aws-journey.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/starting-out-on-your-aws-journey.html</guid>
     <pubDate>Fri, 26 Nov 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Lessons from a few years in the cloud — on learning deliberately, troubleshooting with intent, and treating a career as a process instead of a checklist.</description>
   </item>
   <item>
     <title>&quot;Personal Website on AWS, Part 1: S3&quot;</title>
-    <link>https://example.com/personal-website-on-aws-part-1.html</link>
-    <guid isPermaLink="true">https://example.com/personal-website-on-aws-part-1.html</guid>
+    <link>https://passionwavesmedia.com/personal-website-on-aws-part-1.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/personal-website-on-aws-part-1.html</guid>
     <pubDate>Mon, 31 May 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Skip Wix and Squarespace — host a real static site on S3 and actually understand what&#x27;s happening under the hood.</description>
   </item>
   <item>
     <title>&quot;Personal Website on AWS, Part 2: CloudFront &amp; SSL&quot;</title>
-    <link>https://example.com/personal-website-on-aws-part-2.html</link>
-    <guid isPermaLink="true">https://example.com/personal-website-on-aws-part-2.html</guid>
+    <link>https://passionwavesmedia.com/personal-website-on-aws-part-2.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/personal-website-on-aws-part-2.html</guid>
     <pubDate>Mon, 31 May 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>Turn the bare S3 site from Part 1 into a real HTTPS site on your own domain, served fast from CloudFront&#x27;s edge network.</description>
   </item>
   <item>
     <title>Creating an AWS Account from Scratch</title>
-    <link>https://example.com/create-aws-account-from-scratch.html</link>
-    <guid isPermaLink="true">https://example.com/create-aws-account-from-scratch.html</guid>
+    <link>https://passionwavesmedia.com/create-aws-account-from-scratch.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/create-aws-account-from-scratch.html</guid>
     <pubDate>Sat, 22 May 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>What cloud computing actually buys you, and the exact steps to get a working AWS account and console access.</description>
   </item>
   <item>
     <title>HashiCorp Vault Certification Guide</title>
-    <link>https://example.com/hashicorp-vault-certification-2021.html</link>
-    <guid isPermaLink="true">https://example.com/hashicorp-vault-certification-2021.html</guid>
+    <link>https://passionwavesmedia.com/hashicorp-vault-certification-2021.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/hashicorp-vault-certification-2021.html</guid>
     <pubDate>Thu, 28 Jan 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>What Vault actually solves, how I studied for the Vault Associate exam, and the resources that were worth the time.</description>
   </item>
   <item>
     <title>&quot;Exploring Atlanta&#x27;s Cityscape&quot;</title>
-    <link>https://example.com/atlanta-trip-feb-2020.html</link>
-    <guid isPermaLink="true">https://example.com/atlanta-trip-feb-2020.html</guid>
+    <link>https://passionwavesmedia.com/atlanta-trip-feb-2020.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/atlanta-trip-feb-2020.html</guid>
     <pubDate>Tue, 21 Apr 2020 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>Two days covering Atlanta on foot — the King Center, Centennial Olympic Park, and a lot of the BeltLine.</description>
   </item>
   <item>
     <title>&quot;City by the Bay: San Francisco&quot;</title>
-    <link>https://example.com/san-francisco-trip-2019.html</link>
-    <guid isPermaLink="true">https://example.com/san-francisco-trip-2019.html</guid>
+    <link>https://passionwavesmedia.com/san-francisco-trip-2019.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/san-francisco-trip-2019.html</guid>
     <pubDate>Sun, 19 Apr 2020 12:00:00 +0000</pubDate>
     <category>Travel</category>
     <description>Four days in San Francisco and a detour to Yosemite — Lombard Street, the Golden Gate from four different angles, and a lot of walking.</description>
   </item>
   <item>
     <title>Passing the AWS Solutions Architect Exam</title>
-    <link>https://example.com/aws-solutions-architect-associate-2019.html</link>
-    <guid isPermaLink="true">https://example.com/aws-solutions-architect-associate-2019.html</guid>
+    <link>https://passionwavesmedia.com/aws-solutions-architect-associate-2019.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/aws-solutions-architect-associate-2019.html</guid>
     <pubDate>Sun, 09 Jun 2019 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A score, a stack of resources, and the study order I&#x27;d actually repeat — after two years of AWS and two certifications already behind me.</description>
   </item>
   <item>
     <title>Cloud Dev Setup on Ubuntu</title>
-    <link>https://example.com/ubuntu-dev-environment-setup.html</link>
-    <guid isPermaLink="true">https://example.com/ubuntu-dev-environment-setup.html</guid>
+    <link>https://passionwavesmedia.com/ubuntu-dev-environment-setup.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/ubuntu-dev-environment-setup.html</guid>
     <pubDate>Sun, 02 Dec 2018 12:00:00 +0000</pubDate>
     <category>AWS</category>
     <description>A copy-paste setup guide for a full cloud dev environment on Ubuntu — editor, IaC, Python, AWS SDK, git, and the Serverless Framework.</description>

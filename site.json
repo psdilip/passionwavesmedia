@@ -1,8 +1,5 @@
 {
-  "domain": "https://example.com",
-  "_domain_comment": "EDIT: set to this site's real domain once it has one (its own bucket/CloudFront now, not a subpath of the portfolio).",
-  "portfolioUrl": "https://example.com",
-  "_portfolioUrl_comment": "EDIT: the main portfolio's real domain, used by the header's back-to-portfolio link and the footer.",
+  "domain": "https://passionwavesmedia.com",
   "brandName": "PassionWavesMedia",
   "author": { "name": "Sai Dilip", "role": "PassionWavesMedia" },
 

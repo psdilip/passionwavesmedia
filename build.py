@@ -147,7 +147,7 @@ def footer(cfg, present_cats=None):
     <div>{brand(cfg, sm=True)}<p class="colophon">Spreading passions from me to the world — one article, one wave, at a time.</p></div>
     <nav>
       <div class="col"><h4>Read</h4>{cats}</div>
-      <div class="col"><h4>More</h4><a href="index.html#mission">About</a><a href="feed.xml">RSS Feed</a><a href="{cfg['portfolioUrl']}">Portfolio</a></div>
+      <div class="col"><h4>More</h4><a href="index.html#mission">About</a><a href="feed.xml">RSS Feed</a></div>
       <div class="col"><h4>Elsewhere</h4>{soc}</div>
     </nav>
   </div>
@@ -187,7 +187,6 @@ def nav(cfg, home=False, active=""):
     def cls(x):
         return "navlink active" if x == active else "navlink"
     return (f'<header class="masthead"><div class="wrap masthead-inner">{brand(cfg)}<nav class="nav">'
-            f'<a class="navlink" href="{cfg["portfolioUrl"]}" title="Back to the main portfolio">← Portfolio</a>'
             f'<a class="{cls("read")}" href="articles.html">Read</a>'
             f'<a class="{cls("about")}" href="{about}">About</a>'
             f'<a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a>'
