@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
 permissions:
   id-token: write   # REQUIRED — lets GitHub mint the OIDC token for this job
   contents: read
