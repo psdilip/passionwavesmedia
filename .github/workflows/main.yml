@@ -4,27 +4,130 @@ on:
   push:
     branches:
       - main
-
 permissions:
-  id-token: write
+  id-token: write   # REQUIRED — lets GitHub mint the OIDC token for this job
   contents: read
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    env:
+      AWS_REGION: us-east-1
+
     steps:
+      # ----------------------------------------
+      # Step 1: Checkout repository
+      # ----------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Configure AWS credentials
+
+      # ----------------------------------------
+      # Step 2: Debug — confirm the secret isn't empty
+      # ----------------------------------------
+      - name: Debug Role ARN
+        run: |
+          if [ -z "${{ secrets.AWS_ROLE_ARN }}" ]; then
+            echo "::error::AWS_ROLE_ARN secret is EMPTY or not visible to this job/environment"
+            exit 1
+          fi
+          echo "Role name portion (safe to print):"
+          echo "${{ secrets.AWS_ROLE_ARN }}" | sed 's/.*role\///'
+
+      # ----------------------------------------
+      # Step 3: Debug GitHub identity context
+      # ----------------------------------------
+      - name: Debug GitHub Context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Ref:        ${{ github.ref }}"
+          echo "Workflow:   ${{ github.workflow }}"
+          echo "Actor:      ${{ github.actor }}"
+
+      # ----------------------------------------
+      # Step 4: Verify OIDC token availability
+      # ----------------------------------------
+      - name: Debug OIDC Token
+        run: |
+          if [ -z "${ACTIONS_ID_TOKEN_REQUEST_URL}" ]; then
+            echo "::error::OIDC request URL is missing — check 'permissions: id-token: write'"
+            exit 1
+          fi
+          if [ -z "${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" ]; then
+            echo "::error::OIDC request token is missing"
+            exit 1
+          fi
+          echo "OIDC token endpoint reachable — OK"
+
+      # ----------------------------------------
+      # Step 5: Inspect the actual OIDC claims before we try to use them
+      # ----------------------------------------
+      - name: Inspect OIDC Claims
+        run: |
+          TOKEN=$(curl -s \
+            -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['value'])")
+
+          python3 - <<EOF
+          import base64, json
+          token = "$TOKEN"
+          payload = token.split('.')[1]
+          payload += "=" * (-len(payload) % 4)
+          claims = json.loads(base64.urlsafe_b64decode(payload))
+          print("Issuer:     ", claims.get("iss"))
+          print("Audience:   ", claims.get("aud"))
+          print("Subject:    ", claims.get("sub"))
+          print("Repository: ", claims.get("repository"))
+          print("Ref:        ", claims.get("ref"))
+          EOF
+          echo ""
+          echo ">>> Compare 'Subject' above, character-for-character, against your"
+          echo ">>> trust policy's StringLike condition on token.actions.githubusercontent.com:sub"
+
+      # ----------------------------------------
+      # Step 6: THE STEP THAT WAS MISSING — actually assume the role
+      # ----------------------------------------
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
+          role-session-name: GitHubActions-passionwavesmedia
+
+      # ----------------------------------------
+      # Step 7: Confirm AWS identity
+      # ----------------------------------------
+      - name: Verify AWS Identity
+        run: |
+          echo "Checking AWS caller identity..."
+          aws sts get-caller-identity
+
+      # ----------------------------------------
+      # Step 8: Validate S3 access
+      # ----------------------------------------
+      - name: Test S3 Permissions
+        run: |
+          aws s3 ls s3://${{ secrets.S3_BUCKET_NAME }}
+
+      # ----------------------------------------
+      # Step 9: Build website
+      # ----------------------------------------
       - name: Build site
-        run: python3 build.py
+        run: |
+          python3 build.py
+
+      # ----------------------------------------
+      # Step 10: Deploy to S3
+      # ----------------------------------------
       - name: Deploy to S3
         run: |
-          aws s3 sync ./public s3://${{ secrets.S3_BUCKET_NAME }} --delete
+          aws s3 sync ./public \
+            s3://${{ secrets.S3_BUCKET_NAME }} \
+            --delete
+
+      # ----------------------------------------
+      # Step 11: CloudFront invalidation
+      # ----------------------------------------
       - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation \
