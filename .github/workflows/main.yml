@@ -71,21 +71,43 @@ jobs:
       # ----------------------------------------
       # Step 4: Configure AWS credentials using OIDC
       # ----------------------------------------
-      - name: Inspect OIDC Token
+      - name: Inspect OIDC Claims
         run: |
           TOKEN=$(curl \
             -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" \
-            | jq -r '.value')
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['value'])")
       
-          echo "$TOKEN" | cut -d "." -f2 | base64 -d | jq
-            - name: Configure AWS credentials
-              uses: aws-actions/configure-aws-credentials@v4
-              with:
-                role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-                aws-region: ${{ env.AWS_REGION }}
-                role-duration-seconds: 3600
-                mask-aws-account-id: false
+          python3 - <<EOF
+            import base64
+            import json
+            
+            token = "$TOKEN"
+            
+            payload = token.split('.')[1]
+            payload += "=" * (-len(payload) % 4)
+            
+            claims = json.loads(base64.urlsafe_b64decode(payload))
+            
+            print("Issuer:")
+            print(claims.get("iss"))
+            
+            print("")
+            print("Audience:")
+            print(claims.get("aud"))
+            
+            print("")
+            print("Subject:")
+            print(claims.get("sub"))
+            
+            print("")
+            print("Repository:")
+            print(claims.get("repository"))
+            
+            print("")
+            print("Ref:")
+            print(claims.get("ref"))
+          EOF
 
       # ----------------------------------------
       # Step 5: Confirm AWS identity
