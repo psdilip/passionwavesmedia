@@ -71,13 +71,21 @@ jobs:
       # ----------------------------------------
       # Step 4: Configure AWS credentials using OIDC
       # ----------------------------------------
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: ${{ env.AWS_REGION }}
-          role-duration-seconds: 3600
-          mask-aws-account-id: false
+      - name: Inspect OIDC Token
+        run: |
+          TOKEN=$(curl \
+            -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" \
+            | jq -r '.value')
+      
+          echo "$TOKEN" | cut -d "." -f2 | base64 -d | jq
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+                aws-region: ${{ env.AWS_REGION }}
+                role-duration-seconds: 3600
+                mask-aws-account-id: false
 
       # ----------------------------------------
       # Step 5: Confirm AWS identity
