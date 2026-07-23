@@ -79,34 +79,34 @@ jobs:
             | python3 -c "import sys,json; print(json.load(sys.stdin)['value'])")
       
           python3 - <<EOF
-            import base64
-            import json
-            
-            token = "$TOKEN"
-            
-            payload = token.split('.')[1]
-            payload += "=" * (-len(payload) % 4)
-            
-            claims = json.loads(base64.urlsafe_b64decode(payload))
-            
-            print("Issuer:")
-            print(claims.get("iss"))
-            
-            print("")
-            print("Audience:")
-            print(claims.get("aud"))
-            
-            print("")
-            print("Subject:")
-            print(claims.get("sub"))
-            
-            print("")
-            print("Repository:")
-            print(claims.get("repository"))
-            
-            print("")
-            print("Ref:")
-            print(claims.get("ref"))
+          import base64
+          import json
+          
+          token = "$TOKEN"
+          
+          payload = token.split('.')[1]
+          payload += "=" * (-len(payload) % 4)
+          
+          claims = json.loads(base64.urlsafe_b64decode(payload))
+          
+          print("Issuer:")
+          print(claims.get("iss"))
+          
+          print("")
+          print("Audience:")
+          print(claims.get("aud"))
+          
+          print("")
+          print("Subject:")
+          print(claims.get("sub"))
+          
+          print("")
+          print("Repository:")
+          print(claims.get("repository"))
+          
+          print("")
+          print("Ref:")
+          print(claims.get("ref"))
           EOF
 
       # ----------------------------------------
