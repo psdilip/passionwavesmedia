@@ -41,7 +41,7 @@
 
   "supabase": {
     "_comment": "Fill these to turn on real likes + view counts. Empty = likes still work locally per-browser, views hidden. See README.",
-    "url": "",
-    "anonKey": ""
+    "url": "https://bxnncbzibmutfszxbkvu.supabase.co",
+    "anonKey": "sb_publishable_YNxNdVTUQxIOniUEG_xZig_y6XKikKT"
   }
 }
