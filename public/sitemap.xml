@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://example.com/articles.html</loc><priority>0.9</priority></url>
+  <url><loc>https://example.com/s3-website.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/western-wonders-road-trip-idaho-oregon-utah.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-the-story-of.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/navigating-new-york-work-week.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/vegan-eastvale-guide.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-common-feedback-mistakes.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/atlanta-to-tennessee-wedding-trip.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/vegan-inland-empire-guide.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/colorado-trip-aug-2022.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-icebreaker-speech.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-letter-to-my-friend.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-rocky-rap.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-self-driving-cars.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-time.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/toastmasters-valentine.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/s3-presigned-urls-cli.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/s3-networking-error-fix.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/download-chrome-ie-windows-server-2019.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/imdsv1-to-imdsv2-upgrade.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/jenkins-agents-ec2-spot-instances.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/installing-nginx-ec2-user-data.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/session-manager-windows-no-rdp-port.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/starting-out-on-your-aws-journey.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/personal-website-on-aws-part-1.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/personal-website-on-aws-part-2.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/create-aws-account-from-scratch.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/hashicorp-vault-certification-2021.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/atlanta-trip-feb-2020.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/san-francisco-trip-2019.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/aws-solutions-architect-associate-2019.html</loc><priority>0.8</priority></url>
+  <url><loc>https://example.com/ubuntu-dev-environment-setup.html</loc><priority>0.8</priority></url>
+</urlset>

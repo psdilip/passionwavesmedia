@@ -1,0 +1,50 @@
+{
+  "domain": "https://example.com",
+  "_domain_comment": "EDIT: set to this site's real domain once it has one (its own bucket/CloudFront now, not a subpath of the portfolio).",
+  "portfolioUrl": "https://example.com",
+  "_portfolioUrl_comment": "EDIT: the main portfolio's real domain, used by the header's back-to-portfolio link and the footer.",
+  "brandName": "PassionWavesMedia",
+  "author": { "name": "Sai Dilip", "role": "PassionWavesMedia" },
+
+  "hero": {
+    "eyebrow": "PassionWavesMedia · Est. 2026",
+    "titleHtml": "Spreading what I <span class=\"hl\">love</span>, from me to you.",
+    "lede": "One place for the things I can't stop thinking about — the cloud, the road, the kitchen, and everything I'm still figuring out. If a piece here teaches you something or nudges you to start, it did its job."
+  },
+
+  "mission": {
+    "heading": "Passions, sent out in waves.",
+    "body": [
+      "PassionWavesMedia is exactly what it sounds like — a way to send the things I care about out into the world and see who they reach. Some pieces will teach you how to do something. Some will take you somewhere. All of them are meant to leave you a little more curious than you were.",
+      "It starts with writing. Over time it'll grow into other forms of media, too — but the goal never changes: inspire someone, help someone, pass along something worth knowing."
+    ],
+    "sig": "— and if it lands with even one person, that's a wave worth making."
+  },
+
+  "categories": {
+    "AWS":      "#6B4EE6",
+    "Travel":   "#22B0C4",
+    "How-To":   "#FF6B4A",
+    "Food":     "#E5468A",
+    "Life":     "#F2A93B",
+    "Speaking": "#3BB273"
+  },
+
+  "quotes": [
+    {"text": "Go slow to go fast.", "slug": "starting-out-on-your-aws-journey"},
+    {"text": "The bad news is time flies. The good news is you are the pilot.", "slug": "toastmasters-time"},
+    {"text": "You are not what happened to you — you are what you choose to become.", "slug": "toastmasters-the-story-of"},
+    {"text": "Don't study just to pass the exam — anyone can do that. Study to improve how your company builds things and solve the real problems in front of you.", "slug": "aws-solutions-architect-associate-2019"}
+  ],
+
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/your-handle",
+    "x": "https://x.com/your-handle"
+  },
+
+  "supabase": {
+    "_comment": "Fill these to turn on real likes + view counts. Empty = likes still work locally per-browser, views hidden. See README.",
+    "url": "",
+    "anonKey": ""
+  }
+}
