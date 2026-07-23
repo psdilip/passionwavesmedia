@@ -23,6 +23,10 @@ jobs:
       # ----------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Debug Role ARN
+        run: |
+          echo "Role ARN:"
+          echo "${{ secrets.AWS_ROLE_ARN }}"
 
       # ----------------------------------------
       # Step 2: Debug GitHub identity context
