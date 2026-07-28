@@ -7,6 +7,9 @@ excerpt: A speech about a friend who lost both parents to cancer before he'd eve
 date: 2023-09-22
 ---
 
+![Photo by Patrick Tomasso on Unsplash](assets/images/toastmasters-the-story-of/hero.jpg)
+*Photo by [Patrick Tomasso](https://unsplash.com/@impatrickt) on [Unsplash](https://unsplash.com)*
+
 I left the title unfinished on purpose — you'll know whose story this is by the end.
 
 Sylvester Stallone said it best: *"Life ain't about how hard you hit, it's all about how hard you can get hit and keep moving forward."*

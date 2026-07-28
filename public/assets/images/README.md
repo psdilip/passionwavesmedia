@@ -7,6 +7,25 @@ up automatically — no other edits needed. The next `git push` ships it to S3.
 
 Any file you don't have yet just renders as a broken image until it's filled in.
 
+## greece-europe-tour-2026
+- `01-jfk-departure.jpg` — JFK departure
+- `02-danube-cruise.jpg` — Danube cruise, Hungarian Parliament at night
+- `03-fishermans-bastion.jpg` — Fisherman's Bastion, Budapest
+- `04-buda-castle.jpg` — Buda Castle
+- `05-bratislava-old-town.jpg` — Bratislava Old Town
+- `06-vienna-hofburg-palace.jpg` — Hofburg Palace, Vienna
+- `07-novotel-breakfast.jpg` — Novotel Budapest breakfast spread
+- `08-acropolis.jpg` — The Acropolis, Athens
+- `09-plaka-crepes.jpg` — Crepes in Plaka
+- `10-hydra-port.jpg` — Hydra port
+- `11-hydra-coastline.jpg` — Hydra coastline
+- `12-fira-sunset.jpg` — Fira, Santorini at sunset
+- `13-oia-blue-domes.jpg` — Blue domes, Oia
+- `14-perivolos-black-sand-beach.jpg` — Perivolos Black Sand Beach
+- `15-santorini-balcony.jpg` — Balcony views, Santorini
+- `16-big-ben.jpg` — Big Ben, London
+- `17-hilton-bankside-breakfast.jpg` — Hilton Bankside breakfast
+
 ## western-wonders-road-trip-idaho-oregon-utah
 - `01-boise-downtown.jpg` — Drone shot of downtown Boise from Table Rock
 - `02-wallowa-lake.jpg` — Drone shot of Wallowa Lake

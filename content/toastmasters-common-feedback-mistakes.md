@@ -7,6 +7,9 @@ excerpt: The two pieces of feedback that come up again and again — from 15 of 
 date: 2023-07-27
 ---
 
+![Photo by Headway on Unsplash](assets/images/toastmasters-common-feedback-mistakes/hero.jpg)
+*Photo by [Headway](https://unsplash.com/@headwayio) on [Unsplash](https://unsplash.com)*
+
 "If you don't make mistakes, you aren't really trying." Toastmasters exists precisely to give speakers a low-stakes place to make those mistakes and actually learn from them.
 
 After 15 speeches of my own and watching more than 50 others, two pieces of feedback keep showing up more than anything else.

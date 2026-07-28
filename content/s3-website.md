@@ -7,6 +7,9 @@ excerpt: A calm, copy-paste-able walkthrough to get a real site live on AWS in a
 date: 2026-07-08
 ---
 
+![Photo by Sarguninder Singh on Unsplash](assets/images/s3-website/hero.jpg)
+*Photo by [Sarguninder Singh](https://unsplash.com/@sarguninder) on [Unsplash](https://unsplash.com)*
+
 You do not need to be an engineer to put a website on the internet with AWS. You need a bucket, a few clicks, and about an afternoon. Here's the whole thing, start to finish.
 
 ## 1. Make a bucket

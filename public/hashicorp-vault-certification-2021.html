@@ -154,6 +154,8 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
+.map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .endmark{ text-align:center; font-family:var(--serif); font-size:26px; margin:24px 0 40px; background:var(--grad); background-size:200% 100%; animation:sheen 10s ease-in-out infinite alternate; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 
 /* ---------- Likes + views ---------- */
@@ -250,7 +252,8 @@ a{ color:inherit; text-decoration:none; }
     <p class="dek">What Vault actually solves, how I studied for the Vault Associate exam, and the resources that were worth the time.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
-    <div class="prose"><p>Vault is HashiCorp's secrets management product, and what makes it worth learning isn't the certification — it's how it reframes a problem most teams eventually run into.</p>
+    <div class="prose"><p><img src="assets/images/hashicorp-vault-certification-2021/hero.jpg" alt="Photo by Tanya Barrow on Unsplash"> <em>Photo by <a href="https://unsplash.com/@tanyabarrow">Tanya Barrow</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p>Vault is HashiCorp's secrets management product, and what makes it worth learning isn't the certification — it's how it reframes a problem most teams eventually run into.</p>
 <h3>What Vault is actually for</h3>
 <p>Think of it as a one-stop shop for secrets management, encryption as a service, and identity-based access across whatever mix of clouds you're running. It gives you granular control over tokens, certificates, passwords, and everything else you'd rather not hardcode.</p>
 <p>It earns its place for two reasons in particular:</p>
@@ -293,7 +296,7 @@ vault token renew</code></pre>
   <div class="footer-top">
     <div><a href="index.html" class="brand brand--sm"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><p class="colophon">Spreading passions from me to the world — one article, one wave, at a time.</p></div>
     <nav>
-      <div class="col"><h4>Read</h4><a href="articles.html">All articles</a><a href="articles.html#AWS">AWS</a><a href="articles.html#Travel">Travel</a><a href="articles.html#How-To">How-To</a><a href="articles.html#Food">Food</a><a href="articles.html#Speaking">Speaking</a></div>
+      <div class="col"><h4>Read</h4><a href="articles.html">All articles</a><a href="articles.html#AWS">AWS</a><a href="articles.html#Travel">Travel</a><a href="articles.html#How-To">How-To</a><a href="articles.html#Food">Food</a><a href="articles.html#Career">Career</a><a href="articles.html#Speaking">Speaking</a></div>
       <div class="col"><h4>More</h4><a href="index.html#mission">About</a><a href="feed.xml">RSS Feed</a></div>
       <div class="col"><h4>Elsewhere</h4><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.78v2.19h.07c.67-1.27 2.3-2.61 4.73-2.61 5.06 0 6 3.33 6 7.66V24h-5v-6.99c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.69 1.82-2.69 3.7V24h-5V8z"/></svg>LinkedIn</a><a href="https://x.com/your-handle" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2H21l-6.55 7.48L22 22h-6.15l-4.82-6.3L5.5 22H2.74l7.01-8-7.4-12h6.3l4.36 5.77L18.24 2zm-1.08 18h1.7L7.02 3.9H5.2L17.16 20z"/></svg>X</a></div>
     </nav>

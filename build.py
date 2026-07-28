@@ -53,6 +53,8 @@ def md_to_html(md):
             i += 1
             out.append("<pre><code>" + html.escape("\n".join(buf), quote=False) + "</code></pre>")
             continue
+        if line.strip().startswith("<iframe") and line.strip().endswith("</iframe>"):
+            out.append(f'<div class="map-embed">{line.strip()}</div>'); i += 1; continue
         if re.match(r"^\s*-{3,}\s*$", line):
             out.append("<hr>"); i += 1; continue
         h = re.match(r"^(#{1,4})\s+(.*)$", line)
@@ -395,7 +397,7 @@ def main():
         img_match = re.search(r"!\[[^\]]*\]\(([^)]+)\)", body)
         posts.append({
             "title": meta["title"], "slug": meta.get("slug", md_file.stem),
-            "category": meta.get("category", "Life"), "excerpt": meta.get("excerpt", ""),
+            "category": meta.get("category", "Career"), "excerpt": meta.get("excerpt", ""),
             "tags": tags, "thumb": img_match.group(1) if img_match else None,
             "featured": str(meta.get("featured", "")).lower() == "true",
             "iso": meta["date"], "dt": dt,

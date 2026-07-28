@@ -142,6 +142,8 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
+.map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .endmark{ text-align:center; font-family:var(--serif); font-size:26px; margin:24px 0 40px; background:var(--grad); background-size:200% 100%; animation:sheen 10s ease-in-out infinite alternate; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 
 /* ---------- Likes + views ---------- */

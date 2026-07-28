@@ -7,6 +7,9 @@ excerpt: A quick fix for the confusing "networking error" or "access denied" mes
 date: 2022-04-23
 ---
 
+![Photo by User_Pascal on Unsplash](assets/images/s3-networking-error-fix/hero.jpg)
+*Photo by [User_Pascal](https://unsplash.com/@user_pascal) on [Unsplash](https://unsplash.com)*
+
 Every so often the S3 console throws a networking error, or an "access denied" message, even though the permissions on your account are completely fine. It's an annoying one because the error doesn't point at the real cause.
 
 I'm not entirely sure of the root cause — my best guess is a buildup of cookies from AWS sessions, especially if you're jumping between multiple accounts in the same browser. Could also just be a browser quirk.

@@ -7,6 +7,9 @@ excerpt: The first speech every Toastmaster gives — an introduction, a name th
 date: 2023-03-22
 ---
 
+![Photo by AMONWAT DUMKRUT on Unsplash](assets/images/toastmasters-icebreaker-speech/hero.jpg)
+*Photo by [AMONWAT DUMKRUT](https://unsplash.com/@amonwatdumkrut) on [Unsplash](https://unsplash.com)*
+
 Fellow Toastmasters — have you ever had your name used in all sorts of ways?
 
 Mine's Sai Dilip Ponnaganti, and "Sai" alone has been through a lot — chemistry class turned it into "saianide," rhyming it with cyanide, and it's had a few other phonetic lives since. I've made peace with all of them.

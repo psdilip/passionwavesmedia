@@ -7,6 +7,9 @@ excerpt: A cuisine-by-cuisine tour of the Inland Empire's best vegan orders — 
 date: 2023-05-23
 ---
 
+![Photo by Anna Pelzer on Unsplash](assets/images/vegan-inland-empire-guide/hero.jpg)
+*Photo by [Anna Pelzer](https://unsplash.com/@annapelzer) on [Unsplash](https://unsplash.com)*
+
 A running list of what to order, cuisine by cuisine, across the Inland Empire's plant-based scene.
 
 ### Japanese

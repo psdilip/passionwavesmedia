@@ -7,6 +7,9 @@ excerpt: A fresh Windows Server 2019 box only comes with Internet Explorer — h
 date: 2022-02-17
 ---
 
+![Photo by Lukas on Unsplash](assets/images/download-chrome-ie-windows-server-2019/hero.jpg)
+*Photo by [Lukas](https://unsplash.com/@lukash) on [Unsplash](https://unsplash.com)*
+
 A new Windows Server 2019 instance only ships with Internet Explorer, and IE's default security settings actively get in the way of downloading anything — including the browser you'd rather be using. Here's the sequence that gets Chrome installed without fighting it the whole way.
 
 1. When IE opens for the first time, dismiss the initial pop-up with **OK**.

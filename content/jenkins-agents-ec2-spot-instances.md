@@ -7,6 +7,9 @@ excerpt: A proof of concept for scaling Jenkins agents on spot pricing with the 
 date: 2022-01-06
 ---
 
+![Photo by Kevin Ache on Unsplash](assets/images/jenkins-agents-ec2-spot-instances/hero.jpg)
+*Photo by [Kevin Ache](https://unsplash.com/@kevinache) on [Unsplash](https://unsplash.com)*
+
 Inspired by how Lyft scaled their Jenkins infrastructure, I put together a proof of concept for running Jenkins agents on EC2 Spot instances instead of always-on boxes — using the EC2-Fleet plugin and an Auto Scaling Group to provision agents only when there's actually a job to run.
 
 ### What this was meant to prove

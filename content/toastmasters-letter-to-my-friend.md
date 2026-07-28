@@ -7,6 +7,9 @@ excerpt: A speech written as a letter to an old friend — one who falls constan
 date: 2023-03-22
 ---
 
+![Photo by Aaron Burden on Unsplash](assets/images/toastmasters-letter-to-my-friend/hero.jpg)
+*Photo by [Aaron Burden](https://unsplash.com/@aaronburden) on [Unsplash](https://unsplash.com)*
+
 Fellow Toastmasters — what often falls but never gets hurt? Rain.
 
 I'd like to introduce you all to my friend, Rain. This one's for her, in the form of a letter.

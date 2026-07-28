@@ -7,6 +7,9 @@ excerpt: A copy-paste setup guide for a full cloud dev environment on Ubuntu —
 date: 2018-12-02
 ---
 
+![Photo by Bernd Dittrich on Unsplash](assets/images/ubuntu-dev-environment-setup/hero.jpg)
+*Photo by [Bernd Dittrich](https://unsplash.com/@hdbernd) on [Unsplash](https://unsplash.com)*
+
 Setting up a new machine for cloud work means the same handful of tools every time. Here's the whole setup, one piece at a time.
 
 ### Visual Studio Code

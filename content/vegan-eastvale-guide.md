@@ -7,6 +7,9 @@ excerpt: Eight Eastvale spots with real vegan orders worth making the trip for, 
 date: 2023-08-08
 ---
 
+![Photo by martin becker on Unsplash](assets/images/vegan-eastvale-guide/hero.jpg)
+*Photo by [martin becker](https://unsplash.com/@martinb26) on [Unsplash](https://unsplash.com)*
+
 Eight places in Eastvale worth knowing if you're eating plant-based, and exactly what to order at each one.
 
 - **Luna Grill** — the Vegan Bowl (housemade falafel, lettuce, vegan tahini sauce) or the Falafel Plate with basmati rice and pita

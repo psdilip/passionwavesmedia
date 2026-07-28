@@ -7,6 +7,9 @@ excerpt: What Vault actually solves, how I studied for the Vault Associate exam,
 date: 2021-01-28
 ---
 
+![Photo by Tanya Barrow on Unsplash](assets/images/hashicorp-vault-certification-2021/hero.jpg)
+*Photo by [Tanya Barrow](https://unsplash.com/@tanyabarrow) on [Unsplash](https://unsplash.com)*
+
 Vault is HashiCorp's secrets management product, and what makes it worth learning isn't the certification — it's how it reframes a problem most teams eventually run into.
 
 ### What Vault is actually for

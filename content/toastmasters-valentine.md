@@ -7,6 +7,9 @@ excerpt: What a relationship that didn't last still managed to teach me about se
 date: 2023-03-22
 ---
 
+![Photo by Cody Chan on Unsplash](assets/images/toastmasters-valentine/hero.jpg)
+*Photo by [Cody Chan](https://unsplash.com/@cceee) on [Unsplash](https://unsplash.com)*
+
 I had a Valentine's Day date after a long time — and woke up the next day with body aches from how excited I'd been. Not exactly the outcome I expected from dinner and a movie.
 
 That relationship had a lot of good in it: quality time at home with family and friends, vegan food, actually sleeping well, walks, movies, making plans for the future together. It didn't last. But it left me with a few things worth keeping.
