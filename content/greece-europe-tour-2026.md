@@ -9,6 +9,8 @@ date: 2026-04-12
 
 Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day trip, Athens, a speedboat out to Hydra, Santorini, and a last stop in London before flying home. Hotels, food, and the moments worth knowing about if you're planning the same route.
 
+*Personal photos going up here as they get sorted — until then, a few Unsplash shots stand in for the spots below.*
+
 **Hotels:** Novotel Budapest City · Acropolis View Hotel (Athens) · Cosmopolitan Suites (Santorini) · Hilton London Bankside
 
 ### Day 1 — April 2, 2026 — Departure
@@ -21,7 +23,8 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 > Air Serbia's transfer process was smooth, but the layover was long — a good excuse to rest before the itinerary picks up.
 
-![JFK departure](assets/images/greece-europe-tour-2026/01-jfk-departure.jpg)
+![Photo by Austin Hervias on Unsplash](https://images.unsplash.com/photo-1631330175050-502144e75a87?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Photo by [Austin Hervias](https://unsplash.com/@ahervias77) on [Unsplash](https://unsplash.com)*
 
 ### Day 2 — April 3, 2026 — Budapest Arrival
 
@@ -34,8 +37,8 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Hungarian+Parliament+Building,+Budapest&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hungarian Parliament, Budapest"></iframe>
 
-![Danube cruise, Parliament at night](assets/images/greece-europe-tour-2026/02-danube-cruise.jpg)
-*The Hungarian Parliament from the river*
+![Photo by Jason Mavrommatis on Unsplash](https://images.unsplash.com/photo-1555958493-1380d49ac1ef?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*The Hungarian Parliament from the river — Photo by [Jason Mavrommatis](https://unsplash.com/@jasonblackeye) on [Unsplash](https://unsplash.com)*
 
 ### Day 3 — April 4, 2026 — Budapest Sightseeing
 
@@ -47,11 +50,11 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Fisherman's+Bastion,+Budapest&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Fisherman's Bastion, Budapest"></iframe>
 
-![Fisherman's Bastion](assets/images/greece-europe-tour-2026/03-fishermans-bastion.jpg)
-*Fisherman's Bastion*
+![Photo by Emma Fabbri on Unsplash](https://images.unsplash.com/photo-1549877452-9c387954fbc2?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Fisherman's Bastion — Photo by [Emma Fabbri](https://unsplash.com/@fabevent) on [Unsplash](https://unsplash.com)*
 
-![Buda Castle](assets/images/greece-europe-tour-2026/04-buda-castle.jpg)
-*Buda Castle*
+![Photo by Tjaša Oblak on Unsplash](https://images.unsplash.com/photo-1648575036824-7347833d9200?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Buda Castle — Photo by [Tjaša Oblak](https://unsplash.com/@cloudy99) on [Unsplash](https://unsplash.com)*
 
 ### Day 4 — April 5, 2026 — Slovakia & Vienna Day Trip
 
@@ -65,11 +68,13 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Bratislava+Old+Town&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Bratislava Old Town"></iframe>
 
-![Bratislava Old Town](assets/images/greece-europe-tour-2026/05-bratislava-old-town.jpg)
+![Photo by Lisa van Vliet on Unsplash](https://images.unsplash.com/photo-1587809174740-e04af631cdd9?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Bratislava Old Town — Photo by [Lisa van Vliet](https://unsplash.com/@lisaaxv) on [Unsplash](https://unsplash.com)*
 
 <iframe src="https://maps.google.com/maps?q=Hofburg+Palace,+Vienna&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hofburg Palace, Vienna"></iframe>
 
-![Hofburg Palace, Vienna](assets/images/greece-europe-tour-2026/06-vienna-hofburg-palace.jpg)
+![Photo by Leonhard Niederwimmer on Unsplash](https://images.unsplash.com/photo-1653384889067-7376de3b167d?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Hofburg Palace, Vienna — Photo by [Leonhard Niederwimmer](https://unsplash.com/@lnlnln) on [Unsplash](https://unsplash.com)*
 
 ### Day 5 — April 6, 2026 — Budapest to Athens
 
@@ -78,7 +83,8 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 - Priority Pass lounge access made the wait easy
 - Checked into Acropolis View Hotel, ordered pizza, and called it a night
 
-![Novotel breakfast spread](assets/images/greece-europe-tour-2026/07-novotel-breakfast.jpg)
+![Photo by Edwin Petrus on Unsplash](https://images.unsplash.com/photo-1722477936580-84aa10762b0b?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Novotel breakfast spread — Photo by [Edwin Petrus](https://unsplash.com/@ep_petrus) on [Unsplash](https://unsplash.com)*
 
 ### Day 6 — April 7, 2026 — Athens Exploration
 
@@ -93,10 +99,11 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Acropolis+of+Athens&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Acropolis of Athens"></iframe>
 
-![Acropolis](assets/images/greece-europe-tour-2026/08-acropolis.jpg)
+![Photo by Constantinos Kollias on Unsplash](https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Acropolis — Photo by [Constantinos Kollias](https://unsplash.com/@ckollias) on [Unsplash](https://unsplash.com)*
 
-![Crepes in Plaka](assets/images/greece-europe-tour-2026/09-plaka-crepes.jpg)
-*Plaka*
+![Photo by Matt Cramblett on Unsplash](https://images.unsplash.com/photo-1684197121172-1ac0ae9676ef?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*The streets of Plaka — Photo by [Matt Cramblett](https://unsplash.com/@mcramblett) on [Unsplash](https://unsplash.com)*
 
 ### Day 7 — April 8, 2026 — Hydra & Poros Islands
 
@@ -111,9 +118,11 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Hydra+Island+Port,+Greece&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hydra Island Port"></iframe>
 
-![Hydra port](assets/images/greece-europe-tour-2026/10-hydra-port.jpg)
+![Photo by Despina Galani on Unsplash](https://images.unsplash.com/photo-1603182501684-b38ecae3056a?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Hydra port — Photo by [Despina Galani](https://unsplash.com/@despinagalani) on [Unsplash](https://unsplash.com)*
 
-![Hydra coastline](assets/images/greece-europe-tour-2026/11-hydra-coastline.jpg)
+![Photo by Aris Rovas on Unsplash](https://images.unsplash.com/photo-1710954660079-93876594b8a0?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Hydra coastline — Photo by [Aris Rovas](https://unsplash.com/@aris_rovas) on [Unsplash](https://unsplash.com)*
 
 ### Day 8 — April 9, 2026 — Athens to Santorini
 
@@ -127,7 +136,8 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 > Double-check labels before buying clothes as souvenirs — not everything sold as Greek-made actually is.
 
-![Fira at sunset](assets/images/greece-europe-tour-2026/12-fira-sunset.jpg)
+![Photo by Albert Canite on Unsplash](https://images.unsplash.com/photo-1741345380588-410af204191e?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Fira at sunset — Photo by [Albert Canite](https://unsplash.com/@albert_canite) on [Unsplash](https://unsplash.com)*
 
 ### Day 9 — April 10, 2026 — Santorini Tour
 
@@ -139,9 +149,11 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Oia,+Santorini&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Oia, Santorini"></iframe>
 
-![Blue domes, Oia](assets/images/greece-europe-tour-2026/13-oia-blue-domes.jpg)
+![Photo by Xuan Nguyen on Unsplash](https://images.unsplash.com/photo-1533441865127-f4806aaa12cc?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Blue domes, Oia — Photo by [Xuan Nguyen](https://unsplash.com/@darthxuan) on [Unsplash](https://unsplash.com)*
 
-![Perivolos Black Sand Beach](assets/images/greece-europe-tour-2026/14-perivolos-black-sand-beach.jpg)
+![Photo by Yuliia Sereda on Unsplash](https://images.unsplash.com/photo-1736618626516-674d438a6bf1?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*A black sand beach on Santorini — Photo by [Yuliia Sereda](https://unsplash.com/@ysereda) on [Unsplash](https://unsplash.com)*
 
 ### Day 10 — April 11, 2026 — Santorini to London
 
@@ -153,7 +165,8 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 > Overweight luggage fees can be steep — we saw close to €80. If your ticket was booked through a different airline than the one you're flying, double-check their baggage and check-in rules in advance; partner carriers don't always align.
 
-![Balcony views, Santorini](assets/images/greece-europe-tour-2026/15-santorini-balcony.jpg)
+![Photo by Rachel Park on Unsplash](https://images.unsplash.com/photo-1596252890311-caa6a004a6ee?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Santorini caldera views — Photo by [Rachel Park](https://unsplash.com/@therachelstory) on [Unsplash](https://unsplash.com)*
 
 ### Day 11 — April 12, 2026 — London & Return
 
@@ -163,9 +176,15 @@ Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day
 
 <iframe src="https://maps.google.com/maps?q=Big+Ben,+London&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Big Ben, London"></iframe>
 
-![Big Ben](assets/images/greece-europe-tour-2026/16-big-ben.jpg)
+![Photo by James Newcombe on Unsplash](https://images.unsplash.com/photo-1503566303019-ba141f5f9b76?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Big Ben — Photo by [James Newcombe](https://unsplash.com/@nstudio) on [Unsplash](https://unsplash.com)*
 
-![Hilton Bankside breakfast](assets/images/greece-europe-tour-2026/17-hilton-bankside-breakfast.jpg)
+![Photo by Rachel Park on Unsplash](https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?fm=jpg&q=60&w=3000&auto=format&fit=crop)
+*Hilton Bankside breakfast — Photo by [Rachel Park](https://unsplash.com/@therachelstory) on [Unsplash](https://unsplash.com)*
+
+### Watch: the London leg
+
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/ccUW-XacnNQ" title="England travel video" loading="lazy" allowfullscreen></iframe>
 
 ### Final Notes
 

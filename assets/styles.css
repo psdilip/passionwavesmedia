@@ -117,7 +117,7 @@ a{ color:inherit; text-decoration:none; }
 .footer .base{ border-top:1px solid var(--hairline); padding-top:20px; }
 
 /* ---------- Article ---------- */
-.article{ max-width:680px; margin:0 auto; padding:0 var(--gutter); }
+.article{ max-width:min(860px, 92vw); margin:0 auto; padding:0 var(--gutter); }
 .a-head{ padding:56px 0 30px; }
 .back{ font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; }
 .kicker{ display:inline-flex; align-items:center; gap:8px; margin:22px 0; }
@@ -144,6 +144,8 @@ a{ color:inherit; text-decoration:none; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
+.video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
+.video-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 .endmark{ text-align:center; font-family:var(--serif); font-size:26px; margin:24px 0 40px; background:var(--grad); background-size:200% 100%; animation:sheen 10s ease-in-out infinite alternate; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 
 /* ---------- Likes + views ---------- */
@@ -158,7 +160,7 @@ a{ color:inherit; text-decoration:none; }
 .views{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); display:inline-flex; align-items:center; gap:7px; }
 .views svg{ width:15px; height:15px; opacity:0.7; }
 
-.more{ max-width:680px; margin:0 auto; padding:36px var(--gutter) 80px; border-top:1px solid var(--hairline); }
+.more{ max-width:min(860px, 92vw); margin:0 auto; padding:36px var(--gutter) 80px; border-top:1px solid var(--hairline); }
 .more .mono{ margin-bottom:14px; }
 
 .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }

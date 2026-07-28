@@ -118,6 +118,10 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Flight from Boise to Salt Lake City
 - Flight from Salt Lake City to Ontario
 
+### Watch: the road trip
+
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/ePZvaNfKtvg" title="Idaho, Oregon & Utah road trip video" loading="lazy" allowfullscreen></iframe>
+
 ---
 
 **Tags:** Idaho, Oregon, Utah, Roadtrip, Drones

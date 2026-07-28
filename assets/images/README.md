@@ -1,11 +1,38 @@
 # Personal photos — drop-in guide
 
-Each folder below matches an article slug in `articles/content/`. The corresponding
-`.md` file already references these exact filenames with `![...](assets/images/<slug>/<file>)`,
-so once you drop a real photo in with the matching name, `python build.py` will pick it
-up automatically — no other edits needed. The next `git push` ships it to S3.
+Two ways photos get into an article, depending on whether the file should live in git:
 
-Any file you don't have yet just renders as a broken image until it's filled in.
+## Option A — committed to git (legacy pattern, still works)
+
+Each folder below matches an article slug. The corresponding `.md` file already
+references these exact filenames with `![...](assets/images/<slug>/<file>)`, so once you
+drop a real photo in with the matching name, `python build.py` will pick it up
+automatically — no other edits needed. The next `git push` ships it to S3 as part of the
+normal `public/` sync.
+
+Any file you don't have yet just renders as a broken image (falling back to the
+category-colored tile) until it's filled in.
+
+## Option B — uploaded straight to S3, never committed (preferred for new personal photos)
+
+The deploy workflow (`aws s3 sync ./public s3://$S3_BUCKET_NAME --delete --exclude
+"photos/*"`) intentionally skips a `photos/` prefix in the bucket, so anything you put
+there survives every future deploy without ever touching git.
+
+1. Upload the file yourself, once, with the AWS CLI:
+   ```
+   aws s3 cp my-photo.jpg s3://$S3_BUCKET_NAME/photos/<slug>/<file>.jpg
+   ```
+2. Reference it in the article by its live URL, same as the Unsplash hotlinks already
+   used elsewhere in this site:
+   ```
+   ![Caption](https://passionwavesmedia.com/photos/<slug>/<file>.jpg)
+   ```
+3. Run `python build.py` and commit the `.md` change — only the text changes, never the
+   image bytes.
+
+Nothing in `build.py` needs to change for this — it already treats any `![]()` URL as a
+valid image source, local or remote.
 
 ## greece-europe-tour-2026
 - `01-jfk-departure.jpg` — JFK departure

@@ -54,7 +54,8 @@ def md_to_html(md):
             out.append("<pre><code>" + html.escape("\n".join(buf), quote=False) + "</code></pre>")
             continue
         if line.strip().startswith("<iframe") and line.strip().endswith("</iframe>"):
-            out.append(f'<div class="map-embed">{line.strip()}</div>'); i += 1; continue
+            cls = "video-embed" if "youtube.com/embed" in line else "map-embed"
+            out.append(f'<div class="{cls}">{line.strip()}</div>'); i += 1; continue
         if re.match(r"^\s*-{3,}\s*$", line):
             out.append("<hr>"); i += 1; continue
         h = re.match(r"^(#{1,4})\s+(.*)$", line)
@@ -90,7 +91,10 @@ def parse_md(text):
     if m:
         for l in m.group(1).splitlines():
             if ":" in l:
-                k, v = l.split(":", 1); meta[k.strip()] = v.strip()
+                k, v = l.split(":", 1); v = v.strip()
+                if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+                    v = v[1:-1]
+                meta[k.strip()] = v
         body = m.group(2)
     return meta, body
 
