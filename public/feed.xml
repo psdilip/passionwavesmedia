@@ -6,6 +6,14 @@
   <language>en-us</language>
   <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://passionwavesmedia.com/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>I Tried to Replace Claude Code With a Local LLM. Here&#x27;s Everything I Learned.</title>
+    <link>https://passionwavesmedia.com/replacing-claude-code-with-local-llm.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/replacing-claude-code-with-local-llm.html</guid>
+    <pubDate>Wed, 29 Jul 2026 12:00:00 +0000</pubDate>
+    <category>AWS</category>
+    <description>A journey through RAM upgrades, hallucinated tool calls, context windows, and the honest limits of consumer hardware — and where I landed instead.</description>
+  </item>
+  <item>
     <title>How to Be a Great Customer Success Manager</title>
     <link>https://passionwavesmedia.com/how-to-be-a-great-customer-success-manager.html</link>
     <guid isPermaLink="true">https://passionwavesmedia.com/how-to-be-a-great-customer-success-manager.html</guid>
