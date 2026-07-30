@@ -24,8 +24,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 2: Sunday
 
-![View from the Edge](assets/images/navigating-new-york-work-week/01-view-from-the-edge.jpg)
-*View from the Edge*
+![Photo by Fred Moon on Unsplash](https://images.unsplash.com/photo-1553696718-0ff0872ee05f?w=1600&q=80&fm=jpg&fit=crop)
+*NYC skyline (mood shot, not confirmed taken from The Edge) · Photo by [Fred Moon](https://unsplash.com/@fwed) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Lunch: Mom's packed fried rice
@@ -39,8 +39,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 3: Monday
 
-![Beyond Sushi](assets/images/navigating-new-york-work-week/02-beyond-sushi.jpg)
-*Beyond Sushi*
+![Photo by Sigmund on Unsplash](https://images.unsplash.com/photo-1713453018516-b08018818c0c?w=1600&q=80&fm=jpg&fit=crop)
+*A sushi roll (mood shot, not confirmed to be from Beyond Sushi) · Photo by [Sigmund](https://unsplash.com/@sigmund) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Dinner: Beyond Sushi, with a friend
@@ -51,8 +51,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 4: Tuesday
 
-![Gregory's Coffee](assets/images/navigating-new-york-work-week/03-gregorys-coffee.jpg)
-*Gregory's Coffee*
+![Photo by Kris Tian on Unsplash](https://images.unsplash.com/photo-1733697968338-21feb4b7a4c3?w=1600&q=80&fm=jpg&fit=crop)
+*A coffee shop (mood shot, not confirmed to be Gregory's Coffee) · Photo by [Kris Tian](https://unsplash.com/@kris_tian) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Breakfast: Gregory's Coffee, coffee and a pastry
@@ -65,8 +65,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 5: Wednesday
 
-![Jajaja Mexicana](assets/images/navigating-new-york-work-week/04-jajaja-mexicana.jpg)
-*Jajaja Mexicana*
+![Photo by Frankie Lopez on Unsplash](https://images.unsplash.com/photo-1648437595587-e6a8b0cdf1f9?w=1600&q=80&fm=jpg&fit=crop)
+*Tacos (mood shot, not confirmed to be from Jajaja Mexicana) · Photo by [Frankie Lopez](https://unsplash.com/@frankielopez) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Breakfast: Caffe Vita, chai latte
@@ -81,8 +81,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 6: Thursday
 
-![Work Views](assets/images/navigating-new-york-work-week/05-work-views.jpg)
-*Work Views*
+![Photo by Annie Spratt on Unsplash](https://images.unsplash.com/photo-1695540595388-6c57bcf8682c?w=1600&q=80&fm=jpg&fit=crop)
+*Work Views · Photo by [Annie Spratt](https://unsplash.com/@anniespratt) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Lunch: Beatnic
@@ -95,8 +95,8 @@ A work week in New York, logged day by day: client site during the day, the city
 
 ### Day 7: Friday
 
-![Vegan on the Fly](assets/images/navigating-new-york-work-week/06-vegan-on-the-fly.jpg)
-*Vegan on the Fly*
+![Photo by Aveedibya Dey on Unsplash](https://images.unsplash.com/photo-1664681340322-8b659e1130de?w=1600&q=80&fm=jpg&fit=crop)
+*Vegan on the Fly · Photo by [Aveedibya Dey](https://unsplash.com/@aveedibya) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Lunch: Leftover Thai

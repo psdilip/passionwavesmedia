@@ -7,8 +7,8 @@ excerpt: A friend's wedding in the Smokies, bookended by an overnight drive in e
 date: 2023-07-06
 ---
 
-![Drone shot of House Mountain](assets/images/atlanta-to-tennessee-wedding-trip/01-house-mountain.jpg)
-*Drone shot of House Mountain*
+![Photo by Sean Foster on Unsplash](https://images.unsplash.com/photo-1633622670303-79a3a982dc11?w=1600&q=80&fm=jpg&fit=crop)
+*Smoky Mountains scenery (mood shot, not the actual House Mountain) · Photo by [Sean Foster](https://unsplash.com/@fosterious) on [Unsplash](https://unsplash.com)*
 
 Four days, one wedding, and a rental car that saw more of the Smoky Mountains than I did.
 
@@ -26,8 +26,8 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 
 ### Day 2: Saturday
 
-![Sunsphere](assets/images/atlanta-to-tennessee-wedding-trip/02-sunsphere.jpg)
-*Sunsphere at World's Fair Park*
+![Photo by Elijah Crouch on Unsplash](https://images.unsplash.com/photo-1750569397248-e11c54d0d118?w=1600&q=80&fm=jpg&fit=crop)
+*Sunsphere at World's Fair Park · Photo by [Elijah Crouch](https://unsplash.com/@elijahbcrouch) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Lunch: Cava
@@ -41,8 +41,8 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 
 ### Day 3: Sunday
 
-![The Island at Pigeon Forge](assets/images/atlanta-to-tennessee-wedding-trip/03-island-at-pigeon-forge.jpg)
-*The Island at Pigeon Forge*
+![Photo by Steven Van Elk on Unsplash](https://images.unsplash.com/photo-1626841006782-acf9d5f5e7b7?w=1600&q=80&fm=jpg&fit=crop)
+*Aerial view of Pigeon Forge, TN (mood shot, not confirmed to be The Island specifically) · Photo by [Steven Van Elk](https://unsplash.com/@stevenvanelk) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Lunch: Taco Bell (spicy potato soft tacos, black bean crunchwrap supreme)
@@ -56,8 +56,8 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 
 ### Day 4: Monday
 
-![The Magnolia Wedding Venue](assets/images/atlanta-to-tennessee-wedding-trip/04-magnolia-wedding-venue.jpg)
-*The Magnolia Wedding Venue*
+![Photo by Lucas T Photography on Unsplash](https://images.unsplash.com/photo-1780542900375-0cf459e38fbb?w=1600&q=80&fm=jpg&fit=crop)
+*A wedding reception (mood shot, not the actual Magnolia venue) · Photo by [Lucas T Photography](https://unsplash.com/@lucastphotography) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
 - Dinner: The wedding itself

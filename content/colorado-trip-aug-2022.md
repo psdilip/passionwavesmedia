@@ -11,7 +11,8 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 
 ### Day 1: Thursday
 
-![Day 1 overview](assets/images/colorado-trip-aug-2022/01-day1.jpg)
+![Photo by Alex Holt on Unsplash](https://images.unsplash.com/photo-1649519604462-5a2651b6fe2d?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Alex Holt](https://unsplash.com/@crtrstudio) on [Unsplash](https://unsplash.com)*
 
 **Meals:** Homemade lunch · dinner at a friend's place
 
@@ -35,14 +36,16 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 - Takeout from The Rock Inn Mountain Tavern
 - Walked to Emerald Lake before driving on to Granby
 
-![Day 2 overview](assets/images/colorado-trip-aug-2022/02-day2.jpg)
+![Photo by Peter Pryharski on Unsplash](https://images.unsplash.com/photo-1468711007652-03aab17ae4d2?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Peter Pryharski](https://unsplash.com/@meteorphoto) on [Unsplash](https://unsplash.com)*
 
-![Dream Lake](assets/images/colorado-trip-aug-2022/03-dream-lake.jpg)
-*Dream Lake*
+![Photo by Lauren Lester on Unsplash](https://images.unsplash.com/photo-1714765657626-1b3b1ff7ff47?w=1600&q=80&fm=jpg&fit=crop)
+*Dream Lake · Photo by [Lauren Lester](https://unsplash.com/@lauren__lester) on [Unsplash](https://unsplash.com)*
 
 ### Day 3: Saturday
 
-![Day 3 overview](assets/images/colorado-trip-aug-2022/04-day3.jpg)
+![Photo by Martin Marek on Unsplash](https://images.unsplash.com/photo-1696789738783-0f972304597e?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Martin Marek](https://unsplash.com/@martys111) on [Unsplash](https://unsplash.com)*
 
 **Meals:** Instant oatmeal for breakfast · Subway for lunch · Tommyknocker Brewery & Pub for dinner
 
@@ -55,12 +58,13 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 - Hiked the M. Walter Pesman Trail
 - Dinner at Tommyknocker Brewery & Pub
 
-![View from Mount Evans](assets/images/colorado-trip-aug-2022/05-view-from-mount-evans.jpg)
-*View from Mount Evans*
+![Photo by Mike Petrucci on Unsplash](https://images.unsplash.com/photo-1441991017159-5fdee5dc45bd?w=1600&q=80&fm=jpg&fit=crop)
+*View from Mount Evans · Photo by [Mike Petrucci](https://unsplash.com/@mikepetrucci) on [Unsplash](https://unsplash.com)*
 
 ### Day 4: Sunday
 
-![Day 4 overview](assets/images/colorado-trip-aug-2022/06-day4.jpg)
+![Photo by Marc Pineda on Unsplash](https://images.unsplash.com/photo-1645671708056-f8e5d2defc00?w=1600&q=80&fm=jpg&fit=crop)
+*Red Rocks Park and Amphitheater · Photo by [Marc Pineda](https://unsplash.com/@marcbjorn) on [Unsplash](https://unsplash.com)*
 
 **Meals:** Vegan French toast from the Airbnb host · lunch at The Golden Mill · dinner at home
 

@@ -25,8 +25,8 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Picked up the Turo rental car at the airport
 - Checked into the Airbnb
 
-![Drone shot of downtown Boise from Table Rock](assets/images/western-wonders-road-trip-idaho-oregon-utah/01-boise-downtown.jpg)
-*Drone shot of downtown Boise from Table Rock.*
+![Photo by Zain Creations on Unsplash](https://images.unsplash.com/photo-1732732108656-bc1460583adb?w=1600&q=80&fm=jpg&fit=crop)
+*Drone shot of downtown Boise from Table Rock. · Photo by [Zain Creations](https://unsplash.com/@zaincreations) on [Unsplash](https://unsplash.com)*
 
 ### Day 2: Friday
 
@@ -53,10 +53,10 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Rode the tramway up to Mt. Howard
 - Kayaked at Wallowa Lake
 
-![Drone shot of Wallowa Lake](assets/images/western-wonders-road-trip-idaho-oregon-utah/02-wallowa-lake.jpg)
+![Photo by Dan Meyers on Unsplash](https://images.unsplash.com/photo-1716845134231-182b88c22a34?w=1600&q=80&fm=jpg&fit=crop)
 
-![Wallowa Mountain Range](assets/images/western-wonders-road-trip-idaho-oregon-utah/03-wallowa-mountain-range.jpg)
-*Drone shot of Wallowa Lake and the surrounding mountain range.*
+![Photo by Dan Meyers on Unsplash](https://images.unsplash.com/photo-1716845134243-89113aa52f9e?w=1600&q=80&fm=jpg&fit=crop)
+*Drone shot of Wallowa Lake and the surrounding mountain range. · Photo by [Dan Meyers](https://unsplash.com/@dmey503) on [Unsplash](https://unsplash.com)*
 
 ### Day 4: Sunday
 
@@ -69,8 +69,8 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Drove from Pendleton, Oregon to Twin Falls, Idaho
 - Visited the Perrine Bridge
 
-![Drone shot of the Perrine Memorial Bridge](assets/images/western-wonders-road-trip-idaho-oregon-utah/04-perrine-bridge.jpg)
-*Drone shot of the Perrine Memorial Bridge.*
+![Photo by Fabio Sasso on Unsplash](https://images.unsplash.com/photo-1784870519525-8d2d69df58b2?w=1600&q=80&fm=jpg&fit=crop)
+*Drone shot of the Perrine Memorial Bridge. · Photo by [Fabio Sasso](https://unsplash.com/@abduzeedo) on [Unsplash](https://unsplash.com)*
 
 ### Day 5: Monday
 
@@ -84,10 +84,11 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Visited Shoshone Falls and Lake Cleveland
 - Drove from Twin Falls to Salt Lake City
 
-![Drone shot of Shoshone Falls](assets/images/western-wonders-road-trip-idaho-oregon-utah/05-shoshone-falls.jpg)
+![Photo by Fabio Sasso on Unsplash](https://images.unsplash.com/photo-1784870519950-0eb2c55a3b00?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Fabio Sasso](https://unsplash.com/@abduzeedo) on [Unsplash](https://unsplash.com)*
 
-![Drone shot of Lake Cleveland](assets/images/western-wonders-road-trip-idaho-oregon-utah/06-lake-cleveland.jpg)
-*Drone shot of Shoshone Falls and Lake Cleveland.*
+![Photo by Alex Moliski on Unsplash](https://images.unsplash.com/photo-1723473779194-572005e74265?w=1600&q=80&fm=jpg&fit=crop)
+*An alpine lake (mood shot, not the actual Lake Cleveland) · Photo by [Alex Moliski](https://unsplash.com/@alexmoliski) on [Unsplash](https://unsplash.com)*
 
 ### Day 6: Tuesday
 

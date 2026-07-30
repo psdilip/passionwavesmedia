@@ -22,8 +22,10 @@ The rap itself is a tribute to Rocky's character. But the real point of the spee
 
 **4. Mental health.** Rocky needs his walks, and so do I. They're a built-in reminder to step away from work and actually reset.
 
-![Rocky](assets/images/toastmasters-rocky-rap/02-rocky-1.jpg)
+![Photo by Oscar Aragon on Unsplash](https://images.unsplash.com/photo-1760791510936-eef13da5018b?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Oscar Aragon](https://unsplash.com/@o_aragon) on [Unsplash](https://unsplash.com)*
 
-![Rocky](assets/images/toastmasters-rocky-rap/03-rocky-2.jpg)
+![Photo by Ömer Haktan Bulut on Unsplash](https://images.unsplash.com/photo-1660088293649-2230ce6bb244?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Ömer Haktan Bulut](https://unsplash.com/@omerhaktan) on [Unsplash](https://unsplash.com)*
 
 I closed with a few photos of him. It landed better than I expected, and got called out as the most interesting speech that meeting, with people specifically calling out the mix of rap, visuals, and delivery tone.
