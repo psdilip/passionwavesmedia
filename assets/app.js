@@ -80,6 +80,69 @@
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

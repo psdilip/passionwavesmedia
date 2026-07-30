@@ -171,6 +171,21 @@ def thumb_html(cfg, p):
     return f'<div class="c-thumb c-thumb--fallback">{fallback}</div>'
 
 
+def trend_thumb_html(p):
+    if p.get("thumb"):
+        return (f'<span class="trend-thumb"><img src="{p["thumb"]}" alt="" loading="lazy" '
+                f'onerror="this.parentElement.style.display=\'none\'"></span>')
+    return '<span class="trend-thumb"></span>'
+
+
+def posts_index_json(posts):
+    return [{
+        "slug": p["slug"], "title": p["title"], "excerpt": p["excerpt"],
+        "category": p["category"], "tags": p["tags"], "thumb": p.get("thumb"),
+        "date": p["card_date"], "iso": p["iso"], "minutes": p["minutes"],
+    } for p in posts]
+
+
 def tag_chips_html(tags, limit=4):
     return "".join(f'<span class="tagchip">{html.escape(t)}</span>' for t in tags[:limit])
 
@@ -232,13 +247,32 @@ def build_index(cfg, posts, present_cats):
     feat_html = ""
     if featured:
         col = cfg["categories"].get(featured["category"], "#999")
+        feat_img = (f'<img src="{featured["thumb"]}" alt="" loading="lazy" onerror="this.remove()">'
+                    if featured.get("thumb") else "")
         feat_html = f'''<a href="{featured['slug']}.html" class="feature reveal">
-  <div class="art"><div class="coord mono">{featured['category']} · {featured['minutes']} min</div></div>
+  <div class="art">{feat_img}<div class="coord mono">{featured['category']} · {featured['minutes']} min</div></div>
   <div class="body"><span class="catline mono">{dot(col)}Featured</span>
     <h3>{featured['title']}</h3><p>{featured['excerpt']}</p><span class="readmore">Read the article</span></div></a>'''
 
     latest = [q for q in posts if q is not featured][:6]
     cards = "".join(card_html(cfg, p, i) for i, p in enumerate(latest))
+
+    recent_items = "".join(
+        f'<li><a class="trend-item" href="{p["slug"]}.html">'
+        f'<span class="trend-rank mono">{i + 1}</span>'
+        f'{trend_thumb_html(p)}'
+        f'<span class="trend-body"><span class="t">{p["title"]}</span>'
+        f'<span class="m">{p["card_date"]} · {p["minutes"]} min</span></span></a></li>'
+        for i, p in enumerate(posts[:5])
+    )
+    trend_html = f'''<section class="section trending"><div class="wrap">
+  <div class="section-head reveal"><h2>Trending</h2><p>What readers are actually clicking on right now — updates live, no rebuild needed.</p></div>
+  <div class="trend-grid reveal">
+    <div class="trend-col"><h4>Most viewed</h4><ol class="trend-list" id="trendViews"><li class="trend-empty">Loading…</li></ol></div>
+    <div class="trend-col"><h4>Most liked</h4><ol class="trend-list" id="trendLikes"><li class="trend-empty">Loading…</li></ol></div>
+    <div class="trend-col"><h4>Recent</h4><ol class="trend-list" id="trendRecent">{recent_items}</ol></div>
+  </div>
+</div></section>'''
 
     mission = cfg["mission"]
     mission_body = "".join(f"<p>{b}</p>" for b in mission["body"])
@@ -259,28 +293,31 @@ def build_index(cfg, posts, present_cats):
   <div class="section-head reveal"><h2>Latest</h2><p>The newest dispatches — browse everything in the archive.</p></div>
   {feat_html}
   <div class="grid" id="grid">{cards}</div>
+</div></section>
+
+{trend_html}
+
+<section class="section" style="padding-top:0"><div class="wrap">
   <div class="more-cta reveal"><a href="articles.html"><button class="btn btn-ghost">Browse all articles →</button></a></div>
 </div></section>
 
 {mission_html}
 {footer(cfg, present_cats)}'''
 
+    init_js = "window.PW_POSTS=" + json.dumps(posts_index_json(posts)) + ";pwInitTrending();"
+
     jsonld = json.dumps({"@context": "https://schema.org", "@type": "Blog",
                          "name": f'{cfg["brandName"]}', "url": cfg["domain"] + "/"})
     head = page_head(cfg, f'{cfg["brandName"]} — spreading what I love, from me to you',
                      "A personal publication spreading one person's passions to the world — AWS, travel, food, and life.",
                      cfg["domain"] + "/", jsonld)
-    (PUBLIC / "index.html").write_text(head + body + page_tail(cfg), encoding="utf-8")
+    (PUBLIC / "index.html").write_text(head + body + page_tail(cfg, init_js), encoding="utf-8")
 
 
 def build_archive(cfg, posts, present_cats):
     total = len(posts)
 
-    posts_js = [{
-        "slug": p["slug"], "title": p["title"], "excerpt": p["excerpt"],
-        "category": p["category"], "tags": p["tags"], "thumb": p.get("thumb"),
-        "date": p["card_date"], "iso": p["iso"], "minutes": p["minutes"],
-    } for p in posts]
+    posts_js = posts_index_json(posts)
     cat_colors = {c: cfg["categories"][c] for c in present_cats}
     quotes = cfg.get("quotes", [])
 
@@ -332,6 +369,20 @@ def build_article(cfg, p, present_cats):
   <button class="like-btn" id="likeBtn" aria-label="Like this article">{HEART}<span id="likeCount">0</span></button>
   <span class="views">{EYE}<span id="viewCount"></span></span></div>'''
 
+    mode_match = re.search(r"<h2>\s*Practical Guide[^<]*</h2>", p["html"], re.IGNORECASE)
+    if mode_match:
+        story_html = p["html"][:mode_match.start()]
+        guide_html = p["html"][mode_match.start():]
+        mode_switch = ('<div class="mode-switch" role="tablist">'
+                       '<button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,\'story\')">Story</button>'
+                       '<button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,\'guide\')">Practical Guide</button>'
+                       '</div>')
+        prose_inner = (f'{mode_switch}'
+                       f'<div class="mode-panel" data-mode="story">{story_html}</div>'
+                       f'<div class="mode-panel" data-mode="guide" hidden>{guide_html}</div>')
+    else:
+        prose_inner = p["html"]
+
     body = f'''{header}
 <article>
   <div class="article a-head">
@@ -341,7 +392,7 @@ def build_article(cfg, p, present_cats):
     <p class="dek">{p['excerpt']}</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">{p['category']}</div></div>
-    <div class="prose">{p['html']}<div class="endmark">〜</div></div>
+    <div class="prose">{prose_inner}<div class="endmark">〜</div></div>
     {reactions}
   </div>
 </article>

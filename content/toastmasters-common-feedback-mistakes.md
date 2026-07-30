@@ -3,7 +3,7 @@ title: 3 Common Toastmasters Mistakes
 slug: toastmasters-common-feedback-mistakes
 category: Speaking
 tags: Public Speaking, Feedback, Tips
-excerpt: The two pieces of feedback that come up again and again — from 15 of my own speeches and watching 50 more.
+excerpt: The two pieces of feedback that come up again and again, from 15 of my own speeches and watching 50 more.
 date: 2023-07-27
 ---
 
@@ -24,15 +24,15 @@ This is the single most common issue. I went over the time limit in five of my o
 
 **What actually fixes it:**
 
-1. Time yourself in real practice runs — don't estimate
+1. Time yourself in real practice runs: don't estimate
 2. Build a tight outline with only the main points, nothing extra
 3. Keep the intro short so you get to the substance faster
 4. Split your time evenly across your main points instead of front-loading one
-5. End deliberately — land the message, don't just run out of runway
+5. End deliberately: land the message, don't just run out of runway
 
 ### Setting clear direction
 
-I once got feedback on an informative talk about cars where I'd jumped straight into the content. The alternative — giving the audience a quick preview of what's coming before you dive in — keeps them oriented instead of trying to guess where the speech is headed. It's a small change that changes how easy the whole thing is to follow.
+I once got feedback on an informative talk about cars where I'd jumped straight into the content. The alternative (giving the audience a quick preview of what's coming before you dive in) keeps them oriented instead of trying to guess where the speech is headed. It's a small change that changes how easy the whole thing is to follow.
 
 ### The takeaway
 

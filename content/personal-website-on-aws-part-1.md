@@ -3,7 +3,7 @@ title: "Personal Website on AWS, Part 1: S3"
 slug: personal-website-on-aws-part-1
 category: AWS
 tags: AWS, S3, Static Hosting
-excerpt: Skip Wix and Squarespace — host a real static site on S3 and actually understand what's happening under the hood.
+excerpt: Skip Wix and Squarespace, host a real static site on S3 and actually understand what's happening under the hood.
 date: 2021-05-31
 ---
 
@@ -18,15 +18,15 @@ You'll need an AWS account already set up before starting.
 
 ### What S3 actually is
 
-S3 is cheap, highly available, durable cloud storage that can hold basically any volume or type of data — static website hosting is just one of many things it's built for.
+S3 is cheap, highly available, durable cloud storage that can hold basically any volume or type of data: static website hosting is just one of many things it's built for.
 
 ### Creating the bucket
 
 1. Open the S3 service in the console
 2. Click **Create a bucket**
-3. **Bucket name** — use your intended domain (e.g. `saidilipponnaganti` for `saidilipponnaganti.com`)
-4. **Region** — `us-east-1` is a safe default
-5. **Block Public Access** — uncheck "Block all public access" and acknowledge the warning
+3. **Bucket name**: use your intended domain (e.g. `saidilipponnaganti` for `saidilipponnaganti.com`)
+4. **Region**: `us-east-1` is a safe default
+5. **Block Public Access**: uncheck "Block all public access" and acknowledge the warning
 6. Leave everything else default and click **Create bucket**
 
 ### Uploading your site
@@ -44,7 +44,7 @@ S3 is cheap, highly available, durable cloud storage that can hold basically any
 3. Choose **Host a static website**
 4. Set the **index document** to your main HTML file (required)
 5. Optionally set an **error document**
-6. Save — a hosting link now appears at the bottom of the Properties tab
+6. Save: a hosting link now appears at the bottom of the Properties tab
 
 That link will 403 for now — that's the permissions step, next.
 
@@ -70,19 +70,31 @@ That link will 403 for now — that's the permissions step, next.
 ```
 
 4. Replace `BucketName` with your actual bucket's name
-5. Save, then revisit your hosting link — the site should load
+5. Save, then revisit your hosting link: the site should load
 
 ### Static vs. dynamic, quickly
 
-**Static** sites are just HTML and CSS — the same content for every visitor, fast to load, cheap to build, with the content baked right into the code. Good for informational sites.
+**Static** sites are just HTML and CSS: the same content for every visitor, fast to load, cheap to build, with the content baked right into the code. Good for informational sites.
 
-**Dynamic** sites respond differently per user and lean on server-side code like PHP or Node.js — more capability, more moving parts.
+**Dynamic** sites respond differently per user and lean on server-side code like PHP or Node.js: more capability, more moving parts.
 
 ### Worth turning on later (small extra cost)
 
-- **Bucket versioning** — recover from an accidental delete
-- **Default encryption** — protect data at rest
+- **Bucket versioning**: recover from an accidental delete
+- **Default encryption**: protect data at rest
 
 ### Next up
 
 [Part 2](/personal-website-on-aws-part-2.html) covers CloudFront, buying a real domain, and getting HTTPS working with a free SSL certificate.
+
+## Practical guide: setting this up yourself
+
+A condensed, in-order checklist of everything above.
+
+1. **Create the bucket.** In the S3 console, click **Create a bucket**, name it after your intended domain (e.g. `saidilipponnaganti` for `saidilipponnaganti.com`), pick a region (`us-east-1` is a safe default), and uncheck "Block all public access," acknowledging the warning.
+2. **Upload your site files.** Have your HTML/CSS ready (a free HTML5 UP template works if you don't have your own design), click **Upload** inside the bucket, drag your files in, and wait for the upload to finish.
+3. **Turn on static website hosting.** In the **Properties** tab, edit **Static website hosting**, select **Enable**, choose **Host a static website**, set the **index document** to your main HTML file (required), and optionally set an **error document**. The hosting link that appears will 403 until permissions are set.
+4. **Set the bucket policy.** In the **Permissions** tab, confirm public access is allowed, then edit the **Bucket Policy** and paste a `PublicReadGetObject` statement with `Effect: Allow`, `Principal: *`, and `Action: s3:GetObject` on `arn:aws:s3:::BucketName/*`, replacing `BucketName` with your actual bucket's name.
+5. **Verify it loads.** Revisit the hosting link from the Properties tab. It should serve your site now that the policy is in place.
+6. **Turn on versioning and encryption later.** Both are small extra costs worth adding once the basics work: versioning to recover from an accidental delete, default encryption to protect data at rest.
+7. **Move on to Part 2 when ready.** [Part 2](/personal-website-on-aws-part-2.html) adds a custom domain, CloudFront, and a free SSL certificate for HTTPS.

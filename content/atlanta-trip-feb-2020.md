@@ -3,7 +3,7 @@ title: "Exploring Atlanta's Cityscape"
 slug: atlanta-trip-feb-2020
 category: Travel
 tags: Atlanta, Georgia, City Walk
-excerpt: Two days covering Atlanta on foot — the King Center, Centennial Olympic Park, and a lot of the BeltLine.
+excerpt: Two days covering Atlanta on foot: the King Center, Centennial Olympic Park, and a lot of the BeltLine.
 date: 2020-04-21
 ---
 

@@ -11,7 +11,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/replacing-claude-code-with-local-llm.html</guid>
     <pubDate>Wed, 29 Jul 2026 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>A journey through RAM upgrades, hallucinated tool calls, context windows, and the honest limits of consumer hardware — and where I landed instead.</description>
+    <description>A journey through RAM upgrades, hallucinated tool calls, context windows, and the honest limits of consumer hardware, and where I landed instead.</description>
   </item>
   <item>
     <title>How to Be a Great Customer Success Manager</title>
@@ -27,7 +27,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/greece-europe-tour-2026.html</guid>
     <pubDate>Sun, 12 Apr 2026 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>Eleven days, five countries — a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.</description>
+    <description>Eleven days, five countries: a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.</description>
   </item>
   <item>
     <title>Road Trip: Idaho, Oregon &amp; Utah</title>
@@ -35,7 +35,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/western-wonders-road-trip-idaho-oregon-utah.html</guid>
     <pubDate>Sun, 01 Oct 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.</description>
+    <description>A seven-day drive through Idaho, Oregon, and Utah: waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.</description>
   </item>
   <item>
     <title>The Story Of…</title>
@@ -43,7 +43,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-the-story-of.html</guid>
     <pubDate>Fri, 22 Sep 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
-    <description>A speech about a friend who lost both parents to cancer before he&#x27;d even finished school — and what he taught me about staying calm inside chaos.</description>
+    <description>A speech about a friend who lost both parents to cancer before he&#x27;d even finished school, and what he taught me about staying calm inside chaos.</description>
   </item>
   <item>
     <title>A Work Week in New York</title>
@@ -67,7 +67,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-common-feedback-mistakes.html</guid>
     <pubDate>Thu, 27 Jul 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
-    <description>The two pieces of feedback that come up again and again — from 15 of my own speeches and watching 50 more.</description>
+    <description>The two pieces of feedback that come up again and again, from 15 of my own speeches and watching 50 more.</description>
   </item>
   <item>
     <title>A Wedding Trip: Atlanta to Tennessee</title>
@@ -83,7 +83,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/vegan-inland-empire-guide.html</guid>
     <pubDate>Tue, 23 May 2023 12:00:00 +0000</pubDate>
     <category>Food</category>
-    <description>A cuisine-by-cuisine tour of the Inland Empire&#x27;s best vegan orders — ramen, falafel, dumplings, and plant-based burgers.</description>
+    <description>A cuisine-by-cuisine tour of the Inland Empire&#x27;s best vegan orders, ramen, falafel, dumplings, and plant-based burgers.</description>
   </item>
   <item>
     <title>Colorado&#x27;s Playground: Rockies to Red Rocks</title>
@@ -91,7 +91,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/colorado-trip-aug-2022.html</guid>
     <pubDate>Fri, 24 Mar 2023 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>Four days in Colorado — Rocky Mountain National Park, the summit of Mount Evans, and Red Rocks on the way out.</description>
+    <description>Four days in Colorado: Rocky Mountain National Park, the summit of Mount Evans, and Red Rocks on the way out.</description>
   </item>
   <item>
     <title>My Icebreaker Speech</title>
@@ -99,7 +99,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-icebreaker-speech.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
-    <description>The first speech every Toastmaster gives — an introduction, a name that&#x27;s been mispronounced in every possible way, and where I am right now.</description>
+    <description>The first speech every Toastmaster gives, an introduction, a name that&#x27;s been mispronounced in every possible way, and where I am right now.</description>
   </item>
   <item>
     <title>A Letter to My Friend, Rain</title>
@@ -107,7 +107,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-letter-to-my-friend.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
-    <description>A speech written as a letter to an old friend — one who falls constantly and never gets hurt.</description>
+    <description>A speech written as a letter to an old friend, one who falls constantly and never gets hurt.</description>
   </item>
   <item>
     <title>Rocky (Rap Song)</title>
@@ -115,7 +115,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/toastmasters-rocky-rap.html</guid>
     <pubDate>Wed, 22 Mar 2023 12:00:00 +0000</pubDate>
     <category>Speaking</category>
-    <description>What my dog Rocky has taught me about awareness, presence, and taking a break — delivered as a rap, because a blog post dared me to.</description>
+    <description>What my dog Rocky has taught me about awareness, presence, and taking a break, delivered as a rap, because a blog post dared me to.</description>
   </item>
   <item>
     <title>Self-Driving Cars</title>
@@ -147,7 +147,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/s3-presigned-urls-cli.html</guid>
     <pubDate>Wed, 18 May 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>A walkthrough for sharing a single private S3 object temporarily — no public bucket required.</description>
+    <description>A walkthrough for sharing a single private S3 object temporarily, no public bucket required.</description>
   </item>
   <item>
     <title>Getting Chrome onto Windows Server 2019</title>
@@ -155,7 +155,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/download-chrome-ie-windows-server-2019.html</guid>
     <pubDate>Thu, 17 Feb 2022 12:00:00 +0000</pubDate>
     <category>How-To</category>
-    <description>A fresh Windows Server 2019 box only comes with Internet Explorer — here&#x27;s how to get Chrome onto it without a fight.</description>
+    <description>A fresh Windows Server 2019 box only comes with Internet Explorer, here&#x27;s how to get Chrome onto it without a fight.</description>
   </item>
   <item>
     <title>Upgrading EC2 to IMDSv2</title>
@@ -171,7 +171,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/jenkins-agents-ec2-spot-instances.html</guid>
     <pubDate>Thu, 06 Jan 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>A proof of concept for scaling Jenkins agents on spot pricing with the EC2-Fleet plugin — cheaper builds, no idle capacity.</description>
+    <description>A proof of concept for scaling Jenkins agents on spot pricing with the EC2-Fleet plugin: cheaper builds, no idle capacity.</description>
   </item>
   <item>
     <title>Installing Nginx via EC2 User Data</title>
@@ -179,7 +179,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/installing-nginx-ec2-user-data.html</guid>
     <pubDate>Sun, 02 Jan 2022 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>Stand up an Nginx web server on a fresh EC2 instance with nothing but a user-data script — no manual SSH setup required.</description>
+    <description>Stand up an Nginx web server on a fresh EC2 instance with nothing but a user-data script, no manual SSH setup required.</description>
   </item>
   <item>
     <title>Windows Access via Session Manager, No RDP Port</title>
@@ -195,7 +195,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/starting-out-on-your-aws-journey.html</guid>
     <pubDate>Fri, 26 Nov 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>Lessons from a few years in the cloud — on learning deliberately, troubleshooting with intent, and treating a career as a process instead of a checklist.</description>
+    <description>Lessons from a few years in the cloud, on learning deliberately, troubleshooting with intent, and treating a career as a process instead of a checklist.</description>
   </item>
   <item>
     <title>Personal Website on AWS, Part 1: S3</title>
@@ -203,7 +203,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/personal-website-on-aws-part-1.html</guid>
     <pubDate>Mon, 31 May 2021 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>Skip Wix and Squarespace — host a real static site on S3 and actually understand what&#x27;s happening under the hood.</description>
+    <description>Skip Wix and Squarespace, host a real static site on S3 and actually understand what&#x27;s happening under the hood.</description>
   </item>
   <item>
     <title>Personal Website on AWS, Part 2: CloudFront &amp; SSL</title>
@@ -235,7 +235,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/atlanta-trip-feb-2020.html</guid>
     <pubDate>Tue, 21 Apr 2020 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>Two days covering Atlanta on foot — the King Center, Centennial Olympic Park, and a lot of the BeltLine.</description>
+    <description>Two days covering Atlanta on foot: the King Center, Centennial Olympic Park, and a lot of the BeltLine.</description>
   </item>
   <item>
     <title>City by the Bay: San Francisco</title>
@@ -243,7 +243,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/san-francisco-trip-2019.html</guid>
     <pubDate>Sun, 19 Apr 2020 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>Four days in San Francisco and a detour to Yosemite — Lombard Street, the Golden Gate from four different angles, and a lot of walking.</description>
+    <description>Four days in San Francisco and a detour to Yosemite, Lombard Street, the Golden Gate from four different angles, and a lot of walking.</description>
   </item>
   <item>
     <title>Passing the AWS Solutions Architect Exam</title>
@@ -251,7 +251,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/aws-solutions-architect-associate-2019.html</guid>
     <pubDate>Sun, 09 Jun 2019 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>A score, a stack of resources, and the study order I&#x27;d actually repeat — after two years of AWS and two certifications already behind me.</description>
+    <description>A score, a stack of resources, and the study order I&#x27;d actually repeat, after two years of AWS and two certifications already behind me.</description>
   </item>
   <item>
     <title>Cloud Dev Setup on Ubuntu</title>
@@ -259,6 +259,6 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/ubuntu-dev-environment-setup.html</guid>
     <pubDate>Sun, 02 Dec 2018 12:00:00 +0000</pubDate>
     <category>AWS</category>
-    <description>A copy-paste setup guide for a full cloud dev environment on Ubuntu — editor, IaC, Python, AWS SDK, git, and the Serverless Framework.</description>
+    <description>A copy-paste setup guide for a full cloud dev environment on Ubuntu, editor, IaC, Python, AWS SDK, git, and the Serverless Framework.</description>
   </item>
 </channel></rss>

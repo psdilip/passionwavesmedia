@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,44 +250,65 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
   <div class="article a-head">
     <a href="index.html#read" class="back">← All articles</a>
-    <div class="kicker mono"><span class="dot" style="background:#F2A93B"></span>Career · 4 min read · 27 Jul 2026</div>
+    <div class="kicker mono"><span class="dot" style="background:#F2A93B"></span>Career · 6 min read · 27 Jul 2026</div>
     <h1>How to Be a Great Customer Success Manager</h1>
     <p class="dek">What two-plus years as a CSM at a full-service IT consulting company taught me about trust, adaptability, and building the systems nobody hands you.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">Career</div></div>
-    <div class="prose"><p><img src="assets/images/how-to-be-a-great-customer-success-manager/hero.jpg" alt="Photo by dlxmedia.hu on Unsplash"> <em>Photo by <a href="https://unsplash.com/@dlxmedia">dlxmedia.hu</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p>I came into Customer Success Manager (CSM) after years in infrastructure and DevOps. It was a career growth move, and a test of whether I could thrive in a public-facing, customer-centric role. Two-plus years in, here's what actually made the difference — the attributes, systems, and habits I wish someone had handed me on day one.</p>
+    <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="assets/images/how-to-be-a-great-customer-success-manager/hero.jpg" alt="Photo by dlxmedia.hu on Unsplash"> <em>Photo by <a href="https://unsplash.com/@dlxmedia">dlxmedia.hu</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p>I came into Customer Success Manager (CSM) after years in infrastructure and DevOps. It was a career growth move, and a test of whether I could thrive in a public-facing, customer-centric role. Two-plus years in, here's what actually made the difference: the attributes, systems, and habits I wish someone had handed me on day one.</p>
 <p>I worked at a full-service IT consulting company — everything from cloud to AI to data — so a lot of this is shaped by that environment, but the core lessons transfer anywhere you own the customer relationship.</p>
 <h3>Core attributes</h3>
 <p><strong>Adaptability</strong> is the bare minimum, especially in tech. New technologies show up constantly, and you need to understand them deeply enough to explain them, not just repeat a pitch.</p>
 <ul><li>Learn new technologies quickly, down to their dependencies and intricacies</li><li>Understand your own product well enough to align it with what the customer actually needs</li><li>Translate customer requirements into internal, actionable tasks</li></ul>
 <p><strong>Communication</strong> is the backbone of the role, internally and externally.</p>
-<ul><li>Pick a consistent channel (email, Slack, Teams) and stick to it</li><li>Know when email won't cut it — escalate to a call or meeting</li><li>Follow up relentlessly; this is the real differentiator</li><li>Document everything</li><li>Run regular business reviews</li></ul>
-<p><strong>Ownership and coordination.</strong> You're the internal point person making things happen — the one talking to legal, FinOps, sales, technical account managers, industry leads, and billing, all to get one contract out the door and supported through its life.</p>
+<ul><li>Pick a consistent channel (email, Slack, Teams) and stick to it</li><li>Know when email won't cut it: escalate to a call or meeting</li><li>Follow up relentlessly; this is the real differentiator</li><li>Document everything</li><li>Run regular business reviews</li></ul>
+<p><strong>Ownership and coordination.</strong> You're the internal point person making things happen: the one talking to legal, FinOps, sales, technical account managers, industry leads, and billing, all to get one contract out the door and supported through its life.</p>
 <ul><li>Own the workflow from opportunity → contract → delivery → renewal</li><li>Get clear requirements from the customer, then hold your internal team to exactly what was promised</li><li>Know who to go to for what, and who covers for whom when someone's out</li></ul>
 <p><strong>Customer trust</strong> is the actual goal underneath everything else.</p>
 <ul><li>Deliver exactly what you promised</li><li>Respond quickly</li><li>Bring technical clarity, not just status updates</li><li>Make the customer feel heard and safe about their investment in you</li></ul>
 <h3>Build the systems nobody hands you</h3>
 <p>Most teams won't have this dressed up for you — you build it.</p>
 <ul><li>Contract and CRM tracking (if one doesn't exist, implement it)</li><li>Customer spend dashboards</li><li>Ticketing workflows and renewal calendars</li><li>A knowledge base per customer, and a reusable template for business reviews</li><li>If something works well for one customer, turn it into your golden template and share it with the team</li></ul>
-<p><strong>Automate what you can.</strong> Most of your day goes to follow-ups, ticket responses, and outreach — automate the repeatable parts (cadence reminders, cost reports, feature updates) and use AI to research, summarize new features, and get up to speed on unfamiliar tech fast.</p>
+<p><strong>Automate what you can.</strong> Most of your day goes to follow-ups, ticket responses, and outreach: automate the repeatable parts (cadence reminders, cost reports, feature updates) and use AI to research, summarize new features, and get up to speed on unfamiliar tech fast.</p>
 <h3>Prepare for every meeting like it's the differentiator — because it is</h3>
 <p>Go beyond what the customer asked for:</p>
 <ul><li>Branded deck with their cost consumption broken down by service</li><li>New features or documentation relevant to them</li><li>Cost optimization strategies (instance types, pricing models, what the provider offers to cut spend)</li><li>Anything new from the hyperscaler or recent conferences</li><li>Progress against their stated goals, current obstacles, and concrete next steps</li><li>Bring in a subject matter expert when the conversation needs one</li></ul>
 <h3>Master the internal workflow</h3>
 <p>Every contract touches contract/legal, your manager, industry lead, sales, technical account managers, bid desk, FinOps, and billing. Streamlining this is your job, not something you wait for someone else to fix.</p>
-<ul><li>Know who approves what, who unblocks what, and who's covering during PTO</li><li>Store documents centrally so anyone can answer a question fast</li><li>Work with your manager to reduce approval friction — time-to-market on a contract is a real differentiator for the customer</li><li>Help sales translate technical requirements so the right thing actually gets sold</li></ul>
+<ul><li>Know who approves what, who unblocks what, and who's covering during PTO</li><li>Store documents centrally so anyone can answer a question fast</li><li>Work with your manager to reduce approval friction: time-to-market on a contract is a real differentiator for the customer</li><li>Help sales translate technical requirements so the right thing actually gets sold</li></ul>
 <h3>Stay organized</h3>
-<ul><li>Build your own dashboard: communication history, contract expiration dates, renewal timelines, ticket status</li><li>Plan around time zones — approvals in London, ticketing in Asia, and so on</li><li>Prioritize customers deliberately: contract value, strategic importance, growth potential, urgency — not just whoever emailed last</li></ul>
+<ul><li>Build your own dashboard: communication history, contract expiration dates, renewal timelines, ticket status</li><li>Plan around time zones: approvals in London, ticketing in Asia, and so on</li><li>Prioritize customers deliberately: contract value, strategic importance, growth potential, urgency, not just whoever emailed last</li></ul>
 <h3>Day-to-day principles</h3>
-<ul><li>Find the right way to communicate with each customer — don't force everyone through the same channel</li><li>Overdeliver</li><li>Lead with confidence; prepare enough that you never walk in unsure</li><li>How you show up matters</li><li>Ask questions</li><li>Prioritize ruthlessly, and offload when you have to</li><li>Stay unified with your team — share what works instead of hoarding it</li></ul>
+<ul><li>Find the right way to communicate with each customer: don't force everyone through the same channel</li><li>Overdeliver</li><li>Lead with confidence; prepare enough that you never walk in unsure</li><li>How you show up matters</li><li>Ask questions</li><li>Prioritize ruthlessly, and offload when you have to</li><li>Stay unified with your team: share what works instead of hoarding it</li></ul>
 <h3>The bottom line</h3>
-<p>Being a great CSM comes down to adaptability, communication, ownership, and relentless organization — in service of one goal: the customer trusts you with their investment. Build the systems, overprepare for every conversation, and the rest follows.</p><div class="endmark">〜</div></div>
+<p>Being a great CSM comes down to adaptability, communication, ownership, and relentless organization, in service of one goal: the customer trusts you with their investment. Build the systems, overprepare for every conversation, and the rest follows.</p>
+</div><div class="mode-panel" data-mode="guide" hidden><h2>Practical guide: a checklist to actually run this</h2>
+<p>A condensed version of everything above, distilled into what to actually do.</p>
+<ol><li><strong>Pick one primary channel per customer and stick to it.</strong> Use email, Slack, or Teams consistently, but know when a message needs to become a call or meeting instead.</li><li><strong>Follow up relentlessly and document everything.</strong> This is the real differentiator between an average CSM and a great one, and it feeds every business review you'll ever run.</li><li><strong>Build the systems nobody hands you.</strong> Set up contract and CRM tracking, a customer spend dashboard, ticketing workflows with renewal calendars, and a knowledge base per customer if they don't already exist.</li><li><strong>Automate the repeatable parts of your day.</strong> Cadence reminders, cost reports, and feature updates don't need a human doing them manually; use AI to research and summarize new features so you can get up to speed on unfamiliar tech fast.</li><li><strong>Prepare for every meeting like it's the differentiator.</strong> Bring a branded deck with cost consumption broken down by service, relevant new features, cost optimization strategies, and concrete progress against stated goals, pulling in a subject matter expert when the conversation needs one.</li><li><strong>Map your internal workflow and know who covers what.</strong> Understand who approves, who unblocks, and who covers during PTO across legal, sales, technical account managers, bid desk, FinOps, and billing, then store documents centrally so anyone can answer a question fast.</li><li><strong>Prioritize customers deliberately, not reactively.</strong> Rank by contract value, strategic importance, growth potential, and urgency, accounting for time zones across approvals and ticketing.</li><li><strong>Turn what works for one customer into a reusable template.</strong> Share it with the team instead of hoarding it, and stay unified rather than each CSM solving the same problem separately.</li><li><strong>Overdeliver and lead with confidence.</strong> Prepare enough that you never walk into a conversation unsure, and remember that the underlying goal is always the same: the customer trusts you with their investment.</li></ol></div><div class="endmark">〜</div></div>
     <div class="reactions">
   <button class="like-btn" id="likeBtn" aria-label="Like this article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">0</span></button>
   <span class="views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="viewCount"></span></span></div>
@@ -383,6 +410,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

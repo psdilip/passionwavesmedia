@@ -3,7 +3,7 @@ title: Road Trip: Idaho, Oregon & Utah
 slug: western-wonders-road-trip-idaho-oregon-utah
 category: Travel
 tags: Idaho, Oregon, Utah, Road Trip, Boise, Salt Lake City
-excerpt: A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.
+excerpt: A seven-day drive through Idaho, Oregon, and Utah: waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.
 date: 2023-10-01
 ---
 
@@ -12,7 +12,7 @@ date: 2023-10-01
 
 Seven days, three states, one Turo rental car. A day-by-day log of a loop through Boise, the Wallowa Mountains, Twin Falls, and Salt Lake City.
 
-### Day 1 — Thursday
+### Day 1: Thursday
 
 **Meals:**
 - Lunch: Qudoba at Seattle Airport
@@ -28,7 +28,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 ![Drone shot of downtown Boise from Table Rock](assets/images/western-wonders-road-trip-idaho-oregon-utah/01-boise-downtown.jpg)
 *Drone shot of downtown Boise from Table Rock.*
 
-### Day 2 — Friday
+### Day 2: Friday
 
 **Meals:**
 - Breakfast: Strawberry banana with pea protein, and a berry cashew chia parfait at Nektar Juice Bar
@@ -41,7 +41,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 - Table Rock hike from the Old Idaho Penitentiary site (1.5 hours total, 866 ft elevation gain)
 - Drove to Pendleton, Oregon
 
-### Day 3 — Saturday
+### Day 3: Saturday
 
 **Meals:**
 - Breakfast: Burger at Roosters Country Kitchen with a drink from Dutch Bros
@@ -58,7 +58,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 ![Wallowa Mountain Range](assets/images/western-wonders-road-trip-idaho-oregon-utah/03-wallowa-mountain-range.jpg)
 *Drone shot of Wallowa Lake and the surrounding mountain range.*
 
-### Day 4 — Sunday
+### Day 4: Sunday
 
 **Meals:**
 - Lunch: Chipotle in Boise
@@ -72,7 +72,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 ![Drone shot of the Perrine Memorial Bridge](assets/images/western-wonders-road-trip-idaho-oregon-utah/04-perrine-bridge.jpg)
 *Drone shot of the Perrine Memorial Bridge.*
 
-### Day 5 — Monday
+### Day 5: Monday
 
 **Meals:**
 - Breakfast: TruFuel acai bowl
@@ -89,7 +89,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 ![Drone shot of Lake Cleveland](assets/images/western-wonders-road-trip-idaho-oregon-utah/06-lake-cleveland.jpg)
 *Drone shot of Shoshone Falls and Lake Cleveland.*
 
-### Day 6 — Tuesday
+### Day 6: Tuesday
 
 ![Salt Lake City — Photo by Saul Flores on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*ZKpI5FzcsvzfGPsE)
 *Salt Lake City — Photo by Saul Flores on Unsplash*
@@ -102,7 +102,7 @@ Seven days, three states, one Turo rental car. A day-by-day log of a loop throug
 **Activity:**
 - Drove from Salt Lake City, Utah back to Boise, Idaho
 
-### Day 7 — Wednesday
+### Day 7: Wednesday
 
 ![Photo by Cedric Letsch on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*XxIUH54pKEaIg_Gc)
 *Photo by Cedric Letsch on Unsplash*

@@ -3,14 +3,14 @@ title: Passing the AWS Solutions Architect Exam
 slug: aws-solutions-architect-associate-2019
 category: AWS
 tags: AWS, Solutions Architect, Certification, EC2, S3, IAM
-excerpt: A score, a stack of resources, and the study order I'd actually repeat — after two years of AWS and two certifications already behind me.
+excerpt: A score, a stack of resources, and the study order I'd actually repeat, after two years of AWS and two certifications already behind me.
 date: 2019-06-09
 ---
 
 ![Photo by Brandi Redd on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*HHN6ZsSZ_tO-SnhF)
 *Photo by Brandi Redd on Unsplash*
 
-Going in, I had about two years of AWS experience and already held the Cloud Practitioner and Developer certifications. Even with that background, I spent roughly six months preparing for this one. I walked out with an 855/1000 — and it was harder than I expected going in.
+Going in, I had about two years of AWS experience and already held the Cloud Practitioner and Developer certifications. Even with that background, I spent roughly six months preparing for this one. I walked out with an 855/1000, and it was harder than I expected going in.
 
 ### The exam itself
 
@@ -25,14 +25,14 @@ I finished in about an hour and spent the second hour going back over every ques
 - *AWS Certified Solutions Architect Associate All-in-One Exam Guide* ($30)
 
 **Video courses**
-- ACloudGuru's Solutions Architect Associate course (8.5 hrs) — high level, and honestly less useful than the others below
-- ACloudGuru's Solutions Architect Professional course (12.5 hrs) — aimed above this exam, but the instructor explains things in a way that just sticks
-- *AWS Certified Solutions Architect* by DolfinED (73 hrs, $60) — genuinely end-to-end, matches the exam blueprint and then some
-- *Ultimate AWS Solutions Architect Associate 2019* (18 hrs, $10) — the best value of the bunch: clear explanations, hands-on labs for each concept, and a basic practice test included
+- ACloudGuru's Solutions Architect Associate course (8.5 hrs), high level, and honestly less useful than the others below
+- ACloudGuru's Solutions Architect Professional course (12.5 hrs), aimed above this exam, but the instructor explains things in a way that just sticks
+- *AWS Certified Solutions Architect* by DolfinED (73 hrs, $60): genuinely end-to-end, matches the exam blueprint and then some
+- *Ultimate AWS Solutions Architect Associate 2019* (18 hrs, $10), the best value of the bunch: clear explanations, hands-on labs for each concept, and a basic practice test included
 
 **Practice tests**
-- Jon Bonso / Tutorials Dojo — hard, deliberately so. If you're hitting 80%, you're in good shape. The explanations (with diagrams and references) are worth the price alone.
-- Neal Davis / Digital Cloud Training — similar quality, with more emphasis on picking out the keywords in a question. That skill alone is worth practicing — it's a big part of actually passing.
+- Jon Bonso / Tutorials Dojo: hard, deliberately so. If you're hitting 80%, you're in good shape. The explanations (with diagrams and references) are worth the price alone.
+- Neal Davis / Digital Cloud Training: similar quality, with more emphasis on picking out the keywords in a question. That skill alone is worth practicing. It's a big part of actually passing.
 
 **Everything else**
 - Tutorials Dojo cheat sheets
@@ -42,17 +42,31 @@ I finished in about an hour and spent the second hour going back over every ques
 
 ### The order I'd recommend
 
-1. Go through the *Ultimate AWS Solutions Architect Associate 2019* course, doing the labs as you go — don't just watch.
+1. Go through the *Ultimate AWS Solutions Architect Associate 2019* course, doing the labs as you go. Don't just watch.
 2. Buy the Neal Davis and Jon Bonso practice tests and retake them until you're consistently near 100%. When you miss something, go figure out *why*, either in a lab or back in the course video.
-3. Read the All-in-One Exam Guide (check reviews first — it's not cheap).
+3. Read the All-in-One Exam Guide (check reviews first; it's not cheap).
 4. Read the FAQs for depth, and the whitepapers for the best-practices framing the exam likes.
 5. If you still don't feel solid, or want genuinely comprehensive service coverage, the 73-hour DolfinED course is there.
 6. Right before the exam, run through the cheat sheets as a refresher, not a first read.
 
-I'd skip ACloudGuru's Associate course specifically — it didn't add much for the time it cost, and neither did its practice exams.
+I'd skip ACloudGuru's Associate course specifically: it didn't add much for the time it cost, and neither did its practice exams.
 
 ### The actual takeaway
 
-You can't memorize your way through this one — you have to actually understand what each service does and why. Go in curious, not just trying to check a box; spin up a free-tier account and break things on purpose. And during the exam itself, slow down enough to catch the keywords in each question — that's where the careless misses happen.
+You can't memorize your way through this one — you have to actually understand what each service does and why. Go in curious, not just trying to check a box; spin up a free-tier account and break things on purpose. And during the exam itself, slow down enough to catch the keywords in each question. That's where the careless misses happen.
 
 Don't study just to pass the exam — anyone can do that. Study so you can actually improve how your company builds things and solve the real problems in front of you.
+
+## Practical guide: the study order I'd actually repeat
+
+A condensed version of everything above, in the order I'd run it again.
+
+1. **Start with a hands-on course, not a reading list.** Go through *Ultimate AWS Solutions Architect Associate 2019* and actually do the labs as you go instead of just watching.
+2. **Move to practice tests early, not at the end.** Buy the Jon Bonso / Tutorials Dojo and Neal Davis / Digital Cloud Training sets, and retake them until you're consistently near 100%.
+3. **Chase down every wrong answer.** When you miss a question, go figure out why, either in a lab or back in the course video, rather than just noting the correct choice and moving on.
+4. **Fill in depth with a book, once you've checked reviews first.** The All-in-One Exam Guide isn't cheap, so make sure it's worth it for where you're weak.
+5. **Read the FAQs and the whitepapers for framing, not memorization.** The AWS FAQs give depth, and the Cloud Best Practices and Security Best Practices whitepapers match how the exam actually frames questions.
+6. **Add the 73-hour DolfinED course only if you still don't feel solid.** It's genuinely comprehensive and matches the exam blueprint and then some, but it's the heaviest option, so use it as a backstop, not a first step.
+7. **Save the cheat sheets for the final review, not day one.** Run through the Tutorials Dojo cheat sheets right before the exam as a refresher.
+8. **Practice picking out keywords in a question, deliberately.** That skill, more than raw service knowledge, is what the practice tests are actually training and what saves you from careless misses on exam day.
+9. **Spin up a free-tier account and break things on purpose.** The exam tests whether you understand how services fit together in a real scenario, and that only comes from actually building, not just reading about them.

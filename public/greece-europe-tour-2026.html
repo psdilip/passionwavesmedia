@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Greece & Europe Tour: Budapest to London — PassionWavesMedia</title>
-<meta name="description" content="Eleven days, five countries — a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.">
+<meta name="description" content="Eleven days, five countries: a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.">
 <link rel="canonical" href="https://passionwavesmedia.com/greece-europe-tour-2026.html">
 <link rel="alternate" type="application/rss+xml" title="PassionWavesMedia" href="https://passionwavesmedia.com/feed.xml">
 <meta property="og:title" content="Greece &amp; Europe Tour: Budapest to London — PassionWavesMedia">
-<meta property="og:description" content="Eleven days, five countries — a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.">
+<meta property="og:description" content="Eleven days, five countries: a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.">
 <meta property="og:image" content="https://passionwavesmedia.com/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Greece & Europe Tour: Budapest to London", "datePublished": "2026-04-12", "author": {"@type": "Person", "name": "Sai Dilip"}, "publisher": {"@type": "Organization", "name": "PassionWavesMedia"}}</script>
@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,6 +250,24 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
@@ -251,77 +275,77 @@ a{ color:inherit; text-decoration:none; }
     <a href="index.html#read" class="back">← All articles</a>
     <div class="kicker mono"><span class="dot" style="background:#22B0C4"></span>Travel · 9 min read · 12 Apr 2026</div>
     <h1>Greece & Europe Tour: Budapest to London</h1>
-    <p class="dek">Eleven days, five countries — a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.</p>
+    <p class="dek">Eleven days, five countries: a group tour through Budapest, Bratislava, Vienna, Athens, Hydra, Santorini, and London.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">Travel</div></div>
     <div class="prose"><p>Eleven days, five countries, one group tour: Budapest, a Slovakia-and-Vienna day trip, Athens, a speedboat out to Hydra, Santorini, and a last stop in London before flying home. Hotels, food, and the moments worth knowing about if you're planning the same route.</p>
-<p><em>Personal photos going up here as they get sorted — until then, a few Unsplash shots stand in for the spots below.</em></p>
+<p><em>Personal photos going up here as they get sorted. Until then, a few Unsplash shots stand in for the spots below.</em></p>
 <p><strong>Hotels:</strong> Novotel Budapest City · Acropolis View Hotel (Athens) · Cosmopolitan Suites (Santorini) · Hilton London Bankside</p>
-<h3>Day 1 — April 2, 2026 — Departure</h3>
+<h3>Day 1 · April 2, 2026 · Departure</h3>
 <p><strong>Route:</strong> JFK → Belgrade (Nikola Tesla Airport) → Budapest</p>
 <ul><li>Departed JFK on Air Serbia</li><li>Long layover at Nikola Tesla Airport, Serbia</li><li>Connecting flight on to Budapest</li></ul>
-<blockquote>Air Serbia's transfer process was smooth, but the layover was long — a good excuse to rest before the itinerary picks up.</blockquote>
+<blockquote>Air Serbia's transfer process was smooth, but the layover was long: a good excuse to rest before the itinerary picks up.</blockquote>
 <p><img src="https://images.unsplash.com/photo-1631330175050-502144e75a87?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Austin Hervias on Unsplash"> <em>Photo by <a href="https://unsplash.com/@ahervias77">Austin Hervias</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 2 — April 3, 2026 — Budapest Arrival</h3>
+<h3>Day 2 · April 3, 2026 · Budapest Arrival</h3>
 <p><strong>Stay:</strong> Novotel Budapest City</p>
-<ul><li>Checked into the hotel</li><li>Evening Danube river cruise with a welcome drink — night views of the Hungarian Parliament</li><li>Dinner spread across Rin Thai Restaurant, The Bros, and a local gyro spot</li><li>Delayed luggage finally caught up with us</li></ul>
+<ul><li>Checked into the hotel</li><li>Evening Danube river cruise with a welcome drink: night views of the Hungarian Parliament</li><li>Dinner spread across Rin Thai Restaurant, The Bros, and a local gyro spot</li><li>Delayed luggage finally caught up with us</li></ul>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Hungarian+Parliament+Building,+Budapest&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hungarian Parliament, Budapest"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1555958493-1380d49ac1ef?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Jason Mavrommatis on Unsplash"> <em>The Hungarian Parliament from the river — Photo by <a href="https://unsplash.com/@jasonblackeye">Jason Mavrommatis</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 3 — April 4, 2026 — Budapest Sightseeing</h3>
+<p><img src="https://images.unsplash.com/photo-1555958493-1380d49ac1ef?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Jason Mavrommatis on Unsplash"> <em>The Hungarian Parliament from the river · Photo by <a href="https://unsplash.com/@jasonblackeye">Jason Mavrommatis</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 3 · April 4, 2026 · Budapest Sightseeing</h3>
 <p><strong>Visited:</strong> Citadella (Jubileumi Park) · Buda Castle · Fisherman's Bastion · St. Stephen's Basilica</p>
 <p><strong>Dining:</strong> Bombay Restaurant (Istiklal Street) · Restaurant 26</p>
 <blockquote>Fisherman's Bastion is one of the best photo spots in the city, and the streets around the Basilica are full of good cafés and street snacks.</blockquote>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Fisherman's+Bastion,+Budapest&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Fisherman's Bastion, Budapest"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1549877452-9c387954fbc2?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Emma Fabbri on Unsplash"> <em>Fisherman's Bastion — Photo by <a href="https://unsplash.com/@fabevent">Emma Fabbri</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p><img src="https://images.unsplash.com/photo-1648575036824-7347833d9200?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Tjaša Oblak on Unsplash"> <em>Buda Castle — Photo by <a href="https://unsplash.com/@cloudy99">Tjaša Oblak</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 4 — April 5, 2026 — Slovakia &amp; Vienna Day Trip</h3>
+<p><img src="https://images.unsplash.com/photo-1549877452-9c387954fbc2?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Emma Fabbri on Unsplash"> <em>Fisherman's Bastion · Photo by <a href="https://unsplash.com/@fabevent">Emma Fabbri</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1648575036824-7347833d9200?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Tjaša Oblak on Unsplash"> <em>Buda Castle · Photo by <a href="https://unsplash.com/@cloudy99">Tjaša Oblak</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 4 · April 5, 2026 · Slovakia &amp; Vienna Day Trip</h3>
 <p><strong>Route:</strong> Budapest → Bratislava → Vienna → Budapest</p>
 <p><strong>Bratislava, Slovakia:</strong> Bratislava Castle · Old Town · St. Michael's Gate · St. Martin's Cathedral · Ecco Mall</p>
 <p><strong>Vienna, Austria:</strong> lunch at In-Dish Indian Restaurant · Hofburg Palace · Burg Theatre · Austrian Parliament</p>
-<blockquote>Old Town Bratislava is compact and easy to walk end to end. Vienna's architecture rewards slowing down — don't rush the Hofburg.</blockquote>
+<blockquote>Old Town Bratislava is compact and easy to walk end to end. Vienna's architecture rewards slowing down. Don't rush the Hofburg.</blockquote>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Bratislava+Old+Town&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Bratislava Old Town"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1587809174740-e04af631cdd9?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Lisa van Vliet on Unsplash"> <em>Bratislava Old Town — Photo by <a href="https://unsplash.com/@lisaaxv">Lisa van Vliet</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1587809174740-e04af631cdd9?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Lisa van Vliet on Unsplash"> <em>Bratislava Old Town · Photo by <a href="https://unsplash.com/@lisaaxv">Lisa van Vliet</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Hofburg+Palace,+Vienna&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hofburg Palace, Vienna"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1653384889067-7376de3b167d?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Leonhard Niederwimmer on Unsplash"> <em>Hofburg Palace, Vienna — Photo by <a href="https://unsplash.com/@lnlnln">Leonhard Niederwimmer</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 5 — April 6, 2026 — Budapest to Athens</h3>
-<ul><li>Breakfast at the Novotel — a huge seating area, a fresh-juice station, and a spread big enough for the whole group</li><li>Bus transfer to the airport, then Aegean Airlines to Athens</li><li>Priority Pass lounge access made the wait easy</li><li>Checked into Acropolis View Hotel, ordered pizza, and called it a night</li></ul>
-<p><img src="https://images.unsplash.com/photo-1722477936580-84aa10762b0b?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Edwin Petrus on Unsplash"> <em>Novotel breakfast spread — Photo by <a href="https://unsplash.com/@ep_petrus">Edwin Petrus</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 6 — April 7, 2026 — Athens Exploration</h3>
+<p><img src="https://images.unsplash.com/photo-1653384889067-7376de3b167d?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Leonhard Niederwimmer on Unsplash"> <em>Hofburg Palace, Vienna · Photo by <a href="https://unsplash.com/@lnlnln">Leonhard Niederwimmer</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 5 · April 6, 2026 · Budapest to Athens</h3>
+<ul><li>Breakfast at the Novotel: a huge seating area, a fresh-juice station, and a spread big enough for the whole group</li><li>Bus transfer to the airport, then Aegean Airlines to Athens</li><li>Priority Pass lounge access made the wait easy</li><li>Checked into Acropolis View Hotel, ordered pizza, and called it a night</li></ul>
+<p><img src="https://images.unsplash.com/photo-1722477936580-84aa10762b0b?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Edwin Petrus on Unsplash"> <em>Novotel breakfast spread · Photo by <a href="https://unsplash.com/@ep_petrus">Edwin Petrus</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 6 · April 7, 2026 · Athens Exploration</h3>
 <ul><li>Rooftop breakfast with a straight-on view of the Acropolis, every morning</li><li>Personal walking tour of the Acropolis and the Acropolis Museum</li><li>Walked the markets and Plaka</li><li>Lunch: vegetarian pasta, stuffed vegetables, lamb, bread, and Greek yogurt</li><li>Hot crepes and ice cream from a local shop</li><li>A sunset viewpoint — crowded</li></ul>
-<blockquote>Sunset spots in Athens get packed fast. Locals point to Filopappou Hill as the quieter alternative — worth researching before you go, and on the list for next time.</blockquote>
+<blockquote>Sunset spots in Athens get packed fast. Locals point to Filopappou Hill as the quieter alternative, worth researching before you go, and on the list for next time.</blockquote>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Acropolis+of+Athens&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Acropolis of Athens"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Constantinos Kollias on Unsplash"> <em>Acropolis — Photo by <a href="https://unsplash.com/@ckollias">Constantinos Kollias</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p><img src="https://images.unsplash.com/photo-1684197121172-1ac0ae9676ef?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Matt Cramblett on Unsplash"> <em>The streets of Plaka — Photo by <a href="https://unsplash.com/@mcramblett">Matt Cramblett</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 7 — April 8, 2026 — Hydra &amp; Poros Islands</h3>
-<ul><li>Bus, then a high-speed boat to Hydra — about an hour</li><li>Brunch at EN PLO (margherita pizza), ice cream at Sousami Bakery</li><li>Walked the port and the alleys; some of the group rode mules</li><li>Attempted the hike toward the flag viewpoint — easy to lose the trail, but there are plenty of spots along the way to swim, dive, and just sit by the water</li><li>Lunch at Πιάτο Restaurant</li><li>Pit stop in Poros on the boat back to Athens</li></ul>
-<blockquote>Be careful with the mule vendors on Hydra — confirm the price and the number of mules included before you pay. It's an easy spot to get scammed on both.</blockquote>
+<p><img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Constantinos Kollias on Unsplash"> <em>Acropolis · Photo by <a href="https://unsplash.com/@ckollias">Constantinos Kollias</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1684197121172-1ac0ae9676ef?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Matt Cramblett on Unsplash"> <em>The streets of Plaka · Photo by <a href="https://unsplash.com/@mcramblett">Matt Cramblett</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 7 · April 8, 2026 · Hydra &amp; Poros Islands</h3>
+<ul><li>Bus, then a high-speed boat to Hydra (about an hour)</li><li>Brunch at EN PLO (margherita pizza), ice cream at Sousami Bakery</li><li>Walked the port and the alleys; some of the group rode mules</li><li>Attempted the hike toward the flag viewpoint, easy to lose the trail, but there are plenty of spots along the way to swim, dive, and just sit by the water</li><li>Lunch at Πιάτο Restaurant</li><li>Pit stop in Poros on the boat back to Athens</li></ul>
+<blockquote>Be careful with the mule vendors on Hydra: confirm the price and the number of mules included before you pay. It's an easy spot to get scammed on both.</blockquote>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Hydra+Island+Port,+Greece&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Hydra Island Port"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1603182501684-b38ecae3056a?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Despina Galani on Unsplash"> <em>Hydra port — Photo by <a href="https://unsplash.com/@despinagalani">Despina Galani</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p><img src="https://images.unsplash.com/photo-1710954660079-93876594b8a0?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Aris Rovas on Unsplash"> <em>Hydra coastline — Photo by <a href="https://unsplash.com/@aris_rovas">Aris Rovas</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 8 — April 9, 2026 — Athens to Santorini</h3>
-<ul><li>Flight from Athens to Santorini on Aegean Airlines</li><li>Burger King at the airport before boarding — the plant-based nuggets were genuinely excellent, worth seeking out anywhere in Europe</li><li>Skyserve lounge at the airport</li><li>Taxi from the Santorini airport to the hotel (~€39)</li><li>Checked into Cosmopolitan Suites — highly recommend</li><li>Explored Fira: fresh gyros for €4, a standout falafel gyro, crepes and ice cream again</li><li>Local shopping</li></ul>
-<blockquote>Double-check labels before buying clothes as souvenirs — not everything sold as Greek-made actually is.</blockquote>
-<p><img src="https://images.unsplash.com/photo-1741345380588-410af204191e?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Albert Canite on Unsplash"> <em>Fira at sunset — Photo by <a href="https://unsplash.com/@albert_canite">Albert Canite</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 9 — April 10, 2026 — Santorini Tour</h3>
+<p><img src="https://images.unsplash.com/photo-1603182501684-b38ecae3056a?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Despina Galani on Unsplash"> <em>Hydra port · Photo by <a href="https://unsplash.com/@despinagalani">Despina Galani</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1710954660079-93876594b8a0?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Aris Rovas on Unsplash"> <em>Hydra coastline · Photo by <a href="https://unsplash.com/@aris_rovas">Aris Rovas</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 8 · April 9, 2026 · Athens to Santorini</h3>
+<ul><li>Flight from Athens to Santorini on Aegean Airlines</li><li>Burger King at the airport before boarding: the plant-based nuggets were genuinely excellent, worth seeking out anywhere in Europe</li><li>Skyserve lounge at the airport</li><li>Taxi from the Santorini airport to the hotel (~€39)</li><li>Checked into Cosmopolitan Suites (highly recommend)</li><li>Explored Fira: fresh gyros for €4, a standout falafel gyro, crepes and ice cream again</li><li>Local shopping</li></ul>
+<blockquote>Double-check labels before buying clothes as souvenirs: not everything sold as Greek-made actually is.</blockquote>
+<p><img src="https://images.unsplash.com/photo-1741345380588-410af204191e?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Albert Canite on Unsplash"> <em>Fira at sunset · Photo by <a href="https://unsplash.com/@albert_canite">Albert Canite</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 9 · April 10, 2026 · Santorini Tour</h3>
 <p><strong>Bus tour:</strong> Pyrgos Kallistis Monastery (the island's highest point) · Perivolos Black Sand Beach · the Three Domes in Oia</p>
 <p><strong>Lunch:</strong> Momos Restaurant</p>
 <p><strong>Evening:</strong> sunset in Oia, then the Blue Dome Church for the night candle view</p>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Oia,+Santorini&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Oia, Santorini"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1533441865127-f4806aaa12cc?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Xuan Nguyen on Unsplash"> <em>Blue domes, Oia — Photo by <a href="https://unsplash.com/@darthxuan">Xuan Nguyen</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p><img src="https://images.unsplash.com/photo-1736618626516-674d438a6bf1?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Yuliia Sereda on Unsplash"> <em>A black sand beach on Santorini — Photo by <a href="https://unsplash.com/@ysereda">Yuliia Sereda</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 10 — April 11, 2026 — Santorini to London</h3>
-<ul><li>French toast for breakfast, enjoyed from the balcony</li><li>Last-minute shopping in town — worth comparing prices across shops before buying</li><li>Taxi to the airport, flight to London on British Airways</li><li>Heathrow Express to Paddington, then a short ride to Hilton London Bankside</li><li>Dinner at KUTIR — lamb shank and chicken tikka, an excellent meal</li></ul>
-<blockquote>Overweight luggage fees can be steep — we saw close to €80. If your ticket was booked through a different airline than the one you're flying, double-check their baggage and check-in rules in advance; partner carriers don't always align.</blockquote>
-<p><img src="https://images.unsplash.com/photo-1596252890311-caa6a004a6ee?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Rachel Park on Unsplash"> <em>Santorini caldera views — Photo by <a href="https://unsplash.com/@therachelstory">Rachel Park</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<h3>Day 11 — April 12, 2026 — London &amp; Return</h3>
-<ul><li>Breakfast at the Hilton Bankside — a custom omelet station, fresh juices, pastries, and standout service</li><li>Walked to Big Ben and the London Eye; a marathon was running through the city that morning</li><li>Train to Heathrow, then American Airlines back to the US — good food, good service, landed home safely</li></ul>
+<p><img src="https://images.unsplash.com/photo-1533441865127-f4806aaa12cc?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Xuan Nguyen on Unsplash"> <em>Blue domes, Oia · Photo by <a href="https://unsplash.com/@darthxuan">Xuan Nguyen</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1736618626516-674d438a6bf1?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Yuliia Sereda on Unsplash"> <em>A black sand beach on Santorini · Photo by <a href="https://unsplash.com/@ysereda">Yuliia Sereda</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 10 · April 11, 2026 · Santorini to London</h3>
+<ul><li>French toast for breakfast, enjoyed from the balcony</li><li>Last-minute shopping in town (worth comparing prices across shops before buying)</li><li>Taxi to the airport, flight to London on British Airways</li><li>Heathrow Express to Paddington, then a short ride to Hilton London Bankside</li><li>Dinner at KUTIR: lamb shank and chicken tikka, an excellent meal</li></ul>
+<blockquote>Overweight luggage fees can be steep: we saw close to €80. If your ticket was booked through a different airline than the one you're flying, double-check their baggage and check-in rules in advance; partner carriers don't always align.</blockquote>
+<p><img src="https://images.unsplash.com/photo-1596252890311-caa6a004a6ee?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Rachel Park on Unsplash"> <em>Santorini caldera views · Photo by <a href="https://unsplash.com/@therachelstory">Rachel Park</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<h3>Day 11 · April 12, 2026 · London &amp; Return</h3>
+<ul><li>Breakfast at the Hilton Bankside: a custom omelet station, fresh juices, pastries, and standout service</li><li>Walked to Big Ben and the London Eye; a marathon was running through the city that morning</li><li>Train to Heathrow, then American Airlines back to the US — good food, good service, landed home safely</li></ul>
 <div class="map-embed"><iframe src="https://maps.google.com/maps?q=Big+Ben,+London&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Big Ben, London"></iframe></div>
-<p><img src="https://images.unsplash.com/photo-1503566303019-ba141f5f9b76?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by James Newcombe on Unsplash"> <em>Big Ben — Photo by <a href="https://unsplash.com/@nstudio">James Newcombe</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Rachel Park on Unsplash"> <em>Hilton Bankside breakfast — Photo by <a href="https://unsplash.com/@therachelstory">Rachel Park</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1503566303019-ba141f5f9b76?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by James Newcombe on Unsplash"> <em>Big Ben · Photo by <a href="https://unsplash.com/@nstudio">James Newcombe</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
+<p><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop" alt="Photo by Rachel Park on Unsplash"> <em>Hilton Bankside breakfast · Photo by <a href="https://unsplash.com/@therachelstory">Rachel Park</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
 <h3>Watch: the London leg</h3>
 <div class="video-embed"><iframe width="100%" height="360" src="https://www.youtube.com/embed/ccUW-XacnNQ" title="England travel video" loading="lazy" allowfullscreen></iframe></div>
 <h3>Final Notes</h3>
-<p>Hydra and Santorini were the standouts — an island detour and a sunset town that both earned the hype. Budapest was a better base than expected, and London closed things out well: the Hilton Bankside breakfast alone is worth the stop. Culture, food, and island time, back to back, across five countries in eleven days.</p><div class="endmark">〜</div></div>
+<p>Hydra and Santorini were the standouts: an island detour and a sunset town that both earned the hype. Budapest was a better base than expected, and London closed things out well: the Hilton Bankside breakfast alone is worth the stop. Culture, food, and island time, back to back, across five countries in eleven days.</p><div class="endmark">〜</div></div>
     <div class="reactions">
   <button class="like-btn" id="likeBtn" aria-label="Like this article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">0</span></button>
   <span class="views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="viewCount"></span></span></div>
@@ -423,6 +447,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

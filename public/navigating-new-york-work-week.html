@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,6 +250,24 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
@@ -255,49 +279,49 @@ a{ color:inherit; text-decoration:none; }
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">Travel</div></div>
     <div class="prose"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>6v2xqrG-wZZ1bb0d" alt="Photo by Thomas Habr on Unsplash"> </em>Photo by Thomas Habr on Unsplash*</p>
-<p>A work week in New York, logged day by day — client site during the day, the city everywhere else.</p>
-<h3>Day 1 — Saturday</h3>
+<p>A work week in New York, logged day by day: client site during the day, the city everywhere else.</p>
+<h3>Day 1: Saturday</h3>
 <p><strong>Meals:</strong></p>
-<ul><li>Lunch: Mom's food</li><li>Dinner: Ramen Ku-Raku — spicy tofu vegetable gyoza and ramen</li><li>Stay: Airbnb</li></ul>
+<ul><li>Lunch: Mom's food</li><li>Dinner: Ramen Ku-Raku, spicy tofu vegetable gyoza and ramen</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Flew into New York, Uber from JFK to Upper Manhattan</li></ul>
-<h3>Day 2 — Sunday</h3>
+<h3>Day 2: Sunday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/01-view-from-the-edge.jpg" alt="View from the Edge"> <em>View from the Edge</em></p>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Mom's packed fried rice</li><li>Dinner: Screamer's Pizzeria (vegan pizza) and Van Leeuwen ice cream</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>One-mile morning run around the neighborhood</li><li>Evening at Edge at Hudson Yards</li><li>Train to Brooklyn for pizza and ice cream</li></ul>
-<h3>Day 3 — Monday</h3>
+<h3>Day 3: Monday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/02-beyond-sushi.jpg" alt="Beyond Sushi"> <em>Beyond Sushi</em></p>
 <p><strong>Meals:</strong></p>
 <ul><li>Dinner: Beyond Sushi, with a friend</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>One-mile morning run before the train into work</li></ul>
-<h3>Day 4 — Tuesday</h3>
+<h3>Day 4: Tuesday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/03-gregorys-coffee.jpg" alt="Gregory's Coffee"> <em>Gregory's Coffee</em></p>
 <p><strong>Meals:</strong></p>
-<ul><li>Breakfast: Gregory's Coffee — coffee and a pastry</li><li>Lunch: Beatnic</li><li>Dinner: LadyBird</li><li>Stay: Airbnb</li></ul>
+<ul><li>Breakfast: Gregory's Coffee, coffee and a pastry</li><li>Lunch: Beatnic</li><li>Dinner: LadyBird</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Coffee with colleagues, then donuts from Dough on the way to the client site</li></ul>
-<h3>Day 5 — Wednesday</h3>
+<h3>Day 5: Wednesday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/04-jajaja-mexicana.jpg" alt="Jajaja Mexicana"> <em>Jajaja Mexicana</em></p>
 <p><strong>Meals:</strong></p>
-<ul><li>Breakfast: Caffe Vita — chai latte</li><li>Lunch: Jajaja Mexicana</li><li>Dinner: Chipotle (to-go)</li><li>Stay: Airbnb</li></ul>
+<ul><li>Breakfast: Caffe Vita, chai latte</li><li>Lunch: Jajaja Mexicana</li><li>Dinner: Chipotle (to-go)</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
-<ul><li>Hot yoga at Fierce Grace</li><li>Worked from a colleague's apartment, then moved the afternoon to the Mexican restaurant — churros for the whole table</li><li>Subway back to the office for a late night</li></ul>
-<h3>Day 6 — Thursday</h3>
+<ul><li>Hot yoga at Fierce Grace</li><li>Worked from a colleague's apartment, then moved the afternoon to the Mexican restaurant, churros for the whole table</li><li>Subway back to the office for a late night</li></ul>
+<h3>Day 6: Thursday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/05-work-views.jpg" alt="Work Views"> <em>Work Views</em></p>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Beatnic</li><li>Dinner: Thai</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Client site all day</li><li>30-minute meditation session at a sangha with a colleague</li></ul>
-<h3>Day 7 — Friday</h3>
+<h3>Day 7: Friday</h3>
 <p><img src="assets/images/navigating-new-york-work-week/06-vegan-on-the-fly.jpg" alt="Vegan on the Fly"> <em>Vegan on the Fly</em></p>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Leftover Thai</li><li>Dinner: Vegan on the Fly</li><li>Stay: Airbnb</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Worked from the Airbnb</li><li>Ice skating at Rockefeller Center, a stop at Adidas, and a walk through Times Square</li></ul>
-<h3>Day 8 — Saturday</h3>
+<h3>Day 8: Saturday</h3>
 <p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>kFjceemm-hfQp6zz" alt="Photo by Martin Adams on Unsplash"> </em>Photo by Martin Adams on Unsplash*</p>
 <p><strong>Meals:</strong></p>
 <ul><li>Dinner: Mom's food, back home</li><li>Stay: Home</li></ul>
@@ -404,6 +428,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

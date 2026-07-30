@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,28 +250,46 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
   <div class="article a-head">
     <a href="index.html#read" class="back">← All articles</a>
-    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 3 min read · 31 May 2021</div>
+    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 4 min read · 31 May 2021</div>
     <h1>Personal Website on AWS, Part 2: CloudFront & SSL</h1>
     <p class="dek">Turn the bare S3 site from Part 1 into a real HTTPS site on your own domain, served fast from CloudFront's edge network.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
-    <div class="prose"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>hcu8vevpyXv2nG0K" alt="Photo by Christopher Gower on Unsplash"> </em>Photo by Christopher Gower on Unsplash*</p>
-<p>This picks up right where <a href="/personal-website-on-aws-part-1.html">Part 1</a> left off — a working static site on S3, but on an ugly S3 URL with no HTTPS. Three services fix that: CloudFront, Route 53, and AWS Certificate Manager.</p>
+    <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>hcu8vevpyXv2nG0K" alt="Photo by Christopher Gower on Unsplash"> </em>Photo by Christopher Gower on Unsplash*</p>
+<p>This picks up right where <a href="/personal-website-on-aws-part-1.html">Part 1</a> left off: a working static site on S3, but on an ugly S3 URL with no HTTPS. Three services fix that: CloudFront, Route 53, and AWS Certificate Manager.</p>
 <h3>Setting up CloudFront</h3>
-<p>CloudFront is a CDN — a geographically distributed network of edge locations that serves your content from whichever one is physically closest to the visitor, cutting latency everywhere.</p>
+<p>CloudFront is a CDN: a geographically distributed network of edge locations that serves your content from whichever one is physically closest to the visitor, cutting latency everywhere.</p>
 <ol><li>Open the CloudFront service</li><li>Click <strong>Create Distribution</strong></li><li>Click <strong>Get Started</strong></li></ol>
 <p><strong>Origin settings</strong></p>
-<ul><li><strong>Origin Domain Name</strong> — paste your S3 static-hosting endpoint, in the form <code>&lt;BucketName&gt;.s3-website.us-east-2.amazonaws.com</code></li><li>Leave everything else default</li></ul>
+<ul><li><strong>Origin Domain Name</strong>: paste your S3 static-hosting endpoint, in the form <code>&lt;BucketName&gt;.s3-website.us-east-2.amazonaws.com</code></li><li>Leave everything else default</li></ul>
 <p><strong>Default cache behavior</strong></p>
-<ul><li><strong>Viewer Protocol Policy</strong> — set to <strong>Redirect HTTP to HTTPS</strong></li><li>Save</li></ul>
+<ul><li><strong>Viewer Protocol Policy</strong>: set to <strong>Redirect HTTP to HTTPS</strong></li><li>Save</li></ul>
 <p>Deployment takes 15–30 minutes. Once it's done, the CloudFront link should serve your site.</p>
 <h3>Registering a domain in Route 53</h3>
-<p>Route 53 is AWS's DNS service — it's what routes requests for your domain to the CloudFront distribution.</p>
+<p>Route 53 is AWS's DNS service: it's what routes requests for your domain to the CloudFront distribution.</p>
 <ol><li>Open Route 53, then <strong>Registered Domains</strong></li><li>Click <strong>Register Domain</strong></li><li>Search for the domain you want and check the price</li><li>Add it to the cart</li><li>Enter your contact details</li><li>Review and accept the terms</li><li>Complete the order</li></ol>
 <p>Registration usually finishes within a couple of hours.</p>
 <h3>Pointing the domain at CloudFront</h3>
@@ -273,15 +297,18 @@ a{ color:inherit; text-decoration:none; }
 <ol><li>Open <strong>Hosted Zones</strong></li><li>Click into your domain's zone</li><li>Create an <strong>A record</strong></li><li>Toggle <strong>Alias</strong>, choose <strong>Alias to CloudFront Distribution</strong></li><li>Paste in your CloudFront domain name</li><li>Click <strong>Create records</strong></li></ol>
 <h3>Getting a free SSL certificate</h3>
 <p>Without SSL, anything visitors submit to your site travels unencrypted — worth fixing before you share the link with anyone.</p>
-<ol><li>Open <strong>AWS Certificate Manager</strong> — make sure you're in <strong>us-east-1 / N. Virginia</strong>, since that's the only region CloudFront will accept certificates from</li><li>Click <strong>Provision Certificates → Request a public certificate</strong></li><li>Click <strong>Request a certificate</strong></li><li>Enter your domain name</li><li>Choose <strong>DNS validation</strong></li><li>Click through <strong>Next → Review → Confirm and Request</strong></li><li>Click <strong>Create a record in Route 53</strong></li></ol>
+<ol><li>Open <strong>AWS Certificate Manager</strong>, make sure you're in <strong>us-east-1 / N. Virginia</strong>, since that's the only region CloudFront will accept certificates from</li><li>Click <strong>Provision Certificates → Request a public certificate</strong></li><li>Click <strong>Request a certificate</strong></li><li>Enter your domain name</li><li>Choose <strong>DNS validation</strong></li><li>Click through <strong>Next → Review → Confirm and Request</strong></li><li>Click <strong>Create a record in Route 53</strong></li></ol>
 <p>Validation usually completes within a few minutes.</p>
 <h3>Wiring the certificate into CloudFront</h3>
-<ol><li>Select your distribution → <strong>Distribution Settings → Edit</strong></li><li><strong>Alternate Domain Names (CNAMEs)</strong> — enter your domain (e.g. <code>saismyhero.com</code>)</li><li><strong>SSL Certificate</strong> — choose <strong>Custom SSL Certificate</strong> and select the one you just validated</li><li>Save</li></ol>
+<ol><li>Select your distribution → <strong>Distribution Settings → Edit</strong></li><li><strong>Alternate Domain Names (CNAMEs)</strong>: enter your domain (e.g. <code>saismyhero.com</code>)</li><li><strong>SSL Certificate</strong>: choose <strong>Custom SSL Certificate</strong> and select the one you just validated</li><li>Save</li></ol>
 <p>From here, <code>https://your_domain.com</code> serves the site directly, and plain HTTP requests redirect to HTTPS automatically.</p>
 <h3>What you end up with</h3>
 <p>CloudFront for fast, edge-cached delivery, Route 53 for the domain and DNS, and ACM for the SSL certificate securing the connection — a real website, on your own domain, over HTTPS, for a few dollars a year.</p>
 <h3>Where to take it next</h3>
-<p>Add a résumé, blog posts, photography, past projects, and links to GitHub and LinkedIn. And as a bonus project: wire up CI/CD so pushing to your main branch redeploys the site automatically.</p><div class="endmark">〜</div></div>
+<p>Add a résumé, blog posts, photography, past projects, and links to GitHub and LinkedIn. And as a bonus project: wire up CI/CD so pushing to your main branch redeploys the site automatically.</p>
+</div><div class="mode-panel" data-mode="guide" hidden><h2>Practical guide: if you want to try this yourself</h2>
+<p>A condensed, copy-pasteable version of the steps above, in order.</p>
+<ol><li><strong>Create a CloudFront distribution.</strong> In the CloudFront console, click <strong>Create Distribution → Get Started</strong>, then set <strong>Origin Domain Name</strong> to your S3 static-hosting endpoint (<code>&lt;BucketName&gt;.s3-website.us-east-2.amazonaws.com</code>), leaving the rest default.</li><li><strong>Force HTTPS at the edge.</strong> Under <strong>Default cache behavior</strong>, set <strong>Viewer Protocol Policy</strong> to <strong>Redirect HTTP to HTTPS</strong>, then save and wait 15-30 minutes for deployment.</li><li><strong>Register your domain in Route 53.</strong> Under <strong>Registered Domains</strong>, click <strong>Register Domain</strong>, search for the domain, add it to the cart, enter contact details, and complete the order (usually finishes within a couple of hours).</li><li><strong>Point the domain at CloudFront.</strong> In the auto-created hosted zone, create an <strong>A record</strong>, toggle <strong>Alias</strong>, choose <strong>Alias to CloudFront Distribution</strong>, and paste in your CloudFront domain name.</li><li><strong>Request a free SSL certificate.</strong> In <strong>AWS Certificate Manager</strong>, switch to <strong>us-east-1 / N. Virginia</strong> (the only region CloudFront accepts certs from), then <strong>Request a public certificate</strong>, enter your domain, choose <strong>DNS validation</strong>, and click <strong>Create a record in Route 53</strong> to auto-validate.</li><li><strong>Attach the certificate to your distribution.</strong> Go to your distribution's <strong>Distribution Settings → Edit</strong>, enter your domain under <strong>Alternate Domain Names (CNAMEs)</strong>, and set <strong>SSL Certificate</strong> to <strong>Custom SSL Certificate</strong>, selecting the one you just validated.</li><li><strong>Verify the end result.</strong> <code>https://your_domain.com</code> should now serve the site directly, with plain HTTP requests redirecting to HTTPS automatically.</li></ol></div><div class="endmark">〜</div></div>
     <div class="reactions">
   <button class="like-btn" id="likeBtn" aria-label="Like this article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">0</span></button>
   <span class="views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="viewCount"></span></span></div>
@@ -383,6 +410,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

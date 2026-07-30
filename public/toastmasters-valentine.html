@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,6 +250,24 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
@@ -255,13 +279,13 @@ a{ color:inherit; text-decoration:none; }
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">Speaking</div></div>
     <div class="prose"><p><img src="assets/images/toastmasters-valentine/hero.jpg" alt="Photo by Cody Chan on Unsplash"> <em>Photo by <a href="https://unsplash.com/@cceee">Cody Chan</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p>I had a Valentine's Day date after a long time — and woke up the next day with body aches from how excited I'd been. Not exactly the outcome I expected from dinner and a movie.</p>
+<p>I had a Valentine's Day date after a long time, and woke up the next day with body aches from how excited I'd been. Not exactly the outcome I expected from dinner and a movie.</p>
 <p>That relationship had a lot of good in it: quality time at home with family and friends, vegan food, actually sleeping well, walks, movies, making plans for the future together. It didn't last. But it left me with a few things worth keeping.</p>
-<p><strong>I could have been more prepared.</strong> A relationship takes real energy, commitment, money, and time — going in with that understood ahead of time would have helped.</p>
+<p><strong>I could have been more prepared.</strong> A relationship takes real energy, commitment, money, and time. Going in with that understood ahead of time would have helped.</p>
 <p><strong>Self-care matters more than I gave it credit for.</strong> You can't always be the one providing. Sometimes there's nothing left to give, because you've given all of it away.</p>
-<p><strong>Spend some real time alone.</strong> Clarity comes from reflection — especially before you step into something new, or while you're trying to make sense of where you actually stand.</p>
+<p><strong>Spend some real time alone.</strong> Clarity comes from reflection, especially before you step into something new, or while you're trying to make sense of where you actually stand.</p>
 <p><strong>Don't forget your friends and family.</strong> A relationship shouldn't come at the cost of the people who were there for you long before it started.</p>
-<p><strong>Don't lose track of your career.</strong> Your own ambitions deserve the same priority as the relationship — that's a big part of what keeps your sense of who you are intact.</p>
+<p><strong>Don't lose track of your career.</strong> Your own ambitions deserve the same priority as the relationship. That's a big part of what keeps your sense of who you are intact.</p>
 <hr>
 <p><strong>Feedback I got:</strong> comfortable, engaging delivery, strong gestures, a natural style that held the room's attention — competition-ready, by the group's read. The one suggestion: lean on visual aids a bit more next time.</p><div class="endmark">〜</div></div>
     <div class="reactions">
@@ -365,6 +389,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

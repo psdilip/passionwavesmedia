@@ -3,13 +3,13 @@ title: "Colorado's Playground: Rockies to Red Rocks"
 slug: colorado-trip-aug-2022
 category: Travel
 tags: Colorado, Rocky Mountain National Park, Mount Evans, Red Rocks
-excerpt: Four days in Colorado — Rocky Mountain National Park, the summit of Mount Evans, and Red Rocks on the way out.
+excerpt: Four days in Colorado: Rocky Mountain National Park, the summit of Mount Evans, and Red Rocks on the way out.
 date: 2023-03-24
 ---
 
 Four days built around two mountains: Rocky Mountain National Park and Mount Evans, with Red Rocks as the send-off.
 
-### Day 1 — Thursday
+### Day 1: Thursday
 
 ![Day 1 overview](assets/images/colorado-trip-aug-2022/01-day1.jpg)
 
@@ -22,7 +22,7 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 - Snack run at Walmart
 - Dinner with friends
 
-### Day 2 — Friday
+### Day 2: Friday
 
 **Meals:** Starbucks for breakfast · trail mix and snacks for lunch · The Rock Inn Mountain Tavern for dinner
 
@@ -40,7 +40,7 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 ![Dream Lake](assets/images/colorado-trip-aug-2022/03-dream-lake.jpg)
 *Dream Lake*
 
-### Day 3 — Saturday
+### Day 3: Saturday
 
 ![Day 3 overview](assets/images/colorado-trip-aug-2022/04-day3.jpg)
 
@@ -58,7 +58,7 @@ Four days built around two mountains: Rocky Mountain National Park and Mount Eva
 ![View from Mount Evans](assets/images/colorado-trip-aug-2022/05-view-from-mount-evans.jpg)
 *View from Mount Evans*
 
-### Day 4 — Sunday
+### Day 4: Sunday
 
 ![Day 4 overview](assets/images/colorado-trip-aug-2022/06-day4.jpg)
 

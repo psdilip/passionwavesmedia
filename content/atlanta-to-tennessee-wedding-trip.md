@@ -12,7 +12,7 @@ date: 2023-07-06
 
 Four days, one wedding, and a rental car that saw more of the Smoky Mountains than I did.
 
-### Day 1 — Friday
+### Day 1: Friday
 
 **Meals:**
 - Lunch: Chipotle
@@ -24,14 +24,14 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 - Four-hour drive to Walland, Tennessee, with a couple of gas station stops along the way
 - Picked up pineapple tofu fried rice for dinner
 
-### Day 2 — Saturday
+### Day 2: Saturday
 
 ![Sunsphere](assets/images/atlanta-to-tennessee-wedding-trip/02-sunsphere.jpg)
 *Sunsphere at World's Fair Park*
 
 **Meals:**
 - Lunch: Cava
-- Dinner: The Tomato Head — vegan sandwich, pizza, and a chocolate chip cookie
+- Dinner: The Tomato Head (vegan sandwich, pizza, and a chocolate chip cookie)
 - Stay: Airbnb
 
 **Activity:**
@@ -39,22 +39,22 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 - Two hikes: Lakeshore Park and House Mountain
 - Visited the Sunsphere at World's Fair Park
 
-### Day 3 — Sunday
+### Day 3: Sunday
 
 ![The Island at Pigeon Forge](assets/images/atlanta-to-tennessee-wedding-trip/03-island-at-pigeon-forge.jpg)
 *The Island at Pigeon Forge*
 
 **Meals:**
-- Lunch: Taco Bell — spicy potato soft tacos, black bean crunchwrap supreme
+- Lunch: Taco Bell (spicy potato soft tacos, black bean crunchwrap supreme)
 - Dinner: Subway
 - Stay: Airbnb
 
 **Activity:**
 - Walmart run with a friend
 - Got ready for the wedding, then explored The Island at Pigeon Forge
-- A nearly hour-long wait at the Wendy's drive-thru — worth mentioning only because of how long it was
+- A nearly hour-long wait at the Wendy's drive-thru (worth mentioning only because of how long it was)
 
-### Day 4 — Monday
+### Day 4: Monday
 
 ![The Magnolia Wedding Venue](assets/images/atlanta-to-tennessee-wedding-trip/04-magnolia-wedding-venue.jpg)
 *The Magnolia Wedding Venue*
@@ -67,7 +67,7 @@ Four days, one wedding, and a rental car that saw more of the Smoky Mountains th
 - Celebration ran until 10:30pm
 - Started the overnight drive back to Atlanta through the Smokies
 
-### Day 5 — Tuesday
+### Day 5: Tuesday
 
 ![Photo by Aaron Burden on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*UYEEKfD_qT2Z4LU8)
 *Photo by Aaron Burden on Unsplash*

@@ -3,7 +3,7 @@ title: Installing Nginx via EC2 User Data
 slug: installing-nginx-ec2-user-data
 category: AWS
 tags: AWS, EC2, Nginx, User Data
-excerpt: Stand up an Nginx web server on a fresh EC2 instance with nothing but a user-data script — no manual SSH setup required.
+excerpt: Stand up an Nginx web server on a fresh EC2 instance with nothing but a user-data script, no manual SSH setup required.
 date: 2022-01-02
 ---
 
@@ -14,12 +14,12 @@ Nginx is an open-source web server that also handles reverse proxying, caching, 
 
 ### A few terms, quickly
 
-- **Web server** — hardware and software that serves data over HTTP
-- **Reverse proxy** — a server that sits in front of your origin server, accepting public requests and relaying them while keeping your actual server hidden
-- **Caching** — a copy of frequently requested data kept somewhere fast, so you're not re-fetching it every time
-- **Load balancing** — spreads traffic across multiple servers so no single one gets overwhelmed
-- **Media streaming** — delivers video and audio to clients as they request it
-- **Logging** — records of application and server behavior for later review
+- **Web server**: hardware and software that serves data over HTTP
+- **Reverse proxy**: a server that sits in front of your origin server, accepting public requests and relaying them while keeping your actual server hidden
+- **Caching**: a copy of frequently requested data kept somewhere fast, so you're not re-fetching it every time
+- **Load balancing**: spreads traffic across multiple servers so no single one gets overwhelmed
+- **Media streaming**: delivers video and audio to clients as they request it
+- **Logging**: records of application and server behavior for later review
 
 ### What you need
 
@@ -57,3 +57,24 @@ sudo systemctl start nginx
 ### Where to go from here
 
 From this baseline, it's worth digging into Nginx's config files and command set to start using it for what it's actually good at — reverse proxying, caching, load balancing, and streaming.
+
+## Practical guide: launch checklist
+
+A condensed, copy-pasteable version of the steps above.
+
+1. **Have the prerequisites ready first.** An AWS account plus a VPC, internet gateway, and public subnet already set up.
+2. **Start the launch.** Go to EC2, choose Launch instances, and pick the **Amazon Linux 2 AMI (64-bit x86)**.
+3. **Pick a small instance type.** `t2.micro` is plenty for testing.
+4. **Set networking.** Choose the VPC and turn on Auto-assign Public IP.
+5. **Paste the install script into User data:**
+```
+#!/bin/bash
+sudo yum update -y
+sudo amazon-linux-extras install nginx1 -y
+sudo systemctl enable nginx
+sudo systemctl start nginx
+```
+6. **Leave storage at the default**, add whatever tags you use for organization, and create a security group allowing SSH and port 80.
+7. **Review, launch, and select a key pair.**
+8. **Confirm it's up** by visiting the instance's public IP in a browser.
+9. **If it doesn't show up:** check the instance's system log first, SSH in and run `sudo systemctl status nginx`, and if it's still not right check `/var/log/nginx/` for the actual error.

@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Presigned URLs for S3 with the CLI — PassionWavesMedia</title>
-<meta name="description" content="A walkthrough for sharing a single private S3 object temporarily — no public bucket required.">
+<meta name="description" content="A walkthrough for sharing a single private S3 object temporarily, no public bucket required.">
 <link rel="canonical" href="https://passionwavesmedia.com/s3-presigned-urls-cli.html">
 <link rel="alternate" type="application/rss+xml" title="PassionWavesMedia" href="https://passionwavesmedia.com/feed.xml">
 <meta property="og:title" content="Presigned URLs for S3 with the CLI — PassionWavesMedia">
-<meta property="og:description" content="A walkthrough for sharing a single private S3 object temporarily — no public bucket required.">
+<meta property="og:description" content="A walkthrough for sharing a single private S3 object temporarily, no public bucket required.">
 <meta property="og:image" content="https://passionwavesmedia.com/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Presigned URLs for S3 with the CLI", "datePublished": "2022-05-18", "author": {"@type": "Person", "name": "Sai Dilip"}, "publisher": {"@type": "Organization", "name": "PassionWavesMedia"}}</script>
@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,41 +250,62 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
   <div class="article a-head">
     <a href="index.html#read" class="back">← All articles</a>
-    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 3 min read · 18 May 2022</div>
+    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 4 min read · 18 May 2022</div>
     <h1>Presigned URLs for S3 with the CLI</h1>
-    <p class="dek">A walkthrough for sharing a single private S3 object temporarily — no public bucket required.</p>
+    <p class="dek">A walkthrough for sharing a single private S3 object temporarily, no public bucket required.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
-    <div class="prose"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>yv7UhxzgMNL6QFvx" alt="Photo by Scott Graham on Unsplash"> </em>Photo by Scott Graham on Unsplash*</p>
-<p>AWS Support puts it plainly: "If you are using presigned URLs, you don't need to make the bucket public, and in fact, it may be better not to." That's the whole appeal — you get to share one object, for a limited time, without opening the bucket up.</p>
+    <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>yv7UhxzgMNL6QFvx" alt="Photo by Scott Graham on Unsplash"> </em>Photo by Scott Graham on Unsplash*</p>
+<p>AWS Support puts it plainly: "If you are using presigned URLs, you don't need to make the bucket public, and in fact, it may be better not to." That's the whole appeal: you get to share one object, for a limited time, without opening the bucket up.</p>
 <h3>Why you'd want this</h3>
 <p>S3 is cheap enough that storage usage tends to grow past its original purpose. Two examples that come up a lot:</p>
 <ul><li>A delivery photo gets dropped into S3 the moment a package arrives, and the link to it should expire after a set window.</li><li>An ETL job extracts a customer's data into an S3 object, and you want to hand them a link that works for a day, not forever.</li></ul>
 <h3>Before you start</h3>
 <ul><li>Console and CLI access to an active AWS account</li><li>Permissions on the S3 service</li></ul>
-<p><em>(These steps are for learning the mechanism — not necessarily a production-ready pattern as-is.)</em></p>
+<p><em>(These steps are for learning the mechanism, not necessarily a production-ready pattern as-is.)</em></p>
 <h3>Step by step</h3>
-<p><strong>1. Create a bucket.</strong> A bucket is just a container for objects — think of it like a folder in the cloud.</p>
+<p><strong>1. Create a bucket.</strong> A bucket is just a container for objects: think of it like a folder in the cloud.</p>
 <p><strong>2. Set it up:</strong></p>
-<ul><li><strong>Name</strong> — anything unique and relevant to what you're storing</li><li><strong>Region</strong> — wherever makes sense for your app or your latency needs</li><li><strong>Copy settings from an existing bucket</strong> — leave blank</li><li><strong>Object ownership</strong> — leave default</li><li><strong>Block public access</strong> — leave <em>all</em> public access blocked</li><li><strong>Versioning</strong> — only if you need to track multiple versions of the same object</li><li><strong>Tags</strong> — whatever your org standard is</li><li><strong>Default encryption</strong> — turn it on; SSE-S3 (Amazon S3-managed keys) is a fine default</li><li><strong>Advanced settings</strong> — leave default</li></ul>
+<ul><li><strong>Name</strong>: anything unique and relevant to what you're storing</li><li><strong>Region</strong>: wherever makes sense for your app or your latency needs</li><li><strong>Copy settings from an existing bucket</strong>: leave blank</li><li><strong>Object ownership</strong>: leave default</li><li><strong>Block public access</strong>: leave <em>all</em> public access blocked</li><li><strong>Versioning</strong>: only if you need to track multiple versions of the same object</li><li><strong>Tags</strong>: whatever your org standard is</li><li><strong>Default encryption</strong>: turn it on; SSE-S3 (Amazon S3-managed keys) is a fine default</li><li><strong>Advanced settings</strong>: leave default</li></ul>
 <p><strong>3. Create the bucket.</strong></p>
 <p><strong>4. Confirm it shows up in the console.</strong></p>
-<p><strong>5. Upload an object</strong> — drag a file in from your machine.</p>
+<p><strong>5. Upload an object</strong> by dragging a file in from your machine.</p>
 <p><strong>6. Generate the presigned URL.</strong> With the CLI pointed at the right account:</p>
 <pre><code>aws s3 presign --endpoint-url https://s3.{region}.amazonaws.com s3://{bucketname}/{object} --region {region} --expires-in {seconds}</code></pre>
 <p>An example from my own testing:</p>
 <pre><code>aws s3 presign --endpoint-url https://s3.us-east-1.amazonaws.com s3://sai-pre-signed-url-test/Dance.mov --region us-east-1 --expires-in 86400</code></pre>
-<p>That expires in 86,400 seconds — 24 hours.</p>
+<p>That expires in 86,400 seconds (24 hours).</p>
 <p><strong>7. Use it.</strong> Paste the resulting URL (starting with <code>https://s3.us-east-1...</code>) into a browser. It stops working once the expiry hits, but the object itself is untouched in the bucket.</p>
 <h3>Worth reading next</h3>
 <ul><li><a href="https://docs.aws.amazon.com/cli/latest/reference/s3/presign.html">AWS CLI <code>s3 presign</code> reference</a></li><li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html">S3 security best practices</a></li><li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">Sharing objects using presigned URLs</a></li></ul>
 <h3>Where to take it from here</h3>
-<ul><li>Add a lifecycle policy so the object cleans itself up automatically</li><li>Layer in bucket policies for defense in depth</li><li>If you're generating a lot of these, look at a URL shortener so they're easier to hand off</li></ul><div class="endmark">〜</div></div>
+<ul><li>Add a lifecycle policy so the object cleans itself up automatically</li><li>Layer in bucket policies for defense in depth</li><li>If you're generating a lot of these, look at a URL shortener so they're easier to hand off</li></ul>
+</div><div class="mode-panel" data-mode="guide" hidden><h2>Practical guide: if you want to try this yourself</h2>
+<p>A condensed, copy-pasteable version of the steps above, in order.</p>
+<ol><li><strong>Create a bucket.</strong> Give it a unique name, pick the region that fits your app or latency needs, and leave <strong>Copy settings from an existing bucket</strong> blank.</li><li><strong>Keep public access blocked.</strong> Leave <strong>Block public access</strong> set to block <em>all</em> public access. Presigned URLs are the whole point of not opening the bucket up.</li><li><strong>Turn on default encryption.</strong> SSE-S3 (Amazon S3-managed keys) is a fine default; leave <strong>Advanced settings</strong> as-is.</li><li><strong>Create the bucket and confirm it in the console.</strong></li><li><strong>Upload an object</strong> by dragging a file in from your machine.</li><li><strong>Generate the presigned URL from the CLI</strong>, pointed at the right account: <code>aws s3 presign --endpoint-url https://s3.{region}.amazonaws.com s3://{bucketname}/{object} --region {region} --expires-in {seconds}</code>. For example, <code>aws s3 presign --endpoint-url https://s3.us-east-1.amazonaws.com s3://sai-pre-signed-url-test/Dance.mov --region us-east-1 --expires-in 86400</code> expires in 24 hours (86,400 seconds).</li><li><strong>Use the URL.</strong> Paste the resulting link (starting with <code>https://s3.us-east-1...</code>) into a browser. It stops working once the expiry hits, and the object itself is never touched.</li></ol></div><div class="endmark">〜</div></div>
     <div class="reactions">
   <button class="like-btn" id="likeBtn" aria-label="Like this article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">0</span></button>
   <span class="views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="viewCount"></span></span></div>
@@ -380,6 +407,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

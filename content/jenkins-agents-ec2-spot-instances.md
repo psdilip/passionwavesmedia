@@ -3,14 +3,14 @@ title: Jenkins Agents on EC2 Spot Instances
 slug: jenkins-agents-ec2-spot-instances
 category: AWS
 tags: AWS, EC2, Jenkins, Spot Instances, CI/CD
-excerpt: A proof of concept for scaling Jenkins agents on spot pricing with the EC2-Fleet plugin — cheaper builds, no idle capacity.
+excerpt: A proof of concept for scaling Jenkins agents on spot pricing with the EC2-Fleet plugin: cheaper builds, no idle capacity.
 date: 2022-01-06
 ---
 
 ![Photo by Kevin Ache on Unsplash](assets/images/jenkins-agents-ec2-spot-instances/hero.jpg)
 *Photo by [Kevin Ache](https://unsplash.com/@kevinache) on [Unsplash](https://unsplash.com)*
 
-Inspired by how Lyft scaled their Jenkins infrastructure, I put together a proof of concept for running Jenkins agents on EC2 Spot instances instead of always-on boxes — using the EC2-Fleet plugin and an Auto Scaling Group to provision agents only when there's actually a job to run.
+Inspired by how Lyft scaled their Jenkins infrastructure, I put together a proof of concept for running Jenkins agents on EC2 Spot instances instead of always-on boxes, using the EC2-Fleet plugin and an Auto Scaling Group to provision agents only when there's actually a job to run.
 
 ### What this was meant to prove
 
@@ -33,7 +33,7 @@ Launch an Amazon Linux 2 instance (a `t2.micro` is enough) with this user data:
 
 ```bash
 #!/bin/bash
-wget -q -O — https://pkg.jenkins.io/debian-stable/jenkins.io.key
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo yum update -y
 sudo yum install java-1.8.0-openjdk -y
@@ -52,7 +52,7 @@ Once it's up, hit the instance's public IP on port 8080. Grab the initial admin 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-Run through the setup wizard — install the suggested plugins and create an admin user.
+Run through the setup wizard: install the suggested plugins and create an admin user.
 
 ### Give the fleet plugin an IAM identity
 
@@ -97,7 +97,7 @@ Create an IAM user (`Ec2-fleet-user`) with programmatic access and this policy:
 }
 ```
 
-Download the access key CSV — the plugin needs it during configuration.
+Download the access key CSV: the plugin needs it during configuration.
 
 ### Launch template + Auto Scaling Group
 
@@ -113,7 +113,7 @@ sudo yum install git -y
 sudo yum -y update aws-cli
 ```
 
-Build an Auto Scaling Group from that template — desired 1, minimum 1, maximum 4 — spread across the same VPC's private subnets as the master.
+Build an Auto Scaling Group from that template (desired 1, minimum 1, maximum 4), spread across the same VPC's private subnets as the master.
 
 ### Installing the plugin
 
@@ -139,8 +139,21 @@ A freestyle job (`sai-test-build`) pointed at `https://github.com/psdilip/python
 python3 basics.py
 ```
 
-Kick off the build and watch the Build Executor Status — you'll see the fleet provision an instance in real time, and the console log fills in as usual.
+Kick off the build and watch the Build Executor Status. You'll see the fleet provision an instance in real time, and the console log fills in as usual.
 
 ### The result
 
 The EC2-Fleet plugin deployed spot instances as Jenkins agents and ran jobs in parallel without any manual provisioning, all while cutting infrastructure cost and taking load off the master node entirely. It's a solid foundation to build a larger CI/CD setup on top of.
+
+## Practical guide: setting this up yourself
+
+A condensed, in-order checklist of everything above.
+
+1. **Launch the Jenkins master.** A `t2.micro` running Amazon Linux 2 is enough, with a user data script that installs Java and Jenkins and starts the service, in a VPC with DNS enabled and a public subnet (internet gateway plus auto-assigned public IPs).
+2. **Finish the setup wizard.** Hit the instance's public IP on port `8080`, grab the initial password with `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`, then install the suggested plugins and create an admin user.
+3. **Create an IAM user for the fleet plugin.** Name it `Ec2-fleet-user`, give it programmatic access, and attach a policy covering EC2 spot fleet actions (`DescribeSpotFleetInstances`, `ModifySpotFleetRequest`, `TerminateInstances`, etc.), Auto Scaling Group actions (`DescribeAutoScalingGroups`, `UpdateAutoScalingGroup`), and IAM actions (`ListInstanceProfiles`, `ListRoles`, `PassRole`). Download the access key CSV.
+4. **Build a launch template for agents.** Call it `EC2-fleet-launch-template`, base it on the `amzn2-ami-hvm` AMI on a `t3.small`, enable spot instance requests, and give it user data that installs Java, git, and updates the AWS CLI.
+5. **Build the Auto Scaling Group.** Use that launch template, set desired `1`, minimum `1`, maximum `4`, and place it in the same VPC's private subnets as the master.
+6. **Install the EC2-Fleet plugin.** Under **Manage Jenkins → Manage Plugins**, search for `ec2-fleet`, install without restart, then restart Jenkins.
+7. **Configure the Amazon EC2 Fleet cloud.** Under **Manage Jenkins → Manage Nodes and Clouds → Configure Clouds**, add the IAM user's credentials, pick the region, confirm the Auto Scaling Group auto-populates, test the connection, set the launcher to SSH with the master's private key, and configure `1` executor, `5` max idle minutes, minimum cluster size `1`, maximum cluster size `5`, and label `spot-agents` (non-verifying verification strategy, Private IP for internal traffic).
+8. **Run a test build.** A freestyle job pointed at a git repo with an Execute Shell step is enough to watch the fleet provision a spot instance in real time and confirm the job actually runs on it.

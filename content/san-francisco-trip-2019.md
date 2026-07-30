@@ -3,7 +3,7 @@ title: "City by the Bay: San Francisco"
 slug: san-francisco-trip-2019
 category: Travel
 tags: San Francisco, Yosemite, Golden Gate Bridge
-excerpt: Four days in San Francisco and a detour to Yosemite — Lombard Street, the Golden Gate from four different angles, and a lot of walking.
+excerpt: Four days in San Francisco and a detour to Yosemite, Lombard Street, the Golden Gate from four different angles, and a lot of walking.
 date: 2020-04-19
 ---
 
@@ -37,7 +37,7 @@ Four days covering San Francisco end to end, with a side trip out to Yosemite in
 
 **Meals:** Starbucks for breakfast · Burger King for lunch · Palamuru Grill again for dinner
 
-**Stops:** A day trip out to Yosemite — Tunnel View, Yosemite Valley, and Yosemite Falls. Glacier Point was closed.
+**Stops:** A day trip out to Yosemite: Tunnel View, Yosemite Valley, and Yosemite Falls. Glacier Point was closed.
 
 ### Day 4
 
@@ -47,7 +47,7 @@ Four days covering San Francisco end to end, with a side trip out to Yosemite in
 
 **Meals:** Krispy Kreme for breakfast · Beach Chalet Brewery and Restaurant for lunch · dinner somewhere in the airport
 
-**Stops:** A full loop through Golden Gate Park — the Conservatory of Flowers, Robin Williams Meadow, the National AIDS Memorial Grove, the California Academy of Sciences, the Shakespeare Garden, the Japanese Tea Garden, and Strawberry Hill — then the fire pits at Ocean Beach before heading to the airport.
+**Stops:** A full loop through Golden Gate Park: the Conservatory of Flowers, Robin Williams Meadow, the National AIDS Memorial Grove, the California Academy of Sciences, the Shakespeare Garden, the Japanese Tea Garden, and Strawberry Hill, then the fire pits at Ocean Beach before heading to the airport.
 
 ### Gallery
 

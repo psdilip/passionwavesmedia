@@ -3,7 +3,7 @@ title: Starting Your AWS Journey
 slug: starting-out-on-your-aws-journey
 category: AWS
 tags: AWS, Career, Certifications, Learning
-excerpt: Lessons from a few years in the cloud — on learning deliberately, troubleshooting with intent, and treating a career as a process instead of a checklist.
+excerpt: Lessons from a few years in the cloud, on learning deliberately, troubleshooting with intent, and treating a career as a process instead of a checklist.
 date: 2021-11-26
 ---
 
@@ -17,23 +17,23 @@ AWS has over 200 services, and no one learns all of them at once. Every time I'v
 ![Photo by Alex Blăjan on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*hS4IVsv0LN_80yi6)
 *Photo by Alex Blăjan on Unsplash*
 
-Pick one service, use it until you're not thinking about the console anymore, then move to the next. That slower path builds a foundation you can make decisions on — and decisions are the whole job. The understanding comes from repetition: using a service in a few different scenarios, breaking it, and fixing it.
+Pick one service, use it until you're not thinking about the console anymore, then move to the next. That slower path builds a foundation you can make decisions on, and decisions are the whole job. The understanding comes from repetition: using a service in a few different scenarios, breaking it, and fixing it.
 
 ### Enjoy the process of learning the certifications
 
 ![Photo by Priscilla Du Preez on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*MjdwN2KNQo1J-_rv)
 *Photo by Priscilla Du Preez on Unsplash*
 
-Certifications aren't the point, but they're a good forcing function — they show you the layers of *how* a service is actually implemented, not just what it's for. I try to hit the material from a few directions: labs, teaching someone else, answering questions in a community, writing about it. Each one exposes a different gap.
+Certifications aren't the point, but they're a good forcing function: they show you the layers of *how* a service is actually implemented, not just what it's for. I try to hit the material from a few directions: labs, teaching someone else, answering questions in a community, writing about it. Each one exposes a different gap.
 
 ### Troubleshooting
 
 The better I understand an architecture, the faster I can debug it. A few things that help:
 
-- Ask for (or draw your own) architecture diagrams — a tool like Lucidscale works fine
+- Ask for (or draw your own) architecture diagrams, a tool like Lucidscale works fine
 - Write down your troubleshooting steps so you start noticing patterns
 - Note *what kind* of problem it was: permissions, networking, throttling, a code bug, a config setting
-- Say something the moment you hit an issue — don't sit on it
+- Say something the moment you hit an issue, don't sit on it
 - After it's resolved, write down the problem, how you prevented it going forward, and what you'd tell someone hitting the same thing
 
 ### Resources are not the bottleneck
@@ -52,14 +52,14 @@ AWS ships new features constantly — daily, some weeks. Part of the job is regu
 ![Photo by Antenna on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*eeljAiYWmtKlrpSX)
 *Photo by Antenna on Unsplash*
 
-Go to the meetups, the AWS events, the internal company functions. The directors, solutions architects, and other engineers you meet there aren't just contacts — they're a second source of perspective on problems you're stuck on. You don't have to take every piece of advice, but it's worth hearing.
+Go to the meetups, the AWS events, the internal company functions. The directors, solutions architects, and other engineers you meet there aren't just contacts: they're a second source of perspective on problems you're stuck on. You don't have to take every piece of advice, but it's worth hearing.
 
 ### Third-party tools
 
 ![Credits: simpat.tech/devops-architecture](https://miro.medium.com/v2/resize:fit:1400/1*9-e9Be7ZPu3VQeaUmiicew.jpeg)
 *Credits: simpat.tech/devops-architecture*
 
-Cloud services rarely operate alone — they sit inside a pipeline of monitoring tools, repos, test frameworks, and deployment systems. What you pick depends on cost, how much it automates, how usable it is, and how much time it actually saves you. The cloud platform is one piece, not the whole picture.
+Cloud services rarely operate alone: they sit inside a pipeline of monitoring tools, repos, test frameworks, and deployment systems. What you pick depends on cost, how much it automates, how usable it is, and how much time it actually saves you. The cloud platform is one piece, not the whole picture.
 
 ### On jobs
 
@@ -70,10 +70,10 @@ A few things I'd tell someone looking for their first or next cloud role:
 
 - Ask for referrals from people you already know, and apply through LinkedIn in parallel
 - While you wait to hear back, build something real with what you're learning
-- Early on: talk about your projects and show genuine enthusiasm for learning — that matters more than a perfect resume
+- Early on: talk about your projects and show genuine enthusiasm for learning. That matters more than a perfect resume
 - Prioritize the role and what you'll actually be doing over the salary number, at least at first
 - Pick companies with a healthy culture where you can keep growing
-- Look for roles that keep you a little uncomfortable — that's usually where the learning is
+- Look for roles that keep you a little uncomfortable. That's usually where the learning is
 
 Moving up from there takes experience across different environments, learning from what went wrong, being able to explain technical things clearly, and being confident enough to propose a solution instead of just asking what to do.
 
@@ -96,4 +96,17 @@ You hone concepts incrementally, pick up skills that seem unrelated until sudden
 ![Photo by Drew Beamer on Unsplash](https://miro.medium.com/v2/resize:fit:1400/0*hVrGiXihXJNOrXaF)
 *Photo by Drew Beamer on Unsplash*
 
-None of this happens fast, and that's fine — the pay-as-you-go model means you can afford to experiment your way there. Learn it systematically and the bigger picture eventually falls into place on its own.
+None of this happens fast, and that's fine: the pay-as-you-go model means you can afford to experiment your way there. Learn it systematically and the bigger picture eventually falls into place on its own.
+
+## Practical guide: how to actually approach learning AWS
+
+A condensed version of the habits above, in the order they matter most.
+
+1. **Learn one service at a time.** Use it until the console stops feeling unfamiliar, then move on. Depth on a few services beats shallow exposure to all 200+.
+2. **Treat certifications as a forcing function, not the goal.** Study the material from a few angles (labs, teaching someone else, community Q&A, writing about it) so each one exposes a different gap.
+3. **Build a troubleshooting habit.** Sketch or request an architecture diagram, write down your steps as you go, note what kind of problem it turned out to be (permissions, networking, throttling, code, config), speak up the moment you're stuck, and write a short postmortem once it's resolved.
+4. **Pick one resource and finish it.** Between Pluralsight, Udemy for Business, ACloudGuru, AWS's own docs, and a sandbox account, the bottleneck was never a shortage of material, it was finishing what you start.
+5. **Stay current on purpose.** Scan what AWS ships regularly, decide what's actually worth adopting, and bring the useful parts to your team instead of waiting for someone else to notice.
+6. **Show up to meetups and AWS events.** The people you meet there are a second source of perspective on problems you're stuck on, not just contacts.
+7. **Use the Well-Architected Framework's five pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization) as a checklist** whenever you're proposing something new, not just as exam material.
+8. **When job hunting, lead with projects and enthusiasm, not a perfect resume.** Ask for referrals while applying on LinkedIn in parallel, prioritize the role over the salary number early on, and look for roles that keep you a little uncomfortable.

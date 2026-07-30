@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Road Trip: Idaho, Oregon & Utah — PassionWavesMedia</title>
-<meta name="description" content="A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.">
+<meta name="description" content="A seven-day drive through Idaho, Oregon, and Utah: waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.">
 <link rel="canonical" href="https://passionwavesmedia.com/western-wonders-road-trip-idaho-oregon-utah.html">
 <link rel="alternate" type="application/rss+xml" title="PassionWavesMedia" href="https://passionwavesmedia.com/feed.xml">
 <meta property="og:title" content="Road Trip: Idaho, Oregon &amp; Utah — PassionWavesMedia">
-<meta property="og:description" content="A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.">
+<meta property="og:description" content="A seven-day drive through Idaho, Oregon, and Utah: waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.">
 <meta property="og:image" content="https://passionwavesmedia.com/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Road Trip: Idaho, Oregon & Utah", "datePublished": "2023-10-01", "author": {"@type": "Person", "name": "Sai Dilip"}, "publisher": {"@type": "Organization", "name": "PassionWavesMedia"}}</script>
@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,6 +250,24 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
@@ -251,49 +275,49 @@ a{ color:inherit; text-decoration:none; }
     <a href="index.html#read" class="back">← All articles</a>
     <div class="kicker mono"><span class="dot" style="background:#22B0C4"></span>Travel · 3 min read · 01 Oct 2023</div>
     <h1>Road Trip: Idaho, Oregon & Utah</h1>
-    <p class="dek">A seven-day drive through Idaho, Oregon, and Utah — waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.</p>
+    <p class="dek">A seven-day drive through Idaho, Oregon, and Utah: waterfalls, a mountain tramway, kayaking, hikes, and everything eaten along the way.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">Travel</div></div>
     <div class="prose"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>eUWkxe3m8yQ2PDqV" alt="Photo by Ben Hoskyn on Unsplash"> </em>Photo by Ben Hoskyn on Unsplash*</p>
 <p>Seven days, three states, one Turo rental car. A day-by-day log of a loop through Boise, the Wallowa Mountains, Twin Falls, and Salt Lake City.</p>
-<h3>Day 1 — Thursday</h3>
+<h3>Day 1: Thursday</h3>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Qudoba at Seattle Airport</li><li>Dinner: Mom's tomato fried rice</li><li>Stay: Airbnb in Boise, ID</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Flight from Ontario to Seattle</li><li>Flight from Seattle to Boise</li><li>Picked up the Turo rental car at the airport</li><li>Checked into the Airbnb</li></ul>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/01-boise-downtown.jpg" alt="Drone shot of downtown Boise from Table Rock"> <em>Drone shot of downtown Boise from Table Rock.</em></p>
-<h3>Day 2 — Friday</h3>
+<h3>Day 2: Friday</h3>
 <p><strong>Meals:</strong></p>
 <ul><li>Breakfast: Strawberry banana with pea protein, and a berry cashew chia parfait at Nektar Juice Bar</li><li>Lunch: Mom's tomato fried rice</li><li>Dinner: Breakfast burrito from High Note Cafe</li><li>Stay: Airbnb in Pendleton, Oregon</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>One-hour session at Orangetheory Fitness</li><li>Table Rock hike from the Old Idaho Penitentiary site (1.5 hours total, 866 ft elevation gain)</li><li>Drove to Pendleton, Oregon</li></ul>
-<h3>Day 3 — Saturday</h3>
+<h3>Day 3: Saturday</h3>
 <p><strong>Meals:</strong></p>
 <ul><li>Breakfast: Burger at Roosters Country Kitchen with a drink from Dutch Bros</li><li>Dinner: Thai food at Thai Crystal</li><li>Stay: Airbnb in Pendleton</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Drove from Pendleton to Wallowa Lake</li><li>Rode the tramway up to Mt. Howard</li><li>Kayaked at Wallowa Lake</li></ul>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/02-wallowa-lake.jpg" alt="Drone shot of Wallowa Lake"></p>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/03-wallowa-mountain-range.jpg" alt="Wallowa Mountain Range"> <em>Drone shot of Wallowa Lake and the surrounding mountain range.</em></p>
-<h3>Day 4 — Sunday</h3>
+<h3>Day 4: Sunday</h3>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Chipotle in Boise</li><li>Dinner: Leftover Thai food</li><li>Stay: Airbnb in Twin Falls, Idaho</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Drove from Pendleton, Oregon to Twin Falls, Idaho</li><li>Visited the Perrine Bridge</li></ul>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/04-perrine-bridge.jpg" alt="Drone shot of the Perrine Memorial Bridge"> <em>Drone shot of the Perrine Memorial Bridge.</em></p>
-<h3>Day 5 — Monday</h3>
+<h3>Day 5: Monday</h3>
 <p><strong>Meals:</strong></p>
 <ul><li>Breakfast: TruFuel acai bowl</li><li>Lunch: 4 Roots Juice Bar</li><li>Dinner: Prohibition restaurant</li><li>Stay: A friend's place in Salt Lake City, Utah</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Visited Shoshone Falls and Lake Cleveland</li><li>Drove from Twin Falls to Salt Lake City</li></ul>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/05-shoshone-falls.jpg" alt="Drone shot of Shoshone Falls"></p>
 <p><img src="assets/images/western-wonders-road-trip-idaho-oregon-utah/06-lake-cleveland.jpg" alt="Drone shot of Lake Cleveland"> <em>Drone shot of Shoshone Falls and Lake Cleveland.</em></p>
-<h3>Day 6 — Tuesday</h3>
+<h3>Day 6: Tuesday</h3>
 <p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>ZKpI5FzcsvzfGPsE" alt="Salt Lake City — Photo by Saul Flores on Unsplash"> </em>Salt Lake City — Photo by Saul Flores on Unsplash*</p>
 <p><strong>Meals:</strong></p>
 <ul><li>Breakfast: Leftover Prohibition</li><li>Dinner: Noodles and Company</li><li>Stay: Airbnb in Boise</li></ul>
 <p><strong>Activity:</strong></p>
 <ul><li>Drove from Salt Lake City, Utah back to Boise, Idaho</li></ul>
-<h3>Day 7 — Wednesday</h3>
+<h3>Day 7: Wednesday</h3>
 <p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>XxIUH54pKEaIg_Gc" alt="Photo by Cedric Letsch on Unsplash"> </em>Photo by Cedric Letsch on Unsplash*</p>
 <p><strong>Meals:</strong></p>
 <ul><li>Lunch: Garbanzo Mediterranean Fresh at SLC Airport</li><li>Dinner: Home</li><li>Stay: Home</li></ul>
@@ -404,6 +428,69 @@ a{ color:inherit; text-decoration:none; }
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

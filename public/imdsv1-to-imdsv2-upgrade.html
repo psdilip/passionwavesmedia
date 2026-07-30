@@ -77,8 +77,9 @@ a{ color:inherit; text-decoration:none; }
 .chip .dot{ width:8px; height:8px; border-radius:50%; }
 
 .feature{ display:grid; grid-template-columns:1.05fr 1fr; border:1px solid var(--hairline); border-radius:22px; overflow:hidden; background:var(--surface); margin-bottom:28px; }
-.feature .art{ min-height:320px; position:relative; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
-.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); }
+.feature .art{ min-height:320px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 16s ease-in-out infinite alternate; }
+.feature .art img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.feature .art .coord{ position:absolute; left:22px; bottom:18px; color:rgba(255,255,255,0.9); background:rgba(0,0,0,0.45); padding:6px 12px; border-radius:999px; backdrop-filter:blur(2px); }
 .feature .body{ padding:42px; display:flex; flex-direction:column; justify-content:center; }
 .feature .body h3{ font-family:var(--serif); font-weight:500; font-size:clamp(24px,3vw,34px); line-height:1.14; letter-spacing:-0.01em; margin:14px 0 14px; }
 .feature .body p{ color:var(--muted); margin:0 0 22px; max-width:44ch; }
@@ -154,6 +155,11 @@ a{ color:inherit; text-decoration:none; }
 .prose pre code{ background:none; color:inherit; padding:0; }
 .prose img{ max-width:100%; border-radius:14px; margin:12px 0 28px; }
 .prose hr{ border:none; border-top:1px solid var(--hairline); margin:40px 0; }
+.mode-switch{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--hairline); border-radius:999px; background:var(--surface); margin:0 0 34px; }
+.mode-btn{ font-family:var(--sans); font-size:13.5px; font-weight:500; border:none; background:transparent; color:var(--muted); cursor:pointer; padding:8px 18px; border-radius:999px; transition:all .18s ease; }
+.mode-btn.active{ background:var(--grad); background-size:200% 100%; color:#fff; }
+.mode-btn:not(.active):hover{ color:var(--ink); }
+.mode-panel[hidden]{ display:none; }
 .map-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); }
 .map-embed iframe{ display:block; width:100%; height:280px; border:0; }
 .video-embed{ margin:12px 0 28px; border-radius:14px; overflow:hidden; border:1px solid var(--hairline); position:relative; padding-top:56.25%; height:0; }
@@ -244,26 +250,44 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:980px){ .arc-layout{ grid-template-columns:1fr; } .arc-side{ position:static; } .arc-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:620px){ .arc-grid{ grid-template-columns:1fr; } }
 .more-cta{ display:flex; justify-content:center; margin-top:40px; }
+
+/* ---------- Trending (Most Viewed / Liked / Recent) ---------- */
+.trending{ padding-top:0; }
+.trend-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.trend-col{ border:1px solid var(--hairline); border-radius:16px; padding:22px; background:var(--surface); }
+.trend-col h4{ margin:0 0 14px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:8px; }
+.trend-col h4 svg{ width:14px; height:14px; opacity:0.7; }
+.trend-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.trend-list li{ display:flex; }
+.trend-item{ display:flex; align-items:center; gap:12px; width:100%; }
+.trend-rank{ font-family:var(--mono); font-size:13px; color:var(--muted); width:1.4em; flex:0 0 auto; }
+.trend-thumb{ width:44px; height:44px; border-radius:9px; overflow:hidden; flex:0 0 auto; background:var(--hairline); }
+.trend-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.trend-body{ min-width:0; }
+.trend-body .t{ display:block; font-size:14.5px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trend-body .m{ display:block; font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+.trend-empty{ font-size:13px; color:var(--muted); }
+@media (max-width:880px){ .trend-grid{ grid-template-columns:1fr; } }
 .nav a.navlink.active{ color:var(--ink); }
 </style></head><body><header class="masthead"><div class="wrap masthead-inner"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-text">PassionWavesMedia</span></a><nav class="nav"><a class="navlink" href="articles.html">Read</a><a class="navlink" href="index.html#mission">About</a><a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a></nav></div></header>
 <article>
   <div class="article a-head">
     <a href="index.html#read" class="back">← All articles</a>
-    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 2 min read · 16 Feb 2022</div>
+    <div class="kicker mono"><span class="dot" style="background:#6B4EE6"></span>AWS · 3 min read · 16 Feb 2022</div>
     <h1>Upgrading EC2 to IMDSv2</h1>
     <p class="dek">Why the original instance metadata service was a security gap, and the exact commands to move every instance to the authenticated version.</p>
   </div>
   <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
-    <div class="prose"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>GZbP2GiCu3cI00Yw" alt="Photo by Christina @ wocintechchat.com on Unsplash"> </em>Photo by Christina @ wocintechchat.com on Unsplash*</p>
+    <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>GZbP2GiCu3cI00Yw" alt="Photo by Christina @ wocintechchat.com on Unsplash"> </em>Photo by Christina @ wocintechchat.com on Unsplash*</p>
 <p>Every EC2 instance exposes a metadata service — identity credentials, IAM info, metrics, public keys, security groups — but only from inside that instance. The catch: if someone ever gets a foothold on the instance itself, that data is theirs too.</p>
 <h3>The two versions</h3>
-<ul><li><strong>IMDSv1</strong> — a plain request/response method</li><li><strong>IMDSv2</strong> — a session-oriented method</li></ul>
+<ul><li><strong>IMDSv1</strong>: a plain request/response method</li><li><strong>IMDSv2</strong>: a session-oriented method</li></ul>
 <h3>The problem with v1</h3>
-<p>IMDSv1 doesn't authenticate metadata requests at all. If something on the instance can make an HTTP request — including, say, a compromised app process — it can pull credentials straight out of the metadata service.</p>
+<p>IMDSv1 doesn't authenticate metadata requests at all. If something on the instance can make an HTTP request (including, say, a compromised app process), it can pull credentials straight out of the metadata service.</p>
 <h3>What v2 fixes</h3>
 <p>IMDSv2 requires a token before it'll return anything. It's session-based, the token expires after a set time, and that one change closes the gap entirely.</p>
 <h3>How to upgrade your existing instances</h3>
-<p><strong>1. Find the instances that still need upgrading</strong> — AWS Trusted Advisor will flag them if you have it enabled.</p>
+<p><strong>1. Find the instances that still need upgrading.</strong> AWS Trusted Advisor will flag them if you have it enabled.</p>
 <p><strong>2. Check the current setting:</strong></p>
 <pre><code>aws ec2 describe-instances --instance-ids &lt;enter-your-instance-id&gt;</code></pre>
 <p>Look at the <code>MetadataOptions</code> field in the response.</p>
@@ -274,7 +298,10 @@ a{ color:inherit; text-decoration:none; }
 <p><strong>6. Request metadata the v2 way:</strong></p>
 <pre><code>TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
 curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/</code></pre>
-<p>That's the whole migration. It's a small change with a real security payoff, and there's very little reason not to require it on every instance you run.</p><div class="endmark">〜</div></div>
+<p>That's the whole migration. It's a small change with a real security payoff, and there's very little reason not to require it on every instance you run.</p>
+</div><div class="mode-panel" data-mode="guide" hidden><h2>Practical guide: the upgrade checklist</h2>
+<p>A condensed, copy-pasteable version of the steps above.</p>
+<ol><li><strong>Find out which instances are still on v1.</strong> Check AWS Trusted Advisor if you have it enabled; it flags them for you.</li><li><strong>Check the current setting on an instance</strong> with <code>aws ec2 describe-instances --instance-ids &lt;enter-your-instance-id&gt;</code> and look at the <code>MetadataOptions</code> field in the response.</li><li><strong>Require v2 on that instance:</strong> <code>aws ec2 modify-instance-metadata-options --instance-id &lt;enter-your-instance-id&gt; --http-tokens required --http-endpoint enabled --http-put-response-hop-limit 1</code>.</li><li><strong>Confirm the change took</strong> by running the same <code>describe-instances</code> command again and re-checking <code>MetadataOptions</code>.</li><li><strong>Test from inside the instance.</strong> An unauthenticated metadata request should now fail.</li><li><strong>Request metadata the v2 way, to confirm it works.</strong> Get a token first with <code>curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"</code>, then pass it along with <code>curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/</code>.</li></ol></div><div class="endmark">〜</div></div>
     <div class="reactions">
   <button class="like-btn" id="likeBtn" aria-label="Like this article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">0</span></button>
   <span class="views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="viewCount"></span></span></div>
@@ -376,6 +403,69 @@ curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta
       }
     });
   };
+  /* ---------- story / practical-guide mode switch (article pages) ---------- */
+  window.pwSetMode = function (btn, mode) {
+    var group = btn.closest(".mode-switch");
+    group.querySelectorAll(".mode-btn").forEach(function (b) {
+      var active = b === btn;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    group.parentElement.querySelectorAll(".mode-panel").forEach(function (panel) {
+      panel.hidden = panel.dataset.mode !== mode;
+    });
+  };
+
+  /* ---------- homepage trending (Most Viewed / Most Liked / Recent) ---------- */
+  window.pwInitTrending = function () {
+    var viewsEl = document.getElementById("trendViews");
+    var likesEl = document.getElementById("trendLikes");
+    if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
+
+    if (!haveDB) {
+      viewsEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      likesEl.innerHTML = '<li class="trend-empty">Live stats aren\'t connected yet.</li>';
+      return;
+    }
+
+    var posts = window.PW_POSTS || [];
+    var bySlug = {};
+    posts.forEach(function (p) { bySlug[p.slug] = p; });
+
+    function rowHtml(row, i) {
+      var p = bySlug[row.slug];
+      if (!p) return "";
+      var thumb = p.thumb
+        ? '<span class="trend-thumb"><img src="' + p.thumb + '" alt="" loading="lazy" ' +
+          'onerror="this.parentElement.style.display=\'none\'"></span>'
+        : '<span class="trend-thumb"></span>';
+      return '<li><a class="trend-item" href="' + p.slug + '.html">' +
+        '<span class="trend-rank mono">' + (i + 1) + "</span>" + thumb +
+        '<span class="trend-body"><span class="t">' + p.title + '</span>' +
+        '<span class="m">' + p.date + " · " + p.minutes + " min</span></span></a></li>";
+    }
+
+    function renderRanked(el, rows, key) {
+      var ranked = rows.filter(function (r) { return (r[key] || 0) > 0 && bySlug[r.slug]; })
+        .sort(function (a, b) { return (b[key] || 0) - (a[key] || 0); })
+        .slice(0, 5);
+      el.innerHTML = ranked.length
+        ? ranked.map(function (r, i) { return rowHtml(r, i); }).join("")
+        : '<li class="trend-empty">Not enough reader activity yet — check back soon.</li>';
+    }
+
+    rpc("pw_top_stats", {})
+      .then(function (rows) {
+        rows = rows || [];
+        renderRanked(viewsEl, rows, "views");
+        renderRanked(likesEl, rows, "likes");
+      })
+      .catch(function () {
+        viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+        likesEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';
+      });
+  };
+
   /* ---------- sidebar navigator (articles.html) ---------- */
   window.pwArchiveInitV2 = function () {
     var gridEl = document.getElementById("arcGrid");

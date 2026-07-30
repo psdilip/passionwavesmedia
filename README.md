@@ -109,19 +109,30 @@ purely by the post's slug, so there's nothing extra to do per-article once this 
      return query select s.likes, s.views from stats s where s.slug = p_slug;
    end; $$;
 
-   grant execute on function pw_view(text), pw_like(text) to anon;
+   create or replace function pw_top_stats()
+   returns table(slug text, likes int, views int) language sql security definer
+   stable as $$
+     select s.slug, s.likes, s.views from stats s;
+   $$;
+
+   grant execute on function pw_view(text), pw_like(text), pw_top_stats() to anon;
    ```
 
-3. Rebuild. Likes and reads now count for real, shared across everyone.
+3. Rebuild. Likes and reads now count for real, shared across everyone. The homepage's
+   "Trending" strip (Most Viewed / Most Liked) reads through `pw_top_stats()` — a
+   read-only aggregate with no parameters, so there's no injection surface, same as the
+   other two functions. If you already ran step 2 before this function existed, just
+   re-run the whole block above — `create or replace` and `grant` are both idempotent.
 
 **Why this is safe to expose publicly:**
 - Row-level security is on and **no policy grants the `anon` role any direct access
-  to the `stats` table** — the only way in is through the two functions below.
+  to the `stats` table** — the only way in is through the three functions below.
 - The functions are `security definer` (they run with the owner's privileges to get
-  past RLS on purpose), but each one only runs a fixed, parameterized upsert against
-  one row keyed by `slug` — there's no dynamic SQL, so there's no injection surface.
-- `grant execute` is scoped to exactly `pw_view` and `pw_like`, nothing else — the
-  `anon` key can't read, write, or call anything beyond those two functions.
+  past RLS on purpose). `pw_view`/`pw_like` each only run a fixed, parameterized upsert
+  against one row keyed by `slug`; `pw_top_stats` takes no parameters and only reads —
+  there's no dynamic SQL anywhere, so there's no injection surface.
+- `grant execute` is scoped to exactly `pw_view`, `pw_like`, and `pw_top_stats`, nothing
+  else — the `anon` key can't read, write, or call anything beyond those three functions.
 - **Known trade-off:** there's no server-side rate limiting. The "one like per browser"
   rule is enforced client-side via `localStorage`, which stops accidental double-likes
   but not someone deliberately scripting requests against the public functions. For a
