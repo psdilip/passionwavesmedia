@@ -391,7 +391,7 @@ def build_article(cfg, p, present_cats):
     <h1>{p['title']}</h1>
     <p class="dek">{p['excerpt']}</p>
   </div>
-  <div class="article"><div class="hero-art"><div class="caption mono">{p['category']}</div></div>
+  <div class="article">
     <div class="prose">{prose_inner}<div class="endmark">〜</div></div>
     {reactions}
   </div>

@@ -137,9 +137,7 @@ a{ color:inherit; text-decoration:none; }
 .kicker .dot{ width:9px; height:9px; border-radius:50%; }
 .a-head h1{ font-family:var(--serif); font-weight:500; font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 20px; }
 .dek{ font-family:var(--serif); font-style:italic; font-size:clamp(19px,2.4vw,23px); line-height:1.45; color:var(--muted); margin:0 0 28px; }
-.hero-art{ height:clamp(220px,42vw,400px); margin:34px 0 40px; border-radius:18px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 14s ease-in-out infinite alternate; }
 @keyframes sheen{ from{ background-position:0 50%;} to{ background-position:100% 50%;} }
-.hero-art .caption{ position:absolute; left:20px; bottom:16px; color:rgba(255,255,255,0.92); }
 
 .prose{ font-family:var(--serif); font-size:20px; line-height:1.72; color:#2b2830; }
 .prose p{ margin:0 0 24px; }
@@ -277,7 +275,7 @@ a{ color:inherit; text-decoration:none; }
     <h1>Creating an AWS Account from Scratch</h1>
     <p class="dek">What cloud computing actually buys you, and the exact steps to get a working AWS account and console access.</p>
   </div>
-  <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
+  <div class="article">
     <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>1eRPSCZz9MMzTOLz" alt="Photo by Antonio Scalogna on Unsplash"> </em>Photo by Antonio Scalogna on Unsplash*</p>
 <p>If you're starting a cloud journey, or just want to understand what all the fuss is about, AWS is a reasonable place to start: it's held the top spot in cloud market share for over a decade and is still one of the fastest-growing cloud businesses out there.</p>
 <h3>What "the cloud" actually is</h3>

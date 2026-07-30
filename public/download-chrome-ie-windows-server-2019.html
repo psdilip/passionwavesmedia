@@ -137,9 +137,7 @@ a{ color:inherit; text-decoration:none; }
 .kicker .dot{ width:9px; height:9px; border-radius:50%; }
 .a-head h1{ font-family:var(--serif); font-weight:500; font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 20px; }
 .dek{ font-family:var(--serif); font-style:italic; font-size:clamp(19px,2.4vw,23px); line-height:1.45; color:var(--muted); margin:0 0 28px; }
-.hero-art{ height:clamp(220px,42vw,400px); margin:34px 0 40px; border-radius:18px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 14s ease-in-out infinite alternate; }
 @keyframes sheen{ from{ background-position:0 50%;} to{ background-position:100% 50%;} }
-.hero-art .caption{ position:absolute; left:20px; bottom:16px; color:rgba(255,255,255,0.92); }
 
 .prose{ font-family:var(--serif); font-size:20px; line-height:1.72; color:#2b2830; }
 .prose p{ margin:0 0 24px; }
@@ -277,7 +275,7 @@ a{ color:inherit; text-decoration:none; }
     <h1>Getting Chrome onto Windows Server 2019</h1>
     <p class="dek">A fresh Windows Server 2019 box only comes with Internet Explorer, here's how to get Chrome onto it without a fight.</p>
   </div>
-  <div class="article"><div class="hero-art"><div class="caption mono">How-To</div></div>
+  <div class="article">
     <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="assets/images/download-chrome-ie-windows-server-2019/hero.jpg" alt="Photo by Lukas on Unsplash"> <em>Photo by <a href="https://unsplash.com/@lukash">Lukas</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
 <p>A new Windows Server 2019 instance only ships with Internet Explorer, and IE's default security settings actively get in the way of downloading anything, including the browser you'd rather be using. Here's the sequence that gets Chrome installed without fighting it the whole way.</p>
 <ol><li>When IE opens for the first time, dismiss the initial pop-up with <strong>OK</strong>.</li><li>Open <strong>Internet Options</strong> from the settings menu.</li><li>Go to the <strong>Security</strong> tab.</li><li>Click <strong>Custom Level</strong>, find the <strong>Downloads</strong> section, and enable <strong>File Download</strong>.</li><li>Click <strong>OK</strong> and confirm the security-settings change when it asks.</li><li>Go to <strong>Trusted Sites</strong> and add <code>https://www.google.com</code> to the list.</li><li>Apply and confirm.</li><li>Open a new tab. Another pop-up will appear. Uncheck the highlighted box, choose <strong>Add</strong> to trust the site, and close the dialog.</li><li>Search "download chrome" and open the first result.</li><li>Click <strong>Download Chrome</strong> (refresh the page if the button doesn't show up).</li><li>When prompted, choose <strong>Save</strong>, then <strong>Run</strong>, to finish the install.</li></ol>

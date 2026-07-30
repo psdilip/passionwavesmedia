@@ -137,9 +137,7 @@ a{ color:inherit; text-decoration:none; }
 .kicker .dot{ width:9px; height:9px; border-radius:50%; }
 .a-head h1{ font-family:var(--serif); font-weight:500; font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 20px; }
 .dek{ font-family:var(--serif); font-style:italic; font-size:clamp(19px,2.4vw,23px); line-height:1.45; color:var(--muted); margin:0 0 28px; }
-.hero-art{ height:clamp(220px,42vw,400px); margin:34px 0 40px; border-radius:18px; position:relative; overflow:hidden; background:var(--grad); background-size:220% 100%; animation:sheen 14s ease-in-out infinite alternate; }
 @keyframes sheen{ from{ background-position:0 50%;} to{ background-position:100% 50%;} }
-.hero-art .caption{ position:absolute; left:20px; bottom:16px; color:rgba(255,255,255,0.92); }
 
 .prose{ font-family:var(--serif); font-size:20px; line-height:1.72; color:#2b2830; }
 .prose p{ margin:0 0 24px; }
@@ -277,7 +275,7 @@ a{ color:inherit; text-decoration:none; }
     <h1>Windows Access via Session Manager, No RDP Port</h1>
     <p class="dek">Get shell and RDP access to a Windows EC2 instance through Systems Manager, then close port 3389 in the security group for good.</p>
   </div>
-  <div class="article"><div class="hero-art"><div class="caption mono">AWS</div></div>
+  <div class="article">
     <div class="prose"><div class="mode-switch" role="tablist"><button class="mode-btn active" role="tab" aria-selected="true" onclick="pwSetMode(this,'story')">Story</button><button class="mode-btn" role="tab" aria-selected="false" onclick="pwSetMode(this,'guide')">Practical Guide</button></div><div class="mode-panel" data-mode="story"><p><img src="https://miro.medium.com/v2/resize:fit:1400/0<em>Sl3gnlPFQn9Q-8On" alt="Photo by Christina @ wocintechchat.com on Unsplash"> </em>Photo by Christina @ wocintechchat.com on Unsplash*</p>
 <p>Session Manager, part of AWS Systems Manager, gives you controlled, secure shell access to a Windows or Linux instance without ever opening a port in the security group. Here's how to use it to reach a Windows box (including RDP) without 3389 open to the world.</p>
 <h3>What this walkthrough assumes</h3>
