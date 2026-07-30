@@ -121,8 +121,22 @@ purely by the post's slug, so there's nothing extra to do per-article once this 
 3. Rebuild. Likes and reads now count for real, shared across everyone. The homepage's
    "Trending" strip (Most Viewed / Most Liked) reads through `pw_top_stats()` — a
    read-only aggregate with no parameters, so there's no injection surface, same as the
-   other two functions. If you already ran step 2 before this function existed, just
-   re-run the whole block above — `create or replace` and `grant` are both idempotent.
+   other two functions.
+
+   **If you already ran step 2 before `pw_top_stats()` existed** (i.e. `stats`,
+   `pw_view`, and `pw_like` are already set up): do **not** re-run the block above — the
+   `create table stats` line will fail with `relation "stats" already exists` and stop
+   the whole script before it reaches `pw_top_stats()`. Instead, run only this:
+
+   ```sql
+   create or replace function pw_top_stats()
+   returns table(slug text, likes int, views int) language sql security definer
+   stable as $$
+     select s.slug, s.likes, s.views from stats s;
+   $$;
+
+   grant execute on function pw_top_stats() to anon;
+   ```
 
 **Why this is safe to expose publicly:**
 - Row-level security is on and **no policy grants the `anon` role any direct access
