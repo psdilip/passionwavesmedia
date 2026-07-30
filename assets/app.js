@@ -97,6 +97,7 @@
   window.pwInitTrending = function () {
     var viewsEl = document.getElementById("trendViews");
     var likesEl = document.getElementById("trendLikes");
+    var heroStats = document.getElementById("heroStats");
     if (!viewsEl || !likesEl) return; // Recent is server-rendered and needs no JS
 
     if (!haveDB) {
@@ -136,6 +137,15 @@
         rows = rows || [];
         renderRanked(viewsEl, rows, "views");
         renderRanked(likesEl, rows, "likes");
+
+        if (heroStats) {
+          var totalViews = rows.reduce(function (sum, r) { return sum + (r.views || 0); }, 0);
+          var totalLikes = rows.reduce(function (sum, r) { return sum + (r.likes || 0); }, 0);
+          if (totalViews || totalLikes) {
+            heroStats.innerHTML = "<span>" + fmt(totalViews) + " total reads</span><span>" + fmt(totalLikes) + " likes across every article</span>";
+            heroStats.hidden = false;
+          }
+        }
       })
       .catch(function () {
         viewsEl.innerHTML = '<li class="trend-empty">Couldn\'t load live stats.</li>';

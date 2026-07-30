@@ -287,6 +287,7 @@ def build_index(cfg, posts, present_cats):
   <p class="lede">{cfg['hero']['lede']}</p>
   <div class="cues"><a href="#latest"><button class="btn btn-grad">Start reading</button></a>
   <a href="#mission"><button class="btn btn-ghost">Why this exists</button></a></div>
+  <div class="hero-stats mono" id="heroStats" hidden></div>
 </div>{HERO_WAVE}</section>
 
 <section class="section" id="latest"><div class="wrap">
@@ -298,7 +299,7 @@ def build_index(cfg, posts, present_cats):
 {trend_html}
 
 <section class="section" style="padding-top:0"><div class="wrap">
-  <div class="more-cta reveal"><a href="articles.html"><button class="btn btn-ghost">Browse all articles →</button></a></div>
+  <div class="more-cta reveal"><a href="articles.html"><button class="btn btn-grad btn-lg">Browse all articles →</button></a></div>
 </div></section>
 
 {mission_html}
