@@ -345,7 +345,7 @@ def build_archive(cfg, posts, present_cats):
     body = f'''{nav(cfg, active="read")}
 <section class="section arc-section"><div class="wrap">
   <div class="section-head reveal"><h2>All articles</h2><p>{total} pieces — search by title, tag, or place, or browse by category.</p></div>
-  <div class="arc-layout reveal">{sidebar}{main}</div>
+  <div class="arc-layout">{sidebar}{main}</div>
 </div></section>
 {footer(cfg, present_cats)}'''
 
