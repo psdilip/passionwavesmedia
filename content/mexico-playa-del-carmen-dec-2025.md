@@ -3,7 +3,7 @@ title: "Mexico: Playa del Carmen, Chichen Itza & Xcaret"
 slug: mexico-playa-del-carmen-dec-2025
 category: Travel
 tags: Mexico, Playa del Carmen, Chichen Itza, Cenote, Valladolid, Xcaret, Riviera Maya, Yucatan
-excerpt: A first real resort stay in Playa del Carmen, a full-day trip to Chichen Itza and a cenote, and an adventure-packed day at Xcaret Explorer — all in December.
+excerpt: A first real resort stay in Playa del Carmen, a full-day trip to Chichen Itza and a cenote, and an adventure-packed day at Xcaret Explorer, all in December.
 date: 2025-12-20
 ---
 
@@ -17,12 +17,12 @@ Five days on the Riviera Maya: first real resort stay, Chichen Itza in the rain,
 *Riviera Maya resort area (mood shot, not the actual Pesis La Perla) · Photo by [Willian Justen de Vasconcellos](https://unsplash.com/@willianjusten) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
-- Dinner: Resort buffet — salmon was the standout; limited chicken options
+- Dinner: Resort buffet (salmon was the standout; limited chicken options)
 - Stay: Pesis La Perla, Playa del Carmen
 
 **Activity:**
-- Flew into Tulum airport; cab transfer to Playa del Carmen — for next time, fly into Cancún, it's a much shorter transfer
-- Checked into Pesis La Perla, a first resort at this level — it has a separate adult-only section and a family section
+- Flew into Tulum airport; cab transfer to Playa del Carmen (for next time, fly into Cancún, it's a much shorter transfer)
+- Checked into Pesis La Perla, a first resort at this level, with a separate adult-only section and a family section
 - The adult section was quiet and genuinely peaceful: pool views, Jacuzzi, low noise
 - Evening show at the resort
 - Walked the hotel grounds: small boutiques, coffee shop, ice cream spot, art center, activities running throughout (yoga, dance, drawing classes)
@@ -47,14 +47,14 @@ Five days on the Riviera Maya: first real resort stay, Chichen Itza in the rain,
 - Full-day tour booked through Viator: Chichen Itza, Cenote & Valladolid
 - 8 AM pickup from the hotel in a small van; transferred to a larger group bus around 10 AM
 - ~11 AM: lunch stop, included in the package
-- **Cenote** — lockers on site for your things; water is cold but you adjust fast; small fish swim right up and create a light tingling sensation; swimming area and a small dive spot; tequila tasting also available here. Bring a waterproof phone pouch (most people on the tour had one) and water shoes — Walmart near the resort carries them cheap
-- **Valladolid (~2–3 PM)** — small colonial town; central park ringed by a church, ice cream spots, and local market stalls; easy to walk, worth the stop
-- **Chichen Itza** — rained hard the whole visit; we had nothing to shelter with and ended up under trees with everyone else. Pack an umbrella or poncho
+- **Cenote**: lockers on site for your things; water is cold but you adjust fast; small fish swim right up and create a light tingling sensation; swimming area and a small dive spot; tequila tasting also available here. Bring a waterproof phone pouch (most people on the tour had one) and water shoes (Walmart near the resort carries them cheap)
+- **Valladolid (~2–3 PM)**: small colonial town; central park ringed by a church, ice cream spots, and local market stalls; easy to walk, worth the stop
+- **Chichen Itza**: rained hard the whole visit; we had nothing to shelter with and ended up under trees with everyone else. Pack an umbrella or poncho
 - Before entering: use the restrooms, grab water, a hat, or an umbrella at the front area. Cameras larger than a phone require a ~60 MXN fee at the gate
-- At El Castillo: clap once at the right angle and the echo sounds like a quetzal bird call — a deliberate Mayan engineering feature
+- At El Castillo: clap once at the right angle and the echo sounds like a quetzal bird call, a deliberate Mayan engineering feature
 - The ball court on the grounds is where the Mayans played a sport involving getting a ball through a ring mounted high on the wall
 - Vendors sell magnets, hats, and Maya crafts along the entry path on both sides
-- Long ride back: group bus to a transfer point, then a smaller van dropped off each hotel one by one — we were last
+- Long ride back: group bus to a transfer point, then a smaller van dropped off each hotel one by one; we were last
 
 ### Day 3
 
@@ -62,14 +62,14 @@ Five days on the Riviera Maya: first real resort stay, Chichen Itza in the rain,
 *Tulum coast (mood shot, not the actual Playa del Carmen beach) · Photo by [Tanja Cotoaga](https://unsplash.com/@tarafuco) on [Unsplash](https://unsplash.com)*
 
 **Meals:**
-- Breakfast: Resort buffet — a lot of dessert options
+- Breakfast: Resort buffet, a lot of dessert options
 - Dinner: Resort restaurant
 - Stay: Pesis La Perla, Playa del Carmen
 
 **Activity:**
 - Relaxed morning; leisurely breakfast
 - Beach time
-- Evening spa — first massage. Cleared out a lot more than expected. Would book again.
+- Evening spa, first massage. Cleared out a lot more than expected. Would book again.
 
 ### Day 4
 
@@ -79,7 +79,7 @@ Five days on the Riviera Maya: first real resort stay, Chichen Itza in the rain,
 
 **Activity:**
 - Worked remotely from the resort
-- Walmart run: water shoes, extra swim shirts, and snacks for the activity day ahead — if you have multiple water activity days, buy two or three swim shirts, they won't dry overnight
+- Walmart run: water shoes, extra swim shirts, and snacks for the activity day ahead. If you have multiple water activity days, buy two or three swim shirts, they won't dry overnight
 
 ### Day 5
 
@@ -91,8 +91,8 @@ Five days on the Riviera Maya: first real resort stay, Chichen Itza in the rain,
 - Stay: Pesis La Perla, Playa del Carmen
 
 **Activity:**
-- Explorer package at Xcaret — booked through the hotel (always ask your hotel first and compare prices before booking elsewhere)
+- Explorer package at Xcaret, booked through the hotel (always ask your hotel first and compare prices before booking elsewhere)
 - 7 AM pickup
 - Activities in order: zip lines (9 courses) → waterslide → ATV route → hammock splash river → lunch → underground river rafting
 - Underground river was the standout: rafting through illuminated cave systems underground
-- Flew home the following the next morning
+- Flew home the following morning

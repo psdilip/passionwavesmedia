@@ -309,7 +309,7 @@ def build_index(cfg, posts, present_cats):
 
     jsonld = json.dumps({"@context": "https://schema.org", "@type": "Blog",
                          "name": f'{cfg["brandName"]}', "url": cfg["domain"] + "/"})
-    head = page_head(cfg, f'{cfg["brandName"]} — spreading what I love, from me to you',
+    head = page_head(cfg, 'Ride the Wave',
                      "A personal publication spreading one person's passions to the world — AWS, travel, food, and life.",
                      cfg["domain"] + "/", jsonld)
     (PUBLIC / "index.html").write_text(head + body + page_tail(cfg, init_js), encoding="utf-8")

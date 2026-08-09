@@ -78,3 +78,10 @@ sudo systemctl start nginx
 7. **Review, launch, and select a key pair.**
 8. **Confirm it's up** by visiting the instance's public IP in a browser.
 9. **If it doesn't show up:** check the instance's system log first, SSH in and run `sudo systemctl status nginx`, and if it's still not right check `/var/log/nginx/` for the actual error.
+
+## References
+
+- [Run commands on your Linux instance at launch (user data)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
+- [Amazon EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances.html)
+- [Amazon EC2 security groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html)
+- [Amazon Linux AMI basics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-linux-ami-basics.html)

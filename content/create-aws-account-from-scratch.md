@@ -68,3 +68,10 @@ A condensed version of everything above, in the order you'd actually do it.
 5. **Choose Basic Support if this is for personal projects**, then finish the sign-up flow.
 6. **Sign in to the AWS Management Console as the Root User**, using the email you signed up with, your password, and the security check.
 7. **Start building something small.** AWS's own tutorials are a good starting point; a personal website, an automated SMS sender, or an IoT device talking to AWS are all reasonable first projects.
+
+## References
+
+- [AWS sign-up portal](https://portal.aws.amazon.com/billing/signup)
+- [Root user best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)
+- [Getting started with the AWS Management Console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html)
+- [AWS Free Tier](https://aws.amazon.com/free/)

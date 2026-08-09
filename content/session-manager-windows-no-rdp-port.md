@@ -56,13 +56,6 @@ Open Remote Desktop Connection locally, set the computer to `localhost:54231`, t
 
 Once that connects cleanly, remove port 3389 from the security group entirely. Access still works, just without the open port.
 
-### Worth reading alongside this
-
-- AWS's SSM Agent installation docs
-- The managed-instance setup guide
-- The Session Manager plugin install docs
-- AWS's own walkthrough video on Session Manager
-
 ## Practical guide: if you want to try this yourself
 
 A condensed, in-order checklist for getting Session Manager access to a Windows instance and closing off RDP.
@@ -75,3 +68,10 @@ A condensed, in-order checklist for getting Session Manager access to a Windows 
 6. **Start a port-forwarding session to tunnel RDP through Session Manager**, using `aws ssm start-session --target <instance-id> --document-name AWS-StartPortForwardingSession --parameters "localPortNumber=54231,portNumber=3389" --region <region>`.
 7. **Connect with Remote Desktop Connection**, pointing the computer field at `localhost:54231`, using the username you created and its password.
 8. **Once that connection works cleanly, remove port 3389 from the security group entirely.** Access still works through the Session Manager tunnel, just without the open port.
+
+## References
+
+- [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html)
+- [Install SSM Agent on Windows instances](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-win.html)
+- [Install the Session Manager plugin for the AWS CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
+- [Port forwarding with Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-port-forwarding.html)

@@ -70,3 +70,10 @@ A condensed version of everything above, in the order I'd run it again.
 7. **Save the cheat sheets for the final review, not day one.** Run through the Tutorials Dojo cheat sheets right before the exam as a refresher.
 8. **Practice picking out keywords in a question, deliberately.** That skill, more than raw service knowledge, is what the practice tests are actually training and what saves you from careless misses on exam day.
 9. **Spin up a free-tier account and break things on purpose.** The exam tests whether you understand how services fit together in a real scenario, and that only comes from actually building, not just reading about them.
+
+## References
+
+- [AWS Certified Solutions Architect – Associate exam guide](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
+- [AWS Cloud Best Practices whitepaper](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/aws-overview.html)
+- [AWS Free Tier](https://aws.amazon.com/free/)

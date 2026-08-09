@@ -63,12 +63,6 @@ That expires in 86,400 seconds (24 hours).
 
 **7. Use it.** Paste the resulting URL (starting with `https://s3.us-east-1...`) into a browser. It stops working once the expiry hits, but the object itself is untouched in the bucket.
 
-### Worth reading next
-
-- [AWS CLI `s3 presign` reference](https://docs.aws.amazon.com/cli/latest/reference/s3/presign.html)
-- [S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
-- [Sharing objects using presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
-
 ### Where to take it from here
 
 - Add a lifecycle policy so the object cleans itself up automatically
@@ -86,3 +80,9 @@ A condensed, copy-pasteable version of the steps above, in order.
 5. **Upload an object** by dragging a file in from your machine.
 6. **Generate the presigned URL from the CLI**, pointed at the right account: `aws s3 presign --endpoint-url https://s3.{region}.amazonaws.com s3://{bucketname}/{object} --region {region} --expires-in {seconds}`. For example, `aws s3 presign --endpoint-url https://s3.us-east-1.amazonaws.com s3://sai-pre-signed-url-test/Dance.mov --region us-east-1 --expires-in 86400` expires in 24 hours (86,400 seconds).
 7. **Use the URL.** Paste the resulting link (starting with `https://s3.us-east-1...`) into a browser. It stops working once the expiry hits, and the object itself is never touched.
+
+## References
+
+- [AWS CLI `s3 presign` reference](https://docs.aws.amazon.com/cli/latest/reference/s3/presign.html)
+- [Sharing objects using presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
+- [S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)

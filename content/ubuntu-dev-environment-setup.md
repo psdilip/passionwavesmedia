@@ -80,3 +80,9 @@ A distilled, tool-by-tool checklist in the order this setup installs everything.
 7. **Python 3.6.** Add the repo with `sudo add-apt-repository ppa:jonathonf/python-3.6`, update and install with `sudo apt-get update && sudo apt-get install python3.6`, and confirm with `python3.6`.
 8. **Boto3 (AWS SDK for Python).** Install pip with `sudo apt-get install python-pip python-dev build-essential`, then install the SDK with `pip install boto3`.
 9. **Jupyter Notebooks.** Install it with `sudo python3 –m pip install jupyter`, then start one with `jupyter notebook` to get a local browser page for running code, equations, and notes side by side.
+
+## References
+
+- [Boto3 (AWS SDK for Python) documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+- [Configuring credentials for Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
+- [Installing or updating the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)

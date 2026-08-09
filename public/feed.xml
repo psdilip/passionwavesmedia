@@ -6,12 +6,28 @@
   <language>en-us</language>
   <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://passionwavesmedia.com/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>Billerica, MA: A Few Food Spots Worth Trying</title>
+    <link>https://passionwavesmedia.com/billerica-ma-food-spots.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/billerica-ma-food-spots.html</guid>
+    <pubDate>Sat, 08 Aug 2026 12:00:00 +0000</pubDate>
+    <category>Food</category>
+    <description>Fresh-pressed juice, a seasonal tasting menu, a four-room craft beverage hall, and a few other stops from a run of meals in and around Billerica.</description>
+  </item>
+  <item>
+    <title>Upgrading EC2 from M4.xlarge to M8i.xlarge</title>
+    <link>https://passionwavesmedia.com/ec2-m4-to-m8i-instance-upgrade.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/ec2-m4-to-m8i-instance-upgrade.html</guid>
+    <pubDate>Sat, 08 Aug 2026 12:00:00 +0000</pubDate>
+    <category>AWS</category>
+    <description>What we learned upgrading a long-running Windows EC2 instance four hardware generations at once, the AD outage it caused, and how we&#x27;d plan it differently next time.</description>
+  </item>
+  <item>
     <title>Raleigh-Durham: A Local&#x27;s Guide to the Triangle</title>
     <link>https://passionwavesmedia.com/raleigh-durham-area-guide.html</link>
     <guid isPermaLink="true">https://passionwavesmedia.com/raleigh-durham-area-guide.html</guid>
     <pubDate>Sun, 02 Aug 2026 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>Parks, food, desserts, activities, and neighborhoods worth knowing in the Raleigh-Durham area — whether you&#x27;re visiting, showing guests around, or just exploring your own backyard.</description>
+    <description>Parks, food, desserts, activities, and neighborhoods worth knowing in the Raleigh-Durham area, whether you&#x27;re visiting, showing guests around, or just exploring your own backyard.</description>
   </item>
   <item>
     <title>I Tried to Replace Claude Code With a Local LLM. Here&#x27;s Everything I Learned.</title>
@@ -43,7 +59,7 @@
     <guid isPermaLink="true">https://passionwavesmedia.com/mexico-playa-del-carmen-dec-2025.html</guid>
     <pubDate>Sat, 20 Dec 2025 12:00:00 +0000</pubDate>
     <category>Travel</category>
-    <description>A first real resort stay in Playa del Carmen, a full-day trip to Chichen Itza and a cenote, and an adventure-packed day at Xcaret Explorer — all in December.</description>
+    <description>A first real resort stay in Playa del Carmen, a full-day trip to Chichen Itza and a cenote, and an adventure-packed day at Xcaret Explorer, all in December.</description>
   </item>
   <item>
     <title>Road Trip: Idaho, Oregon &amp; Utah</title>
@@ -242,7 +258,7 @@
     <link>https://passionwavesmedia.com/hashicorp-vault-certification-2021.html</link>
     <guid isPermaLink="true">https://passionwavesmedia.com/hashicorp-vault-certification-2021.html</guid>
     <pubDate>Thu, 28 Jan 2021 12:00:00 +0000</pubDate>
-    <category>AWS</category>
+    <category>How-To</category>
     <description>What Vault actually solves, how I studied for the Vault Associate exam, and the resources that were worth the time.</description>
   </item>
   <item>

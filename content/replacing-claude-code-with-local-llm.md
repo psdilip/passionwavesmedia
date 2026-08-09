@@ -39,7 +39,7 @@ My RX 6700 XT has 12GB of VRAM. That number (not my 48GB of system RAM) was the 
 
 Before even touching AI tooling, I had to pick RAM. A few things mattered more than I expected:
 
-- **CL (CAS latency) matters as much as MHz.** A DDR4-3600 CL16 kit can outperform a DDR4-3600 CL18 kit at the same frequency, because CL16 responds faster per cycle. Real-world latency in nanoseconds — roughly `(CL ÷ (MT/s ÷ 2)) × 1000` — is a better comparison than either number alone.
+- **CL (CAS latency) matters as much as MHz.** A DDR4-3600 CL16 kit can outperform a DDR4-3600 CL18 kit at the same frequency, because CL16 responds faster per cycle. Real-world latency in nanoseconds, roughly `(CL ÷ (MT/s ÷ 2)) × 1000`, is a better comparison than either number alone.
 - **AMD Ryzen 5000-series CPUs have a sweet spot around DDR4-3600MHz.** The Infinity Fabric syncs 1:1 with RAM up to about that speed; pushing higher can decouple the fabric and hurt performance instead of helping it.
 - **Mixing kits (different capacity, speed, or timings) drops everything to the lowest common denominator.** When I added 2x16GB sticks to my existing 2x8GB sticks, I couldn't just enable XMP: the board wouldn't apply a profile built for one kit across mismatched modules. The fix was manually setting a frequency both kits could handle (2666MHz) and disabling XMP entirely.
 
@@ -49,13 +49,13 @@ Before even touching AI tooling, I had to pick RAM. A few things mattered more t
 
 This was the single biggest revelation of the entire journey, and it took the longest to surface.
 
-Every tool I tried — Claude Code pointed at Ollama, Continue.dev, Cline, OpenCode — eventually produced the same failure signature: instead of actually reading files or running commands, the model would output a fake, hallucinated tool call, something like:
+Every tool I tried (Claude Code pointed at Ollama, Continue.dev, Cline, OpenCode) eventually produced the same failure signature: instead of actually reading files or running commands, the model would output a fake, hallucinated tool call, something like:
 
 ```
 {"name": "read_file", "arguments": {"filepath": "main.tf"}}
 ```
 
-My instinct each time was to blame the model. Too small. Wrong architecture. Not "smart enough" for tool calling. So I cycled through model after model — 32B, 27B, 14B, 1.5B, Gemma — convinced the next one would finally be capable enough.
+My instinct each time was to blame the model. Too small. Wrong architecture. Not "smart enough" for tool calling. So I cycled through model after model (32B, 27B, 14B, 1.5B, Gemma), convinced the next one would finally be capable enough.
 
 It never was, because the actual problem was invisible: Ollama's default context window is small (often just 4,096 tokens unless you override it). Coding agents like Claude Code, Cline, and OpenCode send a system prompt plus a full list of tool definitions before your question even arrives, often 10,000 to 30,000 tokens on its own. With a 4K window, that payload gets silently truncated. The model never sees the tools it's supposed to call, so it pattern-matches on fragments and hallucinates what a tool call should look like.
 
@@ -180,9 +180,9 @@ The next piece I haven't wired in yet: an AWS MCP server. Since a good chunk of 
 ![Photo by Kevin Ache on Unsplash](https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?w=1600&q=80&fm=jpg&fit=crop)
 *Photo by [Kevin Ache](https://unsplash.com/@kevinache) on [Unsplash](https://unsplash.com)*
 
-None of the local-LLM detour was wasted effort. What felt like weeks of chasing my own tail — swapping models, fighting timeouts, second-guessing hardware — actually mapped out the whole stack: context windows, VRAM/RAM trade-offs, tool-calling reliability, rule-file architecture. That's a real, transferable skill set, and it now runs quietly in the background of my workflow instead of being the main event.
+None of the local-LLM detour was wasted effort. What felt like weeks of chasing my own tail (swapping models, fighting timeouts, second-guessing hardware) actually mapped out the whole stack: context windows, VRAM/RAM trade-offs, tool-calling reliability, rule-file architecture. That's a real, transferable skill set, and it now runs quietly in the background of my workflow instead of being the main event.
 
-The local setup isn't trying to beat Claude Code anymore. It does the job it's actually good at — private, free, always-available — while the heavy lifting still goes to the cloud. That division of labor, once I stopped fighting it, is what made the whole system feel finished instead of perpetually "almost working."
+The local setup isn't trying to beat Claude Code anymore. It does the job it's actually good at (private, free, always-available) while the heavy lifting still goes to the cloud. That division of labor, once I stopped fighting it, is what made the whole system feel finished instead of perpetually "almost working."
 
 One honest caveat, and this is opinion, not a claim about any specific company's numbers: running everything through a closed-source cloud model means that work is ultimately backed by real data centers, real GPUs, real electricity and water for cooling. I don't have hard figures on any one provider's footprint, and I'm not claiming to. But it's part of why I find the trajectory of more efficient open-source models worth rooting for: every bit of capability that can run on a laptop or a single consumer GPU instead of a data center is less infrastructure someone has to spin up on your behalf. That's a preference, not a verdict.
 

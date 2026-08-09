@@ -66,3 +66,10 @@ A condensed, copy-pasteable version of the steps above.
 4. **Confirm the change took** by running the same `describe-instances` command again and re-checking `MetadataOptions`.
 5. **Test from inside the instance.** An unauthenticated metadata request should now fail.
 6. **Request metadata the v2 way, to confirm it works.** Get a token first with `curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`, then pass it along with `curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/`.
+
+## References
+
+- [Instance metadata and user data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-metadata.html)
+- [Configure the instance metadata service (IMDSv2)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+- [modify-instance-metadata-options CLI reference](https://docs.aws.amazon.com/cli/latest/reference/ec2/modify-instance-metadata-options.html)
+- [AWS Trusted Advisor](https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor.html)

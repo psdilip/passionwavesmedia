@@ -45,7 +45,7 @@ I worked at a full-service IT consulting company — everything from cloud to AI
 
 ### Build the systems nobody hands you
 
-Most teams won't have this dressed up for you — you build it.
+Most teams won't have this dressed up for you. You build it.
 
 - Contract and CRM tracking (if one doesn't exist, implement it)
 - Customer spend dashboards

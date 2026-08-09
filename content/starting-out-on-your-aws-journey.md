@@ -110,3 +110,10 @@ A condensed version of the habits above, in the order they matter most.
 6. **Show up to meetups and AWS events.** The people you meet there are a second source of perspective on problems you're stuck on, not just contacts.
 7. **Use the Well-Architected Framework's five pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization) as a checklist** whenever you're proposing something new, not just as exam material.
 8. **When job hunting, lead with projects and enthusiasm, not a perfect resume.** Ask for referrals while applying on LinkedIn in parallel, prioritize the role over the salary number early on, and look for roles that keep you a little uncomfortable.
+
+## References
+
+- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
+- [AWS Certification overview](https://aws.amazon.com/certification/)
+- [AWS Skill Builder](https://skillbuilder.aws/)
+- [What's New with AWS](https://aws.amazon.com/new/)

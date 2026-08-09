@@ -98,3 +98,10 @@ A condensed, in-order checklist of everything above.
 5. **Verify it loads.** Revisit the hosting link from the Properties tab. It should serve your site now that the policy is in place.
 6. **Turn on versioning and encryption later.** Both are small extra costs worth adding once the basics work: versioning to recover from an accidental delete, default encryption to protect data at rest.
 7. **Move on to Part 2 when ready.** [Part 2](/personal-website-on-aws-part-2.html) adds a custom domain, CloudFront, and a free SSL certificate for HTTPS.
+
+## References
+
+- [Hosting a static website using Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
+- [Bucket policies](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html)
+- [Blocking public access to your S3 storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html)
+- [Using versioning in S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html)

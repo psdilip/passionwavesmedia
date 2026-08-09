@@ -157,3 +157,10 @@ A condensed, in-order checklist of everything above.
 6. **Install the EC2-Fleet plugin.** Under **Manage Jenkins → Manage Plugins**, search for `ec2-fleet`, install without restart, then restart Jenkins.
 7. **Configure the Amazon EC2 Fleet cloud.** Under **Manage Jenkins → Manage Nodes and Clouds → Configure Clouds**, add the IAM user's credentials, pick the region, confirm the Auto Scaling Group auto-populates, test the connection, set the launcher to SSH with the master's private key, and configure `1` executor, `5` max idle minutes, minimum cluster size `1`, maximum cluster size `5`, and label `spot-agents` (non-verifying verification strategy, Private IP for internal traffic).
 8. **Run a test build.** A freestyle job pointed at a git repo with an Execute Shell step is enough to watch the fleet provision a spot instance in real time and confirm the job actually runs on it.
+
+## References
+
+- [EC2 Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
+- [EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html)
+- [Auto Scaling groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
+- [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
