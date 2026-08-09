@@ -7,16 +7,61 @@ excerpt: Fresh-pressed juice, a seasonal tasting menu, a four-room craft beverag
 date: 2026-08-08
 ---
 
-A few places worth knowing if you're spending time in Billerica or the Burlington Mall corridor next door. Billerica itself has been growing fast, more restaurants, more companies moving in, and these are the spots that stood out on a recent run of meals through the area.
+Billerica's been growing fast, more restaurants, more companies moving in. Here's what's actually worth stopping for, most of it a short drive over toward the Burlington Mall corridor.
 
-- **Pressed Cafe**: technically just over the Billerica line on Billerica Road in Chelmsford, but close enough that it counts. A solid go-to for breakfast or lunch with coworkers. My order is the fresh-pressed guava juice with vegetables mixed in, it tastes better than it sounds, but it's worth trying a few of their juices to find what works for you. The egg, bagel, and cheese is the other staple: the bagels are genuinely fresh, and the service has been consistently good every time I've gone.
+### Pressed Cafe
 
-- **Seasons 52**: at the Burlington Mall, a few minutes from Billerica. The menu changes with the season, so what you order this visit won't be on the menu next time you're back. On the vegetarian side, the black bean Bolognese was a good call; another visit I went with the garlic pesto chicken, which held up well too. They also do alcohol-free cocktails if you're not drinking. Save room for dessert: the "mini indulgence" desserts come in small individual cups, and the Oreo one is worth getting. It fills up fast in the evenings, so go early or book ahead.
+![Orange juice in a clear glass](https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [ABHISHEK HAJARE](https://unsplash.com/@abhishek_hajare) on [Unsplash](https://unsplash.com)*
 
-- **Common Craft**: also at the Burlington Mall, and less a bar than a small beverage hall split into four themed rooms: a beer room, a sour-beer room, a speakeasy-style cocktail room, and a wine room, connected by a shared great hall. We didn't eat here, just drank and hung out, but the interior alone makes it worth a stop, it has the feel of finding a few hidden rooms you didn't expect. There's a dog-friendly patio with cornhole if the weather's decent.
+<iframe src="https://maps.google.com/maps?q=Pressed+Cafe,+330+Billerica+Rd,+Chelmsford,+MA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Pressed Cafe, Chelmsford MA"></iframe>
 
-- **Fiorella's Cucina**: an Italian spot at the Burlington Mall with a genuinely impressive interior, big, well-designed, and a strong pick for a date night. The mushroom pasta came with fresh mozzarella and bread on the side and was excellent, a good vegetarian option. The eggplant appetizer was a standout too. For drinks, the sparkling passion fruit raspberry (non-alcoholic) was a good call, and dessert was a chocolate cake with vanilla gelato, solid, if not the highlight of the meal. Service was great throughout.
+**Order:** fresh-pressed guava juice with vegetables mixed in · egg, bagel, and cheese (the bagels are genuinely fresh)
+**Good for:** breakfast or lunch with coworkers
+**Note:** technically just over the Billerica line in Chelmsford, close enough that it counts
 
-- **Yard House**: right next to the Burlington Mall. The garlic noodles with shrimp were a highlight, and they were happy to swap in shrimp without any issue. Paired it with a non-alcoholic sparkling cucumber-lime drink that hit the spot.
+### Seasons 52
 
-Most of this list leans toward the Burlington Mall side of the line, so if you're staying closer to central Billerica, treat this as a short drive away rather than a walk. Worth building out further as we find more spots closer to Billerica itself.
+![A dessert served in a small glass](https://images.unsplash.com/photo-1746633570370-2b0c49779a4f?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Phil Hearing](https://unsplash.com/@philhearing) on [Unsplash](https://unsplash.com)*
+
+<iframe src="https://maps.google.com/maps?q=Seasons+52,+Burlington+Mall,+Burlington,+MA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Seasons 52, Burlington MA"></iframe>
+
+**Order:** black bean Bolognese (vegetarian) · garlic pesto chicken · the Oreo mini dessert
+**Good for:** a nicer dinner, book ahead or go early, it fills up fast
+**Note:** the menu changes every season, so don't expect the same dish twice
+
+### Common Craft
+
+![A row of beer taps on a bar](https://images.unsplash.com/photo-1648135636478-bfb3ff451dd3?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Dawn Agran](https://unsplash.com/@dawnagran) on [Unsplash](https://unsplash.com)*
+
+<iframe src="https://maps.google.com/maps?q=Common+Craft,+Burlington+Mall,+Burlington,+MA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Common Craft, Burlington MA"></iframe>
+
+**What it is:** four themed rooms under one roof, beer, sour beer, speakeasy cocktails, and wine, joined by a shared great hall
+**Good for:** hanging out and drinking, not a meal (we didn't eat here)
+**Note:** dog-friendly patio with cornhole
+
+### Fiorella's Cucina
+
+![A plate of pasta with mushrooms and greens](https://images.unsplash.com/photo-1689793607035-1a25fb32a510?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Oscar Ramirez](https://unsplash.com/@oscareduardohr) on [Unsplash](https://unsplash.com)*
+
+<iframe src="https://maps.google.com/maps?q=Fiorella's+Cucina,+Burlington+Mall,+Burlington,+MA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Fiorella's Cucina, Burlington MA"></iframe>
+
+**Order:** mushroom pasta with fresh mozzarella (vegetarian) · eggplant appetizer · sparkling passion fruit raspberry (non-alcoholic) · chocolate cake with vanilla gelato
+**Good for:** a date night, the interior alone makes it worth the trip
+
+### Yard House
+
+![Noodles with shrimp](https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Olayinka Babalola](https://unsplash.com/@islandsandsunsets) on [Unsplash](https://unsplash.com)*
+
+<iframe src="https://maps.google.com/maps?q=Yard+House,+Burlington,+MA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Yard House, Burlington MA"></iframe>
+
+**Order:** garlic noodles, swapped in shrimp, no issue · non-alcoholic sparkling cucumber-lime
+**Good for:** a quick dinner right next to the mall
+
+---
+
+Most of this leans toward the Burlington Mall side of the line. If you're staying closer to central Billerica, treat it as a short drive rather than a walk. Will keep adding as we find more spots closer to Billerica itself.

@@ -296,11 +296,11 @@ def build_index(cfg, posts, present_cats):
   <div class="grid" id="grid">{cards}</div>
 </div></section>
 
-{trend_html}
-
 <section class="section" style="padding-top:0"><div class="wrap">
   <div class="more-cta reveal"><a href="articles.html"><button class="btn btn-grad btn-lg">Browse all articles →</button></a></div>
 </div></section>
+
+{trend_html}
 
 {mission_html}
 {footer(cfg, present_cats)}'''
