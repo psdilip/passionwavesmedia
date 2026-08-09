@@ -320,7 +320,7 @@ def build_archive(cfg, posts, present_cats):
 
     posts_js = posts_index_json(posts)
     cat_colors = {c: cfg["categories"][c] for c in present_cats}
-    quotes = cfg.get("quotes", [])
+    quotes = [{"text": p["excerpt"], "slug": p["slug"]} for p in posts if p.get("excerpt")]
 
     sidebar = '''<aside class="arc-side">
   <div class="arc-quote" id="arcQuote" aria-live="polite"></div>

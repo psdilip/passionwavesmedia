@@ -1,7 +1,7 @@
 ---
 title: I Tried to Replace Claude Code With a Local LLM. Here's Everything I Learned.
 slug: replacing-claude-code-with-local-llm
-category: AWS
+category: How-To
 tags: AI, LLM, Local LLM, Claude Code, Ollama, LM Studio, Hardware, AWS
 excerpt: A journey through RAM upgrades, hallucinated tool calls, context windows, and the honest limits of consumer hardware, and where I landed instead.
 date: 2026-07-29

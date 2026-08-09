@@ -184,7 +184,7 @@
       };
       showQuote();
       var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!reduce && quotes.length > 1) setInterval(showQuote, 7000);
+      if (!reduce && quotes.length > 1) setInterval(showQuote, 14000);
     } else if (quoteEl) {
       quoteEl.remove();
     }
