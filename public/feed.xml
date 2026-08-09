@@ -30,6 +30,14 @@
     <description>What we learned upgrading a long-running Windows EC2 instance four hardware generations at once, the AD outage it caused, and how we&#x27;d plan it differently next time.</description>
   </item>
   <item>
+    <title>A Foundational AWS Architecture for IoT Device Workflows</title>
+    <link>https://passionwavesmedia.com/iot-aws-foundational-architecture.html</link>
+    <guid isPermaLink="true">https://passionwavesmedia.com/iot-aws-foundational-architecture.html</guid>
+    <pubDate>Sat, 08 Aug 2026 12:00:00 +0000</pubDate>
+    <category>AWS</category>
+    <description>A starting-point architecture for taking data off an IoT device and turning it into something you can query, monitor, and hand back to customers.</description>
+  </item>
+  <item>
     <title>Raleigh-Durham: A Local&#x27;s Guide to the Triangle</title>
     <link>https://passionwavesmedia.com/raleigh-durham-area-guide.html</link>
     <guid isPermaLink="true">https://passionwavesmedia.com/raleigh-durham-area-guide.html</guid>
