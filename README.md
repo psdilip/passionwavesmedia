@@ -65,18 +65,6 @@ In `site.json`, edit the `categories` block — each is a name and a color. The 
 "categories": { "AWS": "#6B4EE6", "Travel": "#22B0C4", "Music": "#3BB273" }
 ```
 
-## LinkedIn & X links
-
-In `site.json` under `social`, replace the two placeholder URLs with your real profiles. They appear in the footer with icons. Leave one blank to hide it.
-
-## RSS feed
-
-There's no email signup — the site publishes `feed.xml` (RSS 2.0) automatically on
-every build, listing every article with its title, link, category, and excerpt. It's
-linked from the header ("RSS"), the footer, and a `<link rel="alternate">` tag in
-`<head>` so feed readers and browsers can auto-discover it. Anyone who wants to know
-when you post can subscribe with any RSS reader — no backend, no provider account.
-
 ## Likes & views — 5-minute setup (optional)
 
 Because the site is static, shared counts need a tiny free datastore. **Supabase**

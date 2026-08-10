@@ -27,11 +27,6 @@
     "Speaking": "#3BB273"
   },
 
-  "social": {
-    "linkedin": "https://www.linkedin.com/in/your-handle",
-    "x": "https://x.com/your-handle"
-  },
-
   "supabase": {
     "_comment": "Fill these to turn on real likes + view counts. Empty = likes still work locally per-browser, views hidden. See README.",
     "url": "https://bxnncbzibmutfszxbkvu.supabase.co",

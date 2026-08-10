@@ -105,12 +105,6 @@ def parse_md(text):
 WAVE = ('<svg viewBox="0 0 24 16" fill="none"><path d="M2 10 q3 -6 6 0 t6 0 t6 0" '
         'stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>')
 
-LINKEDIN = ('<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 '
-            '1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.78v2.19h.07c.67-1.27 2.3-2.61 4.73-2.61 '
-            '5.06 0 6 3.33 6 7.66V24h-5v-6.99c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.69 1.82-2.69 3.7V24h-5V8z"/></svg>')
-XICON = ('<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2H21l-6.55 7.48L22 22h-6.15l-4.82-6.3L5.5 22H2.74'
-         'l7.01-8-7.4-12h6.3l4.36 5.77L18.24 2zm-1.08 18h1.7L7.02 3.9H5.2L17.16 20z"/></svg>')
-
 HEART = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7.5-4.6-10-9.2'
          'C.4 8.4 2 5 5.3 5c2 0 3.3 1.1 4.7 2.8C11.4 6.1 12.7 5 14.7 5 18 5 19.6 8.4 22 11.8 19.5 16.4 12 21 12 21z"/></svg>')
 EYE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7'
@@ -143,18 +137,12 @@ def dot(color):
 def footer(cfg, present_cats=None):
     present_cats = present_cats if present_cats is not None else list(cfg["categories"].keys())
     cats = '<a href="articles.html">All articles</a>' + "".join(f'<a href="articles.html#{c}">{c}</a>' for c in present_cats)
-    soc = ""
-    if cfg["social"].get("linkedin"):
-        soc += f'<a href="{cfg["social"]["linkedin"]}" target="_blank" rel="noopener">{LINKEDIN}LinkedIn</a>'
-    if cfg["social"].get("x"):
-        soc += f'<a href="{cfg["social"]["x"]}" target="_blank" rel="noopener">{XICON}X</a>'
     return f'''<footer class="footer"><div class="wrap">
   <div class="footer-top">
     <div>{brand(cfg, sm=True)}<p class="colophon">Spreading passions from me to the world — one article, one wave, at a time.</p></div>
     <nav>
       <div class="col"><h4>Read</h4>{cats}</div>
-      <div class="col"><h4>More</h4><a href="index.html#mission">About</a><a href="feed.xml">RSS Feed</a></div>
-      <div class="col"><h4>Elsewhere</h4>{soc}</div>
+      <div class="col"><h4>More</h4><a href="index.html#mission">About</a></div>
     </nav>
   </div>
   <div class="base mono">© {datetime.now().year} {cfg["brandName"]} · Built and hosted on AWS</div>
@@ -210,7 +198,6 @@ def nav(cfg, home=False, active=""):
     return (f'<header class="masthead"><div class="wrap masthead-inner">{brand(cfg)}<nav class="nav">'
             f'<a class="{cls("read")}" href="articles.html">Read</a>'
             f'<a class="{cls("about")}" href="{about}">About</a>'
-            f'<a class="navlink" href="feed.xml" title="Subscribe via RSS">RSS</a>'
             f'</nav></div></header>')
 
 
@@ -224,7 +211,6 @@ def page_head(cfg, title, desc, canonical, jsonld):
 <title>{title}</title>
 <meta name="description" content="{html.escape(desc, quote=True)}">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" type="application/rss+xml" title="{html.escape(cfg['brandName'], quote=True)}" href="{cfg['domain']}/feed.xml">
 <meta property="og:title" content="{html.escape(title, quote=True)}">
 <meta property="og:description" content="{html.escape(desc, quote=True)}">
 <meta property="og:image" content="{cfg['domain']}/og-cover.jpg">
@@ -397,9 +383,6 @@ def build_article(cfg, p, present_cats):
     {reactions}
   </div>
 </article>
-<div class="more"><div class="mono">Enjoyed this?</div>
-  <p style="margin:0 0 20px;color:var(--muted)">Grab the RSS feed and new pieces show up the moment they're published — no account, no email required.</p>
-  <a href="feed.xml"><button class="btn btn-grad">Subscribe via RSS</button></a></div>
 {footer(cfg, present_cats)}'''
 
     jsonld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": p["title"],
@@ -408,31 +391,6 @@ def build_article(cfg, p, present_cats):
     head = page_head(cfg, f'{p["title"]} — {cfg["brandName"]}',
                      p["excerpt"], f'{cfg["domain"]}/{p["slug"]}.html', jsonld)
     (PUBLIC / f'{p["slug"]}.html').write_text(head + body + page_tail(cfg, f'pwInitArticle("{p["slug"]}");'), encoding="utf-8")
-
-
-def build_rss(cfg, posts):
-    def rfc822(dt):
-        return dt.strftime("%a, %d %b %Y 12:00:00 +0000")
-
-    items = "".join(f'''  <item>
-    <title>{html.escape(p["title"])}</title>
-    <link>{cfg['domain']}/{p['slug']}.html</link>
-    <guid isPermaLink="true">{cfg['domain']}/{p['slug']}.html</guid>
-    <pubDate>{rfc822(p['dt'])}</pubDate>
-    <category>{html.escape(p['category'])}</category>
-    <description>{html.escape(p['excerpt'])}</description>
-  </item>
-''' for p in posts)
-
-    feed = f'''<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel>
-  <title>{html.escape(cfg['brandName'])}</title>
-  <link>{cfg['domain']}/</link>
-  <description>{html.escape(cfg['hero']['lede'])}</description>
-  <language>en-us</language>
-  <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="{cfg['domain']}/feed.xml" rel="self" type="application/rss+xml"/>
-{items}</channel></rss>'''
-    (PUBLIC / "feed.xml").write_text(feed, encoding="utf-8")
 
 
 # ----------------------------------------------------------------------
@@ -473,7 +431,6 @@ def main():
 
     build_index(cfg, posts, present_cats)
     build_archive(cfg, posts, present_cats)
-    build_rss(cfg, posts)
     for p in posts:
         build_article(cfg, p, present_cats)
 

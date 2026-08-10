@@ -7,6 +7,9 @@ excerpt: A starting-point architecture for taking data off an IoT device and tur
 date: 2026-08-08
 ---
 
+![IoT development components: an Arduino board, sensors, breadboards, and batteries](https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=1600&q=80&fm=jpg&fit=crop)
+*Photo by [Robin Glauser](https://unsplash.com/@nahakiole) on [Unsplash](https://unsplash.com)*
+
 If you've got IoT hardware in the field, whether that's internal equipment you're monitoring or a device you've shipped to customers, at some point you need more than "the device is sending data somewhere." You need a real pipeline: ingest it, clean it, store it, query it, and put it in front of the right people. This is the foundation I'd start from. It's not the only way to build it, but it's a solid, proven shape to adapt from.
 
 One correction up front, since it's an easy mix-up: the AWS service that receives your device's messages is **AWS IoT Core**, not "IoT Hub." IoT Hub is Azure's equivalent service, different cloud, different name. Worth knowing if you're reading AWS docs and Azure docs side by side.
