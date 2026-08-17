@@ -76,13 +76,11 @@ If you're prepping for this one and want to compare notes, feel free to reach ou
 
 ## Practical guide: how to prepare for this exam
 
-A distilled prep checklist, pulling together only the resources and advice already covered above.
-
-1. **Start with the certification blueprint.** Use it as a review checklist against the Vault Project site's own Getting Started tutorials, not as the thing you memorize directly.
-2. **Pick one paid course and stick with it.** Zeal Vora's *HashiCorp Certified: Vault Associate 2021* or Bryan Krausen's *Getting Started with HashiCorp Vault* both cover the material; don't hop between five different courses.
-3. **Work through the interactive labs on KataKoda.** Hands-on practice with the actual commands matters more than reading about them.
-4. **Take the practice exams before the real one.** Zeal Vora's course has one built in, and Bryan Krausen's *HashiCorp Certified: Vault Associate Practice Exam* is a separate, dedicated option.
+1. Use the certification blueprint as a review checklist against the Vault Project site's own Getting Started tutorials, not as the thing you memorize directly.
+2. Pick one paid course and stick with it: Zeal Vora's *HashiCorp Certified: Vault Associate 2021* or Bryan Krausen's *Getting Started with HashiCorp Vault* both cover the material, so don't hop between five different courses.
+3. Work through the interactive labs on KataKoda. Hands-on practice with the actual commands matters more than reading about them.
+4. Take the practice exams before the real one; Zeal Vora's course has one built in, and Bryan Krausen's *HashiCorp Certified: Vault Associate Practice Exam* is a separate, dedicated option.
 5. **Round it out with HashiCorp's YouTube channel and the community question bank.** The 200+ practice questions floating around, plus a handful of third-party guides, help fill in anything the main course skips.
-6. **Spend real time in the dev server.** It's a safe sandbox, so poke at commands like `vault token create -policy=default -period=30m` and `vault token renew` until leasing and renewal actually make sense.
-7. **Build a small proof-of-concept, or write about what you learn.** Applying the material somewhere real, even a toy project, exposes gaps that memorizing the blueprint won't catch.
-8. **Budget for steady, not heroic, study time.** About two months at roughly an hour a day, with breaks worked in, was enough.
+6. Spend real time in the dev server, a safe sandbox for poking at commands like `vault token create -policy=default -period=30m` and `vault token renew` until leasing and renewal actually make sense.
+7. Build a small proof-of-concept, or write about what you learn. Applying the material somewhere real, even a toy project, exposes gaps that memorizing the blueprint won't catch.
+8. Budget for steady, not heroic, study time. About two months at roughly an hour a day, with breaks worked in, was enough.

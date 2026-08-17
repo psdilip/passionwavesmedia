@@ -28,14 +28,12 @@ After that, Chrome installs normally and you can leave IE alone for good.
 
 ## Practical guide: the checklist version
 
-A condensed run-through of the exact steps, in order, for the next time you're stuck on a fresh box with only IE.
-
-1. **Dismiss the first-run pop-up.** Click **OK** when IE opens for the first time so it stops blocking everything else.
-2. **Open Internet Options and go to Security.** This is where the download-blocking settings live.
+1. Click **OK** on the first-run pop-up when IE opens, so it stops blocking everything else.
+2. Open Internet Options and go to the **Security** tab, where the download-blocking settings live.
 3. **Enable File Download under Custom Level.** Find the **Downloads** section and turn on **File Download**, then click **OK** and confirm the change.
-4. **Add google.com to Trusted Sites.** Go to **Trusted Sites**, add `https://www.google.com`, then apply and confirm.
-5. **Trust the new tab pop-up too.** Open a new tab, uncheck the highlighted box in the pop-up that appears, choose **Add**, and close the dialog.
-6. **Search for Chrome and open the first result.** Search "download chrome" and click through to the official page.
-7. **Click Download Chrome.** Refresh the page first if the button doesn't render.
-8. **Save, then Run, to finish the install.** Choose **Save** when prompted, then **Run** the installer.
-9. **Leave IE alone for good.** Once Chrome installs, there's no reason to go back.
+4. Add `https://www.google.com` under **Trusted Sites**, then apply and confirm.
+5. Open a new tab; another pop-up appears. Uncheck the highlighted box, choose **Add**, and close the dialog.
+6. Search "download chrome" and click through to the official page.
+7. Click **Download Chrome**, refreshing the page first if the button doesn't render.
+8. Choose **Save** when prompted, then **Run** the installer to finish the install.
+9. Leave IE alone for good once Chrome is in.

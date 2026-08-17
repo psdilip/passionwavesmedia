@@ -59,15 +59,15 @@ The pattern that makes this work is the fork right after the IoT Rule: one path 
 
 ## Practical guide: standing up the foundation
 
-1. **Provision devices in AWS IoT Core** with X.509 certificates and an IoT policy scoped to only the MQTT topics that device needs.
-2. **Write an IoT Rule** that fans each incoming message out to two actions: an S3 write for the raw archive, and a Lambda invocation for cleanup.
+1. Provision devices in AWS IoT Core with X.509 certificates and an IoT policy scoped to only the MQTT topics that device needs.
+2. Write an IoT Rule that fans each incoming message out to two actions, an S3 write for the raw archive and a Lambda invocation for cleanup.
 3. **Build the cleanup Lambda** to validate the payload, normalize field names/units, and reject anything malformed before it reaches DynamoDB.
-4. **Design a DynamoDB table** around device ID as the partition key, and enable DynamoDB Streams on it.
-5. **Build a second Lambda off the stream** that writes processed records to S3 in a query-friendly format, and set up an AWS Glue crawler (or a manually defined table) to catalog it.
-6. **Confirm Athena can query the catalog** with a few test SQL statements before building anything on top of it.
-7. **Deploy a web app on Elastic Beanstalk** that runs Athena queries on demand, rather than giving every user direct console access.
-8. **Wire up Cognito User Pools** and map each authenticated user to the device(s) they're allowed to query.
-9. **Add QuickSight** on top of the same Athena source for dashboards, internal, customer-facing, or both.
+4. Design a DynamoDB table around device ID as the partition key, and enable DynamoDB Streams on it.
+5. Build a second Lambda off the stream that writes processed records to S3 in a query-friendly format; set up an AWS Glue crawler (or a manually defined table) to catalog it.
+6. Confirm Athena can query the catalog with a few test SQL statements before building anything on top of it.
+7. Deploy a web app on Elastic Beanstalk that runs Athena queries on demand, rather than giving every user direct console access.
+8. Wire up Cognito User Pools and map each authenticated user to the device(s) they're allowed to query.
+9. Add QuickSight on top of the same Athena source for dashboards, internal, customer-facing, or both.
 
 ## References
 

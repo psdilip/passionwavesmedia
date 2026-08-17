@@ -97,14 +97,13 @@ Being a great CSM comes down to adaptability, communication, ownership, and rele
 
 ## Practical guide: a checklist to actually run this
 
-A condensed version of everything above, distilled into what to actually do.
-
-1. **Pick one primary channel per customer and stick to it.** Use email, Slack, or Teams consistently, but know when a message needs to become a call or meeting instead.
-2. **Follow up relentlessly and document everything.** This is the real differentiator between an average CSM and a great one, and it feeds every business review you'll ever run.
-3. **Build the systems nobody hands you.** Set up contract and CRM tracking, a customer spend dashboard, ticketing workflows with renewal calendars, and a knowledge base per customer if they don't already exist.
-4. **Automate the repeatable parts of your day.** Cadence reminders, cost reports, and feature updates don't need a human doing them manually; use AI to research and summarize new features so you can get up to speed on unfamiliar tech fast.
-5. **Prepare for every meeting like it's the differentiator.** Bring a branded deck with cost consumption broken down by service, relevant new features, cost optimization strategies, and concrete progress against stated goals, pulling in a subject matter expert when the conversation needs one.
-6. **Map your internal workflow and know who covers what.** Understand who approves, who unblocks, and who covers during PTO across legal, sales, technical account managers, bid desk, FinOps, and billing, then store documents centrally so anyone can answer a question fast.
-7. **Prioritize customers deliberately, not reactively.** Rank by contract value, strategic importance, growth potential, and urgency, accounting for time zones across approvals and ticketing.
-8. **Turn what works for one customer into a reusable template.** Share it with the team instead of hoarding it, and stay unified rather than each CSM solving the same problem separately.
-9. **Overdeliver and lead with confidence.** Prepare enough that you never walk into a conversation unsure, and remember that the underlying goal is always the same: the customer trusts you with their investment.
+1. Pick one primary channel per customer and stick to it: email, Slack, or Teams, whichever fits, but know when a message needs to become a call or meeting instead.
+2. Follow up relentlessly and document everything. This is the real differentiator between an average CSM and a great one, and it feeds every business review you'll ever run.
+3. **Build the systems nobody hands you:** contract and CRM tracking, a customer spend dashboard, ticketing workflows with renewal calendars, and a knowledge base per customer, if they don't already exist.
+4. Automate the repeatable parts of your day, cadence reminders, cost reports, feature updates, and use AI to research and summarize new tech so you can get up to speed fast.
+5. Prepare for every meeting like it's the differentiator, because it is. Bring a branded deck with cost consumption broken down by service, relevant new features, and cost optimization strategies.
+6. Show concrete progress against stated goals, and pull in a subject matter expert when the conversation needs one.
+7. Map your internal workflow and know who covers what: who approves, who unblocks, and who covers during PTO across legal, sales, technical account managers, bid desk, FinOps, and billing.
+8. Store documents centrally so anyone can answer a question fast, and prioritize customers deliberately (contract value, strategic importance, growth potential, urgency) instead of reactively, accounting for time zones across approvals and ticketing.
+9. Turn what works for one customer into a reusable template and share it with the team, rather than each CSM solving the same problem separately.
+10. **Overdeliver and lead with confidence.** Prepare enough that you never walk into a conversation unsure; the underlying goal is always the same, the customer trusts you with their investment.

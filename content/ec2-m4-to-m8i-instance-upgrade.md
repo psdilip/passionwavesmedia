@@ -55,15 +55,15 @@ The performance and cost case for upgrading is almost always there, AWS ships ne
 
 ## Practical guide: the upgrade checklist
 
-1. **Pull real usage metrics first.** CPU, memory, and network over the last several months, not a snapshot of the last few days. Note whether load is steady or spikes at predictable times.
-2. **Decide between a flex and a standard instance type based on that data**, not on which one is newer. Flex variants suit workloads with a genuinely variable baseline; standard types suit long-running production systems where you want predictable performance.
-3. **Price it out.** Compare on-demand, Reserved Instance, and Savings Plan pricing for the target type before committing.
+1. Pull real usage metrics first: CPU, memory, and network over the last several months, not a snapshot of the last few days. Note whether load is steady or spikes at predictable times.
+2. Decide between a flex and a standard instance type based on that data, not on which one is newer. Flex variants suit workloads with a genuinely variable baseline; standard types suit long-running production systems where you want predictable performance.
+3. Price it out, comparing on-demand, Reserved Instance, and Savings Plan pricing for the target type before committing.
 4. **Write the upgrade plan down and get it approved.** Include expected impact, the maintenance window, and a rollback plan.
-5. **Check whether the target instance type changes hypervisor generation.** If you're moving onto the AWS Nitro System from an older hypervisor, you'll need the ENA and NVMe drivers installed before the change.
-6. **Snapshot first.** Take an AMI snapshot and a separate EBS volume backup before touching anything.
-7. **Stop the instance during a real maintenance window**, confirm no active users, install any required drivers, then change the instance type and start it back up.
-8. **Validate and reboot, then re-check anything tied to networking.** Directory service connections, load balancer health checks, and static routes are the most likely things to break silently after a hypervisor change.
-9. **Keep the rollback plan ready until you're confident**, revert to the prior instance type from the snapshot if anything doesn't check out.
+5. Check whether the target instance type changes hypervisor generation; moving onto the AWS Nitro System from an older hypervisor means you'll need the ENA and NVMe drivers installed before the change.
+6. Snapshot first: take an AMI snapshot and a separate EBS volume backup before touching anything.
+7. Stop the instance during a real maintenance window, confirm no active users, install any required drivers, then change the instance type and start it back up.
+8. Validate and reboot, then re-check anything tied to networking. Directory service connections, load balancer health checks, and static routes are the most likely things to break silently after a hypervisor change.
+9. Keep the rollback plan ready until you're confident; revert to the prior instance type from the snapshot if anything doesn't check out.
 
 ## References
 

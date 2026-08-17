@@ -59,15 +59,13 @@ Once you're in, the best next step is just to start building something small: AW
 
 ## Practical guide: setting up your own AWS account
 
-A condensed version of everything above, in the order you'd actually do it.
-
-1. **Understand what you're paying for.** Cloud computing works like electricity: you pay for what you use, when you use it, instead of buying and racking your own hardware.
-2. **Go to the AWS sign-up page and create your account.** Enter your email, choose a password, fill in your personal details, and accept the terms to continue.
+1. Cloud computing works like electricity: you pay for what you use, when you use it, instead of buying and racking your own hardware. Keep that in mind before you start clicking through the sign-up flow.
+2. Go to the AWS sign-up page, enter your email, choose a password, fill in your personal details, and accept the terms to continue.
 3. **Add billing information.** Free tier usage won't be charged, but AWS still requires a card on file before you can continue.
-4. **Verify your identity with a phone number**, then click **Verify and Continue**.
-5. **Choose Basic Support if this is for personal projects**, then finish the sign-up flow.
-6. **Sign in to the AWS Management Console as the Root User**, using the email you signed up with, your password, and the security check.
-7. **Start building something small.** AWS's own tutorials are a good starting point; a personal website, an automated SMS sender, or an IoT device talking to AWS are all reasonable first projects.
+4. Verify your identity with a phone number, then click **Verify and Continue**.
+5. Choose Basic Support if this is for personal projects, then finish the sign-up flow.
+6. Sign in to the AWS Management Console as the Root User, using the email you signed up with, your password, and the security check.
+7. From there, start building something small. AWS's own tutorials are a good starting point; a personal website, an automated SMS sender, or an IoT device talking to AWS are all reasonable first projects.
 
 ## References
 

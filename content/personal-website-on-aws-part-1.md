@@ -89,15 +89,13 @@ That link will 403 for now — that's the permissions step, next.
 
 ## Practical guide: setting this up yourself
 
-A condensed, in-order checklist of everything above.
-
-1. **Create the bucket.** In the S3 console, click **Create a bucket**, name it after your intended domain (e.g. `saidilipponnaganti` for `saidilipponnaganti.com`), pick a region (`us-east-1` is a safe default), and uncheck "Block all public access," acknowledging the warning.
-2. **Upload your site files.** Have your HTML/CSS ready (a free HTML5 UP template works if you don't have your own design), click **Upload** inside the bucket, drag your files in, and wait for the upload to finish.
+1. In the S3 console, click **Create a bucket**, name it after your intended domain (e.g. `saidilipponnaganti` for `saidilipponnaganti.com`), pick a region (`us-east-1` is a safe default), and uncheck "Block all public access," acknowledging the warning.
+2. Have your HTML/CSS ready (a free HTML5 UP template works if you don't have your own design), then click **Upload** inside the bucket, drag your files in, and wait for the upload to finish.
 3. **Turn on static website hosting.** In the **Properties** tab, edit **Static website hosting**, select **Enable**, choose **Host a static website**, set the **index document** to your main HTML file (required), and optionally set an **error document**. The hosting link that appears will 403 until permissions are set.
-4. **Set the bucket policy.** In the **Permissions** tab, confirm public access is allowed, then edit the **Bucket Policy** and paste a `PublicReadGetObject` statement with `Effect: Allow`, `Principal: *`, and `Action: s3:GetObject` on `arn:aws:s3:::BucketName/*`, replacing `BucketName` with your actual bucket's name.
-5. **Verify it loads.** Revisit the hosting link from the Properties tab. It should serve your site now that the policy is in place.
-6. **Turn on versioning and encryption later.** Both are small extra costs worth adding once the basics work: versioning to recover from an accidental delete, default encryption to protect data at rest.
-7. **Move on to Part 2 when ready.** [Part 2](/personal-website-on-aws-part-2.html) adds a custom domain, CloudFront, and a free SSL certificate for HTTPS.
+4. Set the bucket policy next: in the **Permissions** tab, confirm public access is allowed, then edit the **Bucket Policy** and paste a `PublicReadGetObject` statement with `Effect: Allow`, `Principal: *`, and `Action: s3:GetObject` on `arn:aws:s3:::BucketName/*`, replacing `BucketName` with your actual bucket's name.
+5. Revisit the hosting link from the Properties tab to verify it loads; it should serve your site now that the policy is in place.
+6. Versioning and default encryption are both worth turning on later, and both cost only a little extra: versioning recovers from an accidental delete, encryption protects data at rest.
+7. When you're ready, move on to [Part 2](/personal-website-on-aws-part-2.html), which adds a custom domain, CloudFront, and a free SSL certificate for HTTPS.
 
 ## References
 

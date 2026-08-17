@@ -58,14 +58,12 @@ That's the whole migration. It's a small change with a real security payoff, and
 
 ## Practical guide: the upgrade checklist
 
-A condensed, copy-pasteable version of the steps above.
-
-1. **Find out which instances are still on v1.** Check AWS Trusted Advisor if you have it enabled; it flags them for you.
-2. **Check the current setting on an instance** with `aws ec2 describe-instances --instance-ids <enter-your-instance-id>` and look at the `MetadataOptions` field in the response.
-3. **Require v2 on that instance:** `aws ec2 modify-instance-metadata-options --instance-id <enter-your-instance-id> --http-tokens required --http-endpoint enabled --http-put-response-hop-limit 1`.
-4. **Confirm the change took** by running the same `describe-instances` command again and re-checking `MetadataOptions`.
-5. **Test from inside the instance.** An unauthenticated metadata request should now fail.
-6. **Request metadata the v2 way, to confirm it works.** Get a token first with `curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`, then pass it along with `curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/`.
+1. Find out which instances are still on v1. Check AWS Trusted Advisor if you have it enabled, it flags them for you.
+2. Check the current setting on an instance with `aws ec2 describe-instances --instance-ids <enter-your-instance-id>` and look at the `MetadataOptions` field in the response.
+3. **Require v2** on that instance: `aws ec2 modify-instance-metadata-options --instance-id <enter-your-instance-id> --http-tokens required --http-endpoint enabled --http-put-response-hop-limit 1`.
+4. Run the same `describe-instances` command again to confirm the change took, re-checking `MetadataOptions`.
+5. Test from inside the instance; an unauthenticated metadata request should now fail.
+6. Confirm it works by requesting metadata the v2 way. Get a token first with `curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`, then pass it along with `curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/`.
 
 ## References
 

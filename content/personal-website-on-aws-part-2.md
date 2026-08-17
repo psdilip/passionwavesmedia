@@ -88,15 +88,13 @@ Add a résumé, blog posts, photography, past projects, and links to GitHub and 
 
 ## Practical guide: if you want to try this yourself
 
-A condensed, copy-pasteable version of the steps above, in order.
-
-1. **Create a CloudFront distribution.** In the CloudFront console, click **Create Distribution → Get Started**, then set **Origin Domain Name** to your S3 static-hosting endpoint (`<BucketName>.s3-website.us-east-2.amazonaws.com`), leaving the rest default.
-2. **Force HTTPS at the edge.** Under **Default cache behavior**, set **Viewer Protocol Policy** to **Redirect HTTP to HTTPS**, then save and wait 15-30 minutes for deployment.
-3. **Register your domain in Route 53.** Under **Registered Domains**, click **Register Domain**, search for the domain, add it to the cart, enter contact details, and complete the order (usually finishes within a couple of hours).
+1. In the CloudFront console, click **Create Distribution → Get Started**, then set **Origin Domain Name** to your S3 static-hosting endpoint (`<BucketName>.s3-website.us-east-2.amazonaws.com`), leaving the rest default.
+2. Force HTTPS at the edge: under **Default cache behavior**, set **Viewer Protocol Policy** to **Redirect HTTP to HTTPS**, then save and wait 15-30 minutes for deployment.
+3. Register your domain in Route 53. Under **Registered Domains**, click **Register Domain**, search for the domain, add it to the cart, enter contact details, and complete the order (usually finishes within a couple of hours).
 4. **Point the domain at CloudFront.** In the auto-created hosted zone, create an **A record**, toggle **Alias**, choose **Alias to CloudFront Distribution**, and paste in your CloudFront domain name.
-5. **Request a free SSL certificate.** In **AWS Certificate Manager**, switch to **us-east-1 / N. Virginia** (the only region CloudFront accepts certs from), then **Request a public certificate**, enter your domain, choose **DNS validation**, and click **Create a record in Route 53** to auto-validate.
-6. **Attach the certificate to your distribution.** Go to your distribution's **Distribution Settings → Edit**, enter your domain under **Alternate Domain Names (CNAMEs)**, and set **SSL Certificate** to **Custom SSL Certificate**, selecting the one you just validated.
-7. **Verify the end result.** `https://your_domain.com` should now serve the site directly, with plain HTTP requests redirecting to HTTPS automatically.
+5. Request a free SSL certificate in **AWS Certificate Manager**, switching first to **us-east-1 / N. Virginia** (the only region CloudFront accepts certs from); then **Request a public certificate**, enter your domain, choose **DNS validation**, and click **Create a record in Route 53** to auto-validate.
+6. Attach the certificate to your distribution: go to its **Distribution Settings → Edit**, enter your domain under **Alternate Domain Names (CNAMEs)**, and set **SSL Certificate** to **Custom SSL Certificate**, selecting the one you just validated.
+7. Verify the end result: `https://your_domain.com` should now serve the site directly, with plain HTTP requests redirecting to HTTPS automatically.
 
 ## References
 

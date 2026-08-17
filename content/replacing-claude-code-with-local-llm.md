@@ -190,12 +190,10 @@ What I keep coming back to is simpler than any of the hardware math: the gap bet
 
 ## Practical guide: if you want to try this yourself
 
-A condensed version of everything above, in the order I'd actually do it if starting over:
-
-1. **Check your GPU's VRAM before buying anything.** VRAM decides which models are viable at usable speed; system RAM only decides how badly a model that doesn't fit will overflow.
-2. **Set `OLLAMA_CONTEXT_LENGTH` (or a custom Modelfile with `PARAMETER num_ctx`) before connecting any coding agent.** This one step would have eliminated most of the "hallucinated tool call" debugging described above.
-3. **Pick a model built for tool calling**: an agentic-trained model (like Devstral) or an MoE model (like Qwen3's `-a3b` variants), instead of defaulting to the largest dense model that technically fits in VRAM.
-4. **Verify a model's real memory requirements with `ollama show <model>`** before assuming the name or parameter count in the tag matches what will actually run on your hardware.
-5. **Build your agent rules once, at the root of wherever your repos live**, using `AGENTS.md` (or `.clinerules/` if your tool requires it), then let individual projects extend it instead of rebuilding it per repo.
-6. **Match the model to the task, not the other way around:** local for privacy-sensitive, offline, or single-file work; cloud for multi-file refactors, anything time-sensitive, or anything where tool-calling reliability actually matters.
-7. **Set expectations early.** A 12GB consumer GPU is a genuinely useful complement to a cloud coding agent, not a replacement, at least not until VRAM crosses somewhere around the 24GB line.
+1. Check your GPU's VRAM before buying anything. It decides which models are viable at usable speed; system RAM only decides how badly a model that doesn't fit will overflow.
+2. Set `OLLAMA_CONTEXT_LENGTH` (or a custom Modelfile with `PARAMETER num_ctx`) before connecting any coding agent, and this one step alone would have eliminated most of the hallucinated-tool-call debugging described above.
+3. **Pick a model built for tool calling.** An agentic-trained model like Devstral, or an MoE model like Qwen3's `-a3b` variants, beats defaulting to the largest dense model that technically fits in VRAM.
+4. Verify a model's real memory requirements with `ollama show <model>` before assuming the name or parameter count in the tag matches what will actually run on your hardware.
+5. Build your agent rules once, at the root of wherever your repos live, using `AGENTS.md` (or `.clinerules/` if your tool requires it); let individual projects extend it instead of rebuilding it per repo.
+6. Match the model to the task, not the other way around: local for privacy-sensitive, offline, or single-file work, cloud for multi-file refactors and anything where tool-calling reliability actually matters.
+7. Set expectations early. A 12GB consumer GPU is a genuinely useful complement to a cloud coding agent, not a replacement, at least not until VRAM crosses somewhere around the 24GB line.

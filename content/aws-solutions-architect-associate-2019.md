@@ -59,16 +59,14 @@ Don't study just to pass the exam — anyone can do that. Study so you can actua
 
 ## Practical guide: the study order I'd actually repeat
 
-A condensed version of everything above, in the order I'd run it again.
-
-1. **Start with a hands-on course, not a reading list.** Go through *Ultimate AWS Solutions Architect Associate 2019* and actually do the labs as you go instead of just watching.
-2. **Move to practice tests early, not at the end.** Buy the Jon Bonso / Tutorials Dojo and Neal Davis / Digital Cloud Training sets, and retake them until you're consistently near 100%.
+1. Start with a hands-on course, not a reading list. Go through *Ultimate AWS Solutions Architect Associate 2019* and actually do the labs as you go instead of just watching.
+2. Move to practice tests early rather than saving them for the end; buy the Jon Bonso / Tutorials Dojo and Neal Davis / Digital Cloud Training sets, and retake them until you're consistently near 100%.
 3. **Chase down every wrong answer.** When you miss a question, go figure out why, either in a lab or back in the course video, rather than just noting the correct choice and moving on.
-4. **Fill in depth with a book, once you've checked reviews first.** The All-in-One Exam Guide isn't cheap, so make sure it's worth it for where you're weak.
-5. **Read the FAQs and the whitepapers for framing, not memorization.** The AWS FAQs give depth, and the Cloud Best Practices and Security Best Practices whitepapers match how the exam actually frames questions.
-6. **Add the 73-hour DolfinED course only if you still don't feel solid.** It's genuinely comprehensive and matches the exam blueprint and then some, but it's the heaviest option, so use it as a backstop, not a first step.
-7. **Save the cheat sheets for the final review, not day one.** Run through the Tutorials Dojo cheat sheets right before the exam as a refresher.
-8. **Practice picking out keywords in a question, deliberately.** That skill, more than raw service knowledge, is what the practice tests are actually training and what saves you from careless misses on exam day.
+4. Fill in depth with a book once you've checked reviews first (the All-in-One Exam Guide isn't cheap, so make sure it's worth it for where you're weak).
+5. Read the FAQs and whitepapers for framing, not memorization: the AWS FAQs give depth, and the Cloud Best Practices and Security Best Practices whitepapers match how the exam actually frames questions.
+6. Add the 73-hour DolfinED course only if you still don't feel solid. It's genuinely comprehensive and matches the exam blueprint and then some, but it's the heaviest option, so treat it as a backstop, not a first step.
+7. Save the cheat sheets for the final review, not day one; run through the Tutorials Dojo cheat sheets right before the exam as a refresher.
+8. Practice picking out keywords in a question, deliberately. That skill, more than raw service knowledge, is what the practice tests are actually training and what saves you from careless misses on exam day.
 9. **Spin up a free-tier account and break things on purpose.** The exam tests whether you understand how services fit together in a real scenario, and that only comes from actually building, not just reading about them.
 
 ## References

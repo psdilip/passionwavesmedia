@@ -87,15 +87,14 @@ The firewall is what makes this architecture secure, but the IGW ingress route t
 
 ## Practical guide: building this yourself
 
-1. **Build the VPC with firewall subnets and protected subnets across two Availability Zones.**
-2. **Deploy AWS Network Firewall** with endpoints in the firewall subnets.
-3. **Configure all three route tables**: the firewall/public subnet route table to the internet gateway, the protected subnet route table through the local firewall endpoint, and the internet gateway ingress route table forcing inbound traffic through a firewall endpoint.
-4. **Confirm the firewall policy's default stateless action is drop**, not pass.
-5. **Create a stateless 5-tuple rule** allowlisting the source IPs you want, source port 0-65535, destination IP/port matching your SFTP server on 22, action pass.
-6. **Deploy the Transfer Family server**: protocol SFTP, VPC-hosted endpoint in the protected subnets, internet-facing (or internal, if appropriate), spanning both Availability Zones.
-7. **Choose an identity provider.** Service managed for simplicity, a custom identity provider (Lambda, with or without API Gateway) if you need to validate against your own backend.
-8. **Create users with scoped IAM roles** and a restricted home directory pointed at the specific S3 prefix they need.
-9. **Turn on CloudWatch logging and pick a security policy deliberately**, testing it against whatever client or script will actually be connecting.
+1. Build the VPC with firewall subnets and protected subnets across two Availability Zones, then deploy AWS Network Firewall with endpoints in the firewall subnets.
+2. **Configure all three route tables**: the firewall/public subnet route table to the internet gateway, the protected subnet route table through the local firewall endpoint, and the internet gateway ingress route table forcing inbound traffic through a firewall endpoint.
+3. Confirm the firewall policy's default stateless action is drop, not pass.
+4. Create a stateless 5-tuple rule allowlisting the source IPs you want: source port 0-65535, destination IP/port matching your SFTP server on 22, action pass.
+5. Deploy the Transfer Family server (protocol SFTP, VPC-hosted endpoint in the protected subnets, internet-facing or internal as appropriate) spanning both Availability Zones.
+6. Choose an identity provider: service managed for simplicity, or a custom identity provider (Lambda, with or without API Gateway) if you need to validate against your own backend.
+7. Create users with scoped IAM roles and a restricted home directory pointed at the specific S3 prefix they need.
+8. Turn on CloudWatch logging, and pick a security policy deliberately, testing it against whatever client or script will actually be connecting.
 
 ## References
 

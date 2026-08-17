@@ -31,10 +31,19 @@ def _inline(text):
     codes = []
     text = re.sub(r"`([^`]+)`", lambda m: (codes.append(m.group(1)), f"\x00{len(codes)-1}\x00")[1], text)
     text = html.escape(text, quote=False)
-    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img src="\2" alt="\1">', text)
-    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+    urls = []
+    def _stash(m):
+        urls.append(m.group(2))
+        return f'![{m.group(1)}](\x01{len(urls)-1}\x01)'
+    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", _stash, text)
+    def _stash_link(m):
+        urls.append(m.group(2))
+        return f'[{m.group(1)}](\x01{len(urls)-1}\x01)'
+    text = re.sub(r"(?<!!)\[([^\]]+)\]\(([^)]+)\)", _stash_link, text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
+    text = re.sub(r"!\[([^\]]*)\]\(\x01(\d+)\x01\)", lambda m: f'<img src="{urls[int(m.group(2))]}" alt="{m.group(1)}">', text)
+    text = re.sub(r"\[([^\]]+)\]\(\x01(\d+)\x01\)", lambda m: f'<a href="{urls[int(m.group(2))]}">{m.group(1)}</a>', text)
     text = re.sub(r"\x00(\d+)\x00", lambda m: "<code>" + html.escape(codes[int(m.group(1))], quote=False) + "</code>", text)
     return text
 

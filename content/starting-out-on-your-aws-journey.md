@@ -100,16 +100,16 @@ None of this happens fast, and that's fine: the pay-as-you-go model means you ca
 
 ## Practical guide: how to actually approach learning AWS
 
-A condensed version of the habits above, in the order they matter most.
-
-1. **Learn one service at a time.** Use it until the console stops feeling unfamiliar, then move on. Depth on a few services beats shallow exposure to all 200+.
-2. **Treat certifications as a forcing function, not the goal.** Study the material from a few angles (labs, teaching someone else, community Q&A, writing about it) so each one exposes a different gap.
-3. **Build a troubleshooting habit.** Sketch or request an architecture diagram, write down your steps as you go, note what kind of problem it turned out to be (permissions, networking, throttling, code, config), speak up the moment you're stuck, and write a short postmortem once it's resolved.
-4. **Pick one resource and finish it.** Between Pluralsight, Udemy for Business, ACloudGuru, AWS's own docs, and a sandbox account, the bottleneck was never a shortage of material, it was finishing what you start.
-5. **Stay current on purpose.** Scan what AWS ships regularly, decide what's actually worth adopting, and bring the useful parts to your team instead of waiting for someone else to notice.
-6. **Show up to meetups and AWS events.** The people you meet there are a second source of perspective on problems you're stuck on, not just contacts.
-7. **Use the Well-Architected Framework's five pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization) as a checklist** whenever you're proposing something new, not just as exam material.
-8. **When job hunting, lead with projects and enthusiasm, not a perfect resume.** Ask for referrals while applying on LinkedIn in parallel, prioritize the role over the salary number early on, and look for roles that keep you a little uncomfortable.
+1. Learn one service at a time and use it until the console stops feeling unfamiliar before moving on. Depth on a few services beats shallow exposure to all 200+.
+2. Treat certifications as a forcing function, not the goal. Study the material from a few angles: labs, teaching someone else, community Q&A, writing about it, since each one exposes a different gap.
+3. **Build a troubleshooting habit.** Sketch or request an architecture diagram, write down your steps as you go, and note what kind of problem it turned out to be (permissions, networking, throttling, code, config).
+4. Speak up the moment you're stuck, and write a short postmortem once it's resolved.
+5. Pick one resource and actually finish it. Between Pluralsight, Udemy for Business, ACloudGuru, AWS's own docs, and a sandbox account, the bottleneck was never a shortage of material.
+6. Stay current on purpose: scan what AWS ships regularly, decide what's actually worth adopting, and bring the useful parts to your team instead of waiting for someone else to notice.
+7. Show up to meetups and AWS events. The people you meet there are a second source of perspective on problems you're stuck on, not just contacts.
+8. Use the **Well-Architected Framework's five pillars** (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization) as a checklist whenever you're proposing something new, not just as exam material.
+9. When job hunting, lead with projects and enthusiasm rather than a perfect resume; ask for referrals while applying on LinkedIn in parallel.
+10. Prioritize the role over the salary number early on, and look for roles that keep you a little uncomfortable.
 
 ## References
 

@@ -147,16 +147,15 @@ The EC2-Fleet plugin deployed spot instances as Jenkins agents and ran jobs in p
 
 ## Practical guide: setting this up yourself
 
-A condensed, in-order checklist of everything above.
-
-1. **Launch the Jenkins master.** A `t2.micro` running Amazon Linux 2 is enough, with a user data script that installs Java and Jenkins and starts the service, in a VPC with DNS enabled and a public subnet (internet gateway plus auto-assigned public IPs).
-2. **Finish the setup wizard.** Hit the instance's public IP on port `8080`, grab the initial password with `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`, then install the suggested plugins and create an admin user.
-3. **Create an IAM user for the fleet plugin.** Name it `Ec2-fleet-user`, give it programmatic access, and attach a policy covering EC2 spot fleet actions (`DescribeSpotFleetInstances`, `ModifySpotFleetRequest`, `TerminateInstances`, etc.), Auto Scaling Group actions (`DescribeAutoScalingGroups`, `UpdateAutoScalingGroup`), and IAM actions (`ListInstanceProfiles`, `ListRoles`, `PassRole`). Download the access key CSV.
-4. **Build a launch template for agents.** Call it `EC2-fleet-launch-template`, base it on the `amzn2-ami-hvm` AMI on a `t3.small`, enable spot instance requests, and give it user data that installs Java, git, and updates the AWS CLI.
-5. **Build the Auto Scaling Group.** Use that launch template, set desired `1`, minimum `1`, maximum `4`, and place it in the same VPC's private subnets as the master.
-6. **Install the EC2-Fleet plugin.** Under **Manage Jenkins → Manage Plugins**, search for `ec2-fleet`, install without restart, then restart Jenkins.
-7. **Configure the Amazon EC2 Fleet cloud.** Under **Manage Jenkins → Manage Nodes and Clouds → Configure Clouds**, add the IAM user's credentials, pick the region, confirm the Auto Scaling Group auto-populates, test the connection, set the launcher to SSH with the master's private key, and configure `1` executor, `5` max idle minutes, minimum cluster size `1`, maximum cluster size `5`, and label `spot-agents` (non-verifying verification strategy, Private IP for internal traffic).
-8. **Run a test build.** A freestyle job pointed at a git repo with an Execute Shell step is enough to watch the fleet provision a spot instance in real time and confirm the job actually runs on it.
+1. Launch the Jenkins master on a `t2.micro` running Amazon Linux 2, with a user data script that installs Java and Jenkins and starts the service, in a VPC with DNS enabled and a public subnet (internet gateway plus auto-assigned public IPs).
+2. Hit the instance's public IP on port `8080` to finish the setup wizard. Grab the initial password with `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`, then install the suggested plugins and create an admin user.
+3. **Create an IAM user for the fleet plugin** (`Ec2-fleet-user`, programmatic access) and attach a policy covering EC2 spot fleet actions (`DescribeSpotFleetInstances`, `ModifySpotFleetRequest`, `TerminateInstances`, etc.), Auto Scaling Group actions (`DescribeAutoScalingGroups`, `UpdateAutoScalingGroup`), and IAM actions (`ListInstanceProfiles`, `ListRoles`, `PassRole`); download the access key CSV.
+4. Build a launch template for the agents (`EC2-fleet-launch-template`), based on the `amzn2-ami-hvm` AMI on a `t3.small`, with spot instance requests enabled and user data that installs Java, git, and updates the AWS CLI.
+5. From that template, build the Auto Scaling Group: desired `1`, minimum `1`, maximum `4`, placed in the same VPC's private subnets as the master.
+6. Install the EC2-Fleet plugin under **Manage Jenkins → Manage Plugins** (search `ec2-fleet`, install without restart, then restart Jenkins).
+7. Configure the Amazon EC2 Fleet cloud under **Manage Jenkins → Manage Nodes and Clouds → Configure Clouds**: add the IAM user's credentials, pick the region, and confirm the Auto Scaling Group auto-populates.
+8. Test the connection, set the launcher to SSH with the master's private key, and configure `1` executor, `5` max idle minutes, minimum cluster size `1`, maximum cluster size `5`, and label `spot-agents` (non-verifying verification strategy, Private IP for internal traffic).
+9. Run a test build. A freestyle job pointed at a git repo with an Execute Shell step is enough to watch the fleet provision a spot instance in real time and confirm the job actually runs on it.
 
 ## References
 

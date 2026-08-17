@@ -60,12 +60,10 @@ From this baseline, it's worth digging into Nginx's config files and command set
 
 ## Practical guide: launch checklist
 
-A condensed, copy-pasteable version of the steps above.
-
-1. **Have the prerequisites ready first.** An AWS account plus a VPC, internet gateway, and public subnet already set up.
-2. **Start the launch.** Go to EC2, choose Launch instances, and pick the **Amazon Linux 2 AMI (64-bit x86)**.
-3. **Pick a small instance type.** `t2.micro` is plenty for testing.
-4. **Set networking.** Choose the VPC and turn on Auto-assign Public IP.
+1. Have the prerequisites ready first: an AWS account plus a VPC, internet gateway, and public subnet already set up.
+2. Go to EC2, choose Launch instances, and pick the **Amazon Linux 2 AMI (64-bit x86)**.
+3. Pick a small instance type; `t2.micro` is plenty for testing.
+4. Choose the VPC and turn on Auto-assign Public IP.
 5. **Paste the install script into User data:**
 ```
 #!/bin/bash
@@ -74,10 +72,10 @@ sudo amazon-linux-extras install nginx1 -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
-6. **Leave storage at the default**, add whatever tags you use for organization, and create a security group allowing SSH and port 80.
-7. **Review, launch, and select a key pair.**
-8. **Confirm it's up** by visiting the instance's public IP in a browser.
-9. **If it doesn't show up:** check the instance's system log first, SSH in and run `sudo systemctl status nginx`, and if it's still not right check `/var/log/nginx/` for the actual error.
+6. Leave storage at the default, add whatever tags you use for organization, and create a security group allowing SSH and port 80.
+7. Review, launch, and select a key pair.
+8. Visit the instance's public IP in a browser to confirm it's up.
+9. If it doesn't show up, check the instance's system log first, SSH in and run `sudo systemctl status nginx`, and if it's still not right check `/var/log/nginx/` for the actual error.
 
 ## References
 
