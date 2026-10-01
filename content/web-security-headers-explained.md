@@ -94,15 +94,26 @@ Security headers don't close the original vulnerability. They limit what an atta
 
 **The headers that matter:**
 
-| Header | What it enforces |
-|---|---|
-| `Content-Security-Policy` | Which domains scripts, styles, images, and fonts can load from. Blocks everything not on the list. The most powerful header here — covered in depth below. |
-| `Strict-Transport-Security` | Forces the browser to use HTTPS only, even if the user types HTTP. Prevents protocol-downgrade attacks. |
-| `X-Frame-Options` | Blocks the page from being loaded inside an iframe on another domain. Stops clickjacking. |
-| `X-Content-Type-Options: nosniff` | Tells the browser to trust the declared content type and not try to guess. Prevents content-type sniffing attacks. |
-| `X-XSS-Protection` | Enables the browser's built-in XSS filter. Useful for older browser support. |
-| `Referrer-Policy` | Controls how much of the page URL gets sent to other domains when a user follows a link. Prevents internal URLs from leaking. |
-| `Permissions-Policy` | Restricts which browser features the page can access — camera, microphone, geolocation, payments. Limits damage if a script is ever injected. |
+**`Content-Security-Policy`**
+Defines which domains scripts, styles, images, and fonts can load from. Blocks everything not on the approved list. The most powerful header here — covered in its own section below.
+
+**`Strict-Transport-Security`**
+Forces the browser to use HTTPS only, even if the user types plain HTTP. Prevents protocol-downgrade attacks.
+
+**`X-Frame-Options`**
+Blocks the page from being loaded inside an iframe on another domain. Stops clickjacking attacks where a hidden frame tricks users into clicking things they didn't intend to.
+
+**`X-Content-Type-Options: nosniff`**
+Tells the browser to trust the server's declared content type and not try to guess it. Prevents content-type sniffing attacks where a file gets executed as the wrong type.
+
+**`X-XSS-Protection`**
+Enables the browser's built-in XSS filter. Useful for older browser support; modern browsers lean on CSP instead.
+
+**`Referrer-Policy`**
+Controls how much of the page URL gets included when a user follows a link to another site. Prevents internal URLs — including those with session tokens or user IDs — from leaking to external domains.
+
+**`Permissions-Policy`**
+Restricts which browser features the page is allowed to access — camera, microphone, geolocation, payments. Limits damage if a script is ever injected.
 
 > **Start with these three if you're new to this:** `X-Frame-Options` (one line, immediate impact), `Strict-Transport-Security` (works everywhere, no application changes needed), and `Content-Security-Policy` (most powerful, needs the most planning — use report-only mode first). The rest are quick wins once those are in place.
 

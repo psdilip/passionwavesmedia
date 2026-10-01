@@ -155,9 +155,11 @@ The response headers policy is attached per behavior.
 
 **Create and attach the policy:**
 
-1. Go to **CloudFront → Policies → Response headers**
-2. Create a new custom policy (or start from the managed `SecurityHeadersPolicy`)
-3. Configure the security headers:
+**1.** Go to **CloudFront → Policies → Response headers**
+
+**2.** Create a new custom policy (or start from the managed `SecurityHeadersPolicy`)
+
+**3.** Configure the security headers:
 
 ```
 Strict-Transport-Security:
@@ -182,8 +184,7 @@ Content-Security-Policy:
   (build this from report-only findings first — see Step 4)
 ```
 
-4. Attach the policy to the default behavior:
-   **Distribution → Behaviors → Edit → Response headers policy → select your policy**
+**4.** Attach the policy to the default behavior: **Distribution → Behaviors → Edit → Response headers policy → select your policy**
 
 The managed `SecurityHeadersPolicy` includes HSTS, `nosniff`, `X-Frame-Options: SAMEORIGIN`, and `X-XSS-Protection` out of the box. It's a reasonable starting point, but `Content-Security-Policy` and `Permissions-Policy` are application-specific and must be configured manually.
 
@@ -213,9 +214,9 @@ Browser detects violation → POST report to report-uri endpoint
                                CloudWatch Logs
 ```
 
-1. **API Gateway**: create a simple HTTP API with a POST route. This URL becomes your `report-uri`.
+**1. API Gateway** — Create a simple HTTP API with a POST route. This URL becomes your `report-uri`.
 
-2. **Lambda function**: receive the violation report body (JSON), parse it, and log it to CloudWatch.
+**2. Lambda function** — Receive the violation report body (JSON), parse it, and log it to CloudWatch.
 
 ```python
 import json, logging
@@ -228,7 +229,7 @@ def handler(event, context):
     return {"statusCode": 204}
 ```
 
-3. **CloudFront Response Headers Policy**: add the report-only header pointing to your API Gateway endpoint:
+**3. CloudFront Response Headers Policy** — Add the report-only header pointing to your API Gateway endpoint:
 
 ```
 Content-Security-Policy-Report-Only:
@@ -236,7 +237,7 @@ Content-Security-Policy-Report-Only:
   report-uri https://your-api-id.execute-api.us-east-1.amazonaws.com/report
 ```
 
-4. **Monitor CloudWatch Logs** for two to four weeks. Violations show up like this:
+**4. Monitor CloudWatch Logs** for two to four weeks. Violations show up like this:
 
 ```json
 {
@@ -265,16 +266,16 @@ Before flipping, you can temporarily run both headers at once: the report-only h
 
 **Create the distribution:**
 
-1. **CloudFront → Create distribution**
-2. **Origin domain**: your ALB's DNS name (e.g., `my-app-alb-123456.us-east-1.elb.amazonaws.com`)
-3. **Origin protocol policy**: HTTPS only
-4. **Minimum origin SSL protocol**: TLSv1.2
-5. **Origin custom headers**: add your `X-Origin-Verify` secret header
-6. **Viewer protocol policy**: Redirect HTTP to HTTPS
-7. **Cache policy**: CachingDisabled for dynamic content; a custom cache policy for static assets
-8. **WAF Web ACL**: select the global Web ACL created in `us-east-1`
-9. **Alternate domain names (CNAMEs)**: enter your domain (e.g., `yourapp.com`)
-10. **SSL certificate**: select your ACM certificate
+- **CloudFront → Create distribution**
+- **Origin domain**: your ALB's DNS name (e.g., `my-app-alb-123456.us-east-1.elb.amazonaws.com`)
+- **Origin protocol policy**: HTTPS only
+- **Minimum origin SSL protocol**: TLSv1.2
+- **Origin custom headers**: add your `X-Origin-Verify` secret header
+- **Viewer protocol policy**: Redirect HTTP to HTTPS
+- **Cache policy**: CachingDisabled for dynamic content; a custom policy for static assets
+- **WAF Web ACL**: select the global Web ACL created in `us-east-1`
+- **Alternate domain names (CNAMEs)**: enter your domain (e.g., `yourapp.com`)
+- **SSL certificate**: select your ACM certificate (must be in `us-east-1`)
 
 ACM certificates for CloudFront must be in `us-east-1` regardless of where the application runs. If the ALB is in another region, you'll have two certificates: one in the ALB's region for CloudFront-to-origin HTTPS, and one in `us-east-1` for viewer-to-CloudFront HTTPS.
 
